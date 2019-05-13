@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Title -->
+        <title>Оповещения Talion</title>
+
+        <!-- Main styles. -->
+        <style>
+            body {
+                background-color: transparent;
+            }
+
+            .main-alert {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .main-text-alert {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+
+        <!-- Load our favicon -->
+        <link rel="icon" href="/favicon.ico" />
+    </head>
+
+    <!-- Main body -->
+    <body>
+        <div class="main-alert">
+            <!-- Where the gif gets played. -->
+            <div id="alert"></div>
+        </div>
+        <div class="main-text-alert">
+            <!-- Where the custom gif text is displayed. -->
+            <div id="alert-text"></div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="/common/js/jquery-ui/external/jquery/jquery.min.js"></script>
+        <!-- Bot config file -->
+        <script src="/common/js/wsConfig.js"></script>
+        <!-- Reconnecting socket -->
+        <script src="/common/reconnecting-websocket/reconnectingWS.min.js"></script>
+        <!-- File that handles alerts -->
+        <script src="/alerts/js/index.js"></script>
+    </body>
+</html>

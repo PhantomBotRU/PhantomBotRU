@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Плейлист Talion</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/common/js/jquery-ui/jquery-ui.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <script src="/common/js/jquery-ui/external/jquery/jquery.min.js"></script>
+        <script src="/common/js/jquery-ui/jquery-ui.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="/playlist/js/playerConfig.js"></script>
+        <script type="text/javascript" src="/playlist/js/ytPlaylist.js"></script>
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="/playlist/css/style.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    </head>
+
+    <body>
+        <div class="header">
+            <img id="logo" src="common/images/logo.png"/>
+            <div id="newAlert" class="alert" style="display:none"></div>
+        </div>
+             
+        <table>
+            <tr>
+                <td style="vertical-align: top">
+            
+                    <div id="currentsong">
+                        <div id="songTableTitle">Сейчас звучит</div>
+                        <table id="currentSongTable"> </table>
+                    </div>
+
+                    <div id="songlist">
+                        <div id="songTableTitle">Очередь заказов</div>
+                        <table id="songTable"> </table>
+                    </div>
+            
+                    <div id="playlist">
+                        <div id="playlistTableTitle">Плейлист</div>
+                        <table id="playlistTable"> </table>
+                    </div>
+        
+                    <div id="copyright">
+                        Плейлист Talion
+                    </div>
+                </td>
+            </tr>
+        </table>             
+    </body>
+</html>
