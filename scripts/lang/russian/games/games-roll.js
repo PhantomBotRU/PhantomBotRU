@@ -1,9 +1,9 @@
-$.lang.register('roll.rolled', '$1 rolls a [$2] and [$3]. ');
-$.lang.register('roll.doubleone', 'Snake eyes for $1! ');
-$.lang.register('roll.doubletwo', 'Hard four for $1! ');
-$.lang.register('roll.doublethree', 'Hard six for $1! ');
-$.lang.register('roll.doublefour', 'Hard eight for $1! ');
-$.lang.register('roll.doublefive', 'Hard ten for $1! ');
-$.lang.register('roll.doublesix', 'Boxcars to the max!!! $1! ');
-$.lang.register('roll.rewards.usage', 'Применение: !roll rewards [double 1\'s] [2\'s] [3\'s] [4\'s] [5\'s] [6\'s]. Currently: $1');
-$.lang.register('roll.rewards.success', 'Updated rewards for the dice roll.');
+$.lang.register('roll.rolled', '$1 выбросил(а) «$2» и «$3» ');
+$.lang.register('roll.doubleone', '$1 выбросил(а) две единицы ');
+$.lang.register('roll.doubletwo', '$1 выбросил(а) две двойки ');
+$.lang.register('roll.doublethree', '$1 выбросил(а) две тройки ');
+$.lang.register('roll.doublefour', '$1 выбросил(а) две четвёрки ');
+$.lang.register('roll.doublefive', '$1 выбросил(а) две пятёрки ');
+$.lang.register('roll.doublesix', '$1 выбросил(а) две шестёрки ');
+$.lang.register('roll.rewards.usage', 'применение: !roll rewards [вознаграждение за единицы, в поинтах] [за двойки] [за тройки] [за четвёрки] [за пятёрки] [за шестёрки] (текущее вознаграждение: $1)');
+$.lang.register('roll.rewards.success', 'вознаграждение в игры в кости обновлено');
