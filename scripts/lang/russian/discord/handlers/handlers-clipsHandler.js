@@ -1,0 +1,10 @@
+$.lang.register('discord.cliphandler.toggle.off', 'Clips announcements have been disabled.');
+$.lang.register('discord.cliphandler.toggle.on', 'Clips announcements have been enabled.');
+$.lang.register('discord.cliphandler.message.usage', 'Применение: !clipsmessage (message) - Tags: (name), (url)');
+$.lang.register('discord.cliphandler.message.set', 'Clips message has been set to: $1.');
+$.lang.register('discord.cliphandler.channel.usage', 'Применение: !clipschannel (channel).  Currently: $1');
+$.lang.register('discord.cliphandler.channel.set', 'Clips channel has been set to: $1');
+$.lang.register('discord.cliphandler.noclip', 'не найден');
+$.lang.register('discord.cliphandler.lastclip', 'Последний клип: $1');
+$.lang.register('discord.cliphandler.topclip', 'Самый популярный клип сегодня: $1');
+$.lang.register('discord.cliphandler.clip.embedtitle', 'Клип');

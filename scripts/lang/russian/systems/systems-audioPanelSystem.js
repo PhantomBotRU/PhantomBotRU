@@ -1,0 +1,16 @@
+$.lang.register('audiohook.usage', 'Применение: !audiohook [play / list / customcommand / togglemessages]');
+$.lang.register('audiohook.play.usage', 'Применение: !audiohook play [имя звука]');
+$.lang.register('audiohook.play.404', 'Звук $1 не найден');
+$.lang.register('audiohook.play.success', 'Звук $1 отправлен');
+$.lang.register('audiohook.list', 'Звуки: $1');
+$.lang.register('audiohook.list.total', 'Всего страниц: $1');
+$.lang.register('audiohook.toggle', 'Звуки $1');
+$.lang.register('audiohook.customcommand.usage', 'Применение: !audiohook customcommand [add / remove] [command] [имя звука]');
+$.lang.register('audiohook.customcommand.add.usage', 'Применение: !audiohook customcommand add [command] [имя звука]');
+$.lang.register('audiohook.customcommand.add.error.exists', 'Указанная команда или псевдоним уже существует');
+$.lang.register('audiohook.customcommand.add.list', 'Команда «!$1» будет выводить список всех звуковых команд');
+$.lang.register('audiohook.customcommand.add.error.fx.null', 'Указанный звук не найден (список всех звуков: !audioHook list)');
+$.lang.register('audiohook.customcommand.add.success', 'Команда «!$1» будет вызывать звук $2');
+$.lang.register('audiohook.customcommand.remove.usage', 'Применение: !audiohook customcommand remove [имя команды]');
+$.lang.register('audiohook.customcommand.remove.error.404', 'Указанной команды не существует');
+$.lang.register('audiohook.customcommand.remove.success', 'Команда «!$1» удалена');

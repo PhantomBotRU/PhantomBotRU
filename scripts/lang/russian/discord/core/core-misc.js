@@ -1,0 +1,11 @@
+$.lang.register('discord.misc.module.usage', 'Применение: !module [enable / disable / list]');
+$.lang.register('discord.misc.module.enabled', 'модуль $1 включен');
+$.lang.register('discord.misc.module.disabled', 'модуль $1 отключен');
+$.lang.register('discord.misc.module.list', 'список модулей Discord:\r\n$1');
+$.lang.register('discord.misc.module.404', 'данный модуль не найден: $1');
+$.lang.register('discord.misc.game.set.usage', 'Применение: !setgame [название игры]');
+$.lang.register('discord.misc.game.set', 'установлена текущая игра бота в Discord: $1');
+$.lang.register('discord.misc.game.stream.set.usage', 'Применение: !setstream [ссылка на канал Twitch] [название игры]');
+$.lang.register('discord.misc.game.stream.set', 'установлены статус стрима и текущая игра бота в Discord: $1 и $2');
+$.lang.register('discord.misc.game.removed', 'статус стрима и текущая игра бота в Discord очищены');
+$.lang.register('discord.misc.reconnect', 'попытка соединения с Discord');

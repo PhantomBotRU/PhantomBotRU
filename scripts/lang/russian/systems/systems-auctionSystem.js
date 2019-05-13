@@ -1,0 +1,14 @@
+$.lang.register('auctionsystem.usage', 'применение: !auction open [шаг в поинтах] [минимальная ставка в поинтах] [продолжительность в секундах]');
+$.lang.register('auctionsystem.err.opened', 'аукцион уже проводится');
+$.lang.register('auctionsystem.opened', 'Стартовал аукцион с минимальной ставкой $2 и шагом $1, для участия наберите !bid [ставка в поинтах]');
+$.lang.register('auctionsystem.auto.timer.msg', 'Аукцион завершится через $1 сек');
+$.lang.register('auctionsystem.err.closed', 'аукцион сейчас не проводится');
+$.lang.register('auctionsystem.err.no.bids', 'Аукцион завершён без принятых ставок');
+$.lang.register('auctionsystem.closed', 'Аукцион завершён, победителем стал(а) $1 со ставкой $2');
+$.lang.register('auctionsystem.warn.force', 'Аукцион скоро завершится, максимальная ставка на данный момент составляет $2 от $1, кто предложит $3?');
+$.lang.register('auctionsystem.warn', 'максимальная ставка на данный момент составляет $2 от $1');
+$.lang.register('auctionsystem.bid.usage', 'применение: !bid [ставка в поинтах]');
+$.lang.register('auctionsystem.err.bid.minimum', 'минимальная ставка в текущем аукционе составляет $1');
+$.lang.register('auctionsystem.err.points', 'у вас недостаточно $1 для участия в аукционе');
+$.lang.register('auctionsystem.err.increments', 'минимальный шаг в текущем аукционе составляет $1');
+$.lang.register('auctionsystem.bid', '$1 предложил(а) $2, кто предложит $3?');
