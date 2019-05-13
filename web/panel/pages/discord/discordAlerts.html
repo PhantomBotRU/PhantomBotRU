@@ -1,0 +1,311 @@
+<main>
+    <!-- Header -->
+    <section class="content-header">
+        <h1>Оповещения в Discord</h1>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Discord</li>
+            <li class="active">Оповещения</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <!-- Follower Alerts -->
+            <div class="col-md-4">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <div class="box-tools pull-right">
+                           <label class="switch" data-toggle="tooltip" title="Переключить">
+                               <input type="checkbox" id="followHandlerToggle" checked="true" data-alert-toggle="./discord/handlers/followHandler.js">
+                               <span class="slider round"></span>
+                            </label>
+
+                            <button type="button" id="discordFollowHandlerSettings" class="btn btn-md btn-box-tool" style="margin-bottom: 7px;" data-toggle="tooltip" title="Настройки">
+                                <i class="fa fa-cog fa-lg"></i>
+                            </button>
+                        </div>
+                        <h3 class="box-title">Фолловинг</h3>
+                    </div>
+
+                    <form role="form">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <p class="auto-cut">Приветствие новых фолловеров канала Twitch</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Subscriber Alerts -->
+            <div class="col-md-4">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <div class="box-tools pull-right">
+                           <label class="switch" data-toggle="tooltip" title="Переключить">
+                               <input type="checkbox" id="subscribeHandlerToggle" checked="true" data-alert-toggle="./discord/handlers/subscribeHandler.js">
+                               <span class="slider round"></span>
+                            </label>
+
+                            <button type="button" id="discordSubscribeHandlerSettings" class="btn btn-md btn-box-tool" style="margin-bottom: 7px;" data-toggle="tooltip" title="Настройки">
+                                <i class="fa fa-cog fa-lg"></i>
+                            </button>
+                        </div>
+                        <h3 class="box-title">Подписки</h3>
+                    </div>
+
+                    <form role="form">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <p class="auto-cut">Приветствие платных подписчиков канала Twitch</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Host Alerts -->
+            <div class="col-md-4">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <div class="box-tools pull-right">
+                           <label class="switch" data-toggle="tooltip" title="Переключить">
+                               <input type="checkbox" id="hostHandlerToggle" checked="true" data-alert-toggle="./discord/handlers/hostHandler.js">
+                               <span class="slider round"></span>
+                            </label>
+
+                            <button type="button" id="discordHostHandlerSettings" class="btn btn-md btn-box-tool" style="margin-bottom: 7px;" data-toggle="tooltip" title="Настройки">
+                                <i class="fa fa-cog fa-lg"></i>
+                            </button>
+                        </div>
+                        <h3 class="box-title">Хосты</h3>
+                    </div>
+
+                    <form role="form">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <p class="auto-cut">Приветствие хостеров канала Twitch</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Bits Alerts -->
+            <div class="col-md-4">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <div class="box-tools pull-right">
+                           <label class="switch" data-toggle="tooltip" title="Переключить">
+                               <input type="checkbox" id="bitsHandlerToggle" checked="true" data-alert-toggle="./discord/handlers/bitsHandler.js">
+                               <span class="slider round"></span>
+                            </label>
+
+                            <button type="button" id="discordBitsHandlerSettings" class="btn btn-md btn-box-tool" style="margin-bottom: 7px;" data-toggle="tooltip" title="Настройки">
+                                <i class="fa fa-cog fa-lg"></i>
+                            </button>
+                        </div>
+                        <h3 class="box-title">Биты</h3>
+                    </div>
+
+                    <form role="form">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <p class="auto-cut">Приветствие пользователей, поддерживающих битами канал Twitch</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Clips Alerts -->
+            <div class="col-md-4">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <div class="box-tools pull-right">
+                           <label class="switch" data-toggle="tooltip" title="Переключить">
+                               <input type="checkbox" id="clipHandlerToggle" checked="true" data-alert-toggle="./discord/handlers/clipHandler.js">
+                               <span class="slider round"></span>
+                            </label>
+
+                            <button type="button" id="discordClipHandlerSettings" class="btn btn-md btn-box-tool" style="margin-bottom: 7px;" data-toggle="tooltip" title="Настройки">
+                                <i class="fa fa-cog fa-lg"></i>
+                            </button>
+                        </div>
+                        <h3 class="box-title">Клипы</h3>
+                    </div>
+
+                    <form role="form">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <p class="auto-cut">Оповещения о новых клипах, сделанных на стриме в Twitch</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Twitch Stream Alerts -->
+            <div class="col-md-4">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <div class="box-tools pull-right">
+                           <label class="switch" data-toggle="tooltip" title="Переключить">
+                               <input type="checkbox" id="streamHandlerToggle" checked="true" data-alert-toggle="./discord/handlers/streamHandler.js">
+                               <span class="slider round"></span>
+                            </label>
+
+                            <button type="button" id="discordStreamHandlerSettings" class="btn btn-md btn-box-tool" style="margin-bottom: 7px;" data-toggle="tooltip" title="Настройки">
+                                <i class="fa fa-cog fa-lg"></i>
+                            </button>
+                        </div>
+                        <h3 class="box-title">Стримы</h3>
+                    </div>
+
+                    <form role="form">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <p class="auto-cut">Оповещения о начале и завершении стримов, а также о смене игр в Twitch</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Greeting Alerts -->
+            <div class="col-md-4">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <div class="box-tools pull-right">
+                           <label class="switch" data-toggle="tooltip" title="Переключить">
+                               <input type="checkbox" id="greetingsSystemToggle" checked="true" data-alert-toggle="./discord/systems/greetingsSystem.js">
+                               <span class="slider round"></span>
+                            </label>
+
+                            <button type="button" id="discordGreetingsSystemSettings" class="btn btn-md btn-box-tool" style="margin-bottom: 7px;" data-toggle="tooltip" title="Настройки">
+                                <i class="fa fa-cog fa-lg"></i>
+                            </button>
+                        </div>
+                        <h3 class="box-title">Посещения</h3>
+                    </div>
+
+                    <form role="form">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <p class="auto-cut">Оповещения о посещениях сервера Discord и назначение им роли</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Streamlabs Alerts -->
+            <div class="col-md-4">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <div class="box-tools pull-right">
+                           <label class="switch" data-toggle="tooltip" title="Переключить">
+                               <input type="checkbox" id="streamlabsHandlerToggle" checked="true" data-alert-toggle="./discord/handlers/streamlabsHandler.js">
+                               <span class="slider round"></span>
+                            </label>
+
+                            <button type="button" id="discordStreamlabsHandlerSettings" class="btn btn-md btn-box-tool" style="margin-bottom: 7px;" data-toggle="tooltip" title="Настройки">
+                                <i class="fa fa-cog fa-lg"></i>
+                            </button>
+                        </div>
+                        <h3 class="box-title">Streamlabs</h3>
+                    </div>
+
+                    <form role="form">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <p class="auto-cut">Приветствие пользователей, делающих донаты через Streamlabs</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- TipeeeStream Alerts -->
+            <div class="col-md-4">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <div class="box-tools pull-right">
+                           <label class="switch" data-toggle="tooltip" title="Переключить">
+                               <input type="checkbox" id="tipeeeStreamHandlerToggle" checked="true" data-alert-toggle="./discord/handlers/tipeeeStreamHandler.js">
+                               <span class="slider round"></span>
+                            </label>
+
+                            <button type="button" id="discordTipeeeStreamHandlerSettings" class="btn btn-md btn-box-tool" style="margin-bottom: 7px;" data-toggle="tooltip" title="Настройки">
+                                <i class="fa fa-cog fa-lg"></i>
+                            </button>
+                        </div>
+                        <h3 class="box-title">TipeeeStream</h3>
+                    </div>
+
+                    <form role="form">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <p class="auto-cut">Приветствие пользователей, делающих донаты через TipeeeStream</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- StreamElements Alerts -->
+            <div class="col-md-4">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <div class="box-tools pull-right">
+                           <label class="switch" data-toggle="tooltip" title="Переключить">
+                               <input type="checkbox" id="streamElementsHandlerToggle" checked="true" data-alert-toggle="./discord/handlers/streamElementsHandler.js">
+                               <span class="slider round"></span>
+                            </label>
+
+                            <button type="button" id="discordStreamElementsHandlerSettings" class="btn btn-md btn-box-tool" style="margin-bottom: 7px;" data-toggle="tooltip" title="Настройки">
+                                <i class="fa fa-cog fa-lg"></i>
+                            </button>
+                        </div>
+                        <h3 class="box-title">StreamElements</h3>
+                    </div>
+
+                    <form role="form">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <p class="auto-cut">Приветствие пользователей, делающих донаты через StreamElements</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Twitter Alerts -->
+            <div class="col-md-4">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <div class="box-tools pull-right">
+                           <label class="switch" data-toggle="tooltip" title="Переключить">
+                               <input type="checkbox" id="twitterHandlerToggle" checked="true" data-alert-toggle="./discord/handlers/twitterHandler.js">
+                               <span class="slider round"></span>
+                            </label>
+
+                            <button type="button" id="discordTwitterHandlerSettings" class="btn btn-md btn-box-tool" style="margin-bottom: 7px;" data-toggle="tooltip" title="Настройки">
+                                <i class="fa fa-cog fa-lg"></i>
+                            </button>
+                        </div>
+                        <h3 class="box-title">Twitter</h3>
+                    </div>
+
+                    <form role="form">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <p class="auto-cut">Публикация в канале Discord свежих твитов</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- discordAlerts -->
+    <script src="panel/js/pages/discord/discordAlerts.js"></script>
+</main>

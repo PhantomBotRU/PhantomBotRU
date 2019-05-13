@@ -1,0 +1,40 @@
+<main>
+    <!-- Header -->
+    <section class="content-header">
+        <h1>Роли</h1>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li class="active">Роли</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    	<div class="box box-solid">
+            <div class="box-header with-border">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Модуль нельзя выключить">
+  						<input type="checkbox" disabled="" checked="true">
+                        <span class="slider round disabled"></span>
+                    </label>
+
+                    <button type="button" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Модуль не имеет настроек" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+                </div>
+                <h3 class="box-title">Роли</h3>
+            </div>
+            <form role="form">
+                <!-- Box content -->
+                <div class="box-body">
+                    <button class="btn btn-primary btn-sm pull-right" type="button" id="add-permissions-button"><i class="fa fa-user"></i>&nbsp; Назначить роль</button>
+
+                    <table id="permissionsTable" class="table table-bordered table-hover"></table>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- permissions -->
+    <script src="panel/js/pages/permissions/permissions.js"></script>
+</main>

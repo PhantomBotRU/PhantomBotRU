@@ -1,0 +1,70 @@
+<main>
+    <!-- Custom styles for this page -->
+    <style>
+        .center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bottom {
+            top: 100%;
+        }
+
+        .death-total {
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+    </style>
+
+    <!-- Header -->
+    <section class="content-header">
+        <h1>Экстра</h1>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Экстра</li>
+            <li class="active">Счётчик побед</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    	<div class="box box-solid">
+            <div class="box-header with-border">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Переключить">
+  						<input type="checkbox" id="deathCounterModuleToggle" checked="true">
+                        <span class="slider round"></span>
+                    </label>
+
+                    <button type="button" id="settings-deaths-button" class="btn btn-md btn-box-tool" style="margin-bottom: 7px;" data-toggle="tooltip" title="Настройки">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+                </div>
+                <h3 class="box-title">Счётчик побед</h3>
+            </div>
+
+            <form role="form" id="deathCounterModule">
+                <!-- Box content -->
+                <div class="box-body">
+                    <div class="death-total center">
+                        <span>Количество побед:&nbsp;</span>
+                        <span id="death-number">–</span>
+                    </div>
+
+                    <div class="btn-toolbar center">
+                        <button class="btn btn-success" type="button" id="incr-deaths-button"
+                            data-toggle="tooltip" title="Прибавить одну победу в текущей игре"><i class="fa fa-plus"></i>&nbsp; Прибавить</button>
+                        <button class="btn btn-warning" type="button" id="decr-deaths-button"
+                            data-toggle="tooltip" title="Отнять одну победу в текущей игре"><i class="fa fa-minus"></i>&nbsp; Отнять</button>
+                        <button class="btn btn-danger" type="button" id="reset-deaths-button"
+                            data-toggle="tooltip" title="Сбросить количество побед в текущей игре до нуля"><i class="fa fa-eraser"></i>&nbsp; Сбросить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- deathcounter -->
+    <script src="panel/js/pages/extra/deathcounter.js"></script>
+</main>

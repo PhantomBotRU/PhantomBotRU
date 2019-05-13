@@ -1,0 +1,583 @@
+<main>
+	<style>
+		.table>tbody>tr>th {
+			border: none !important;
+		}
+	</style>
+
+    <!-- Header -->
+    <section class="content-header">
+        <!-- Page title.-->
+        <h1>Помощь</h1>
+
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Помощь</li>
+            <li class="active">Теги команд</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="nav-tabs-custom">
+            <div class="box-header with-border">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Модуль нельзя выключить">
+  						<input type="checkbox" disabled="" checked="true">
+                        <span class="slider round disabled"></span>
+                    </label>
+
+                    <button type="button" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Модуль не имеет настроек" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+                </div>
+                <h3 class="box-title">Теги пользовательских команд</h3>
+            </div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#twitch_tags" data-toggle="tab">Twitch</a></li>
+                <li><a href="#discord_tags" data-toggle="tab">Discord</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <!-- Twitch Modules -->
+                <div class="tab-pane active" id="twitch_tags">
+                    <table id="twitchTagsTable" class="table table-bordered table-hover" width="100%">
+
+                    <tr>
+                    	<td>(#)</td>
+                    	<td>генерирует случайное число от 1 до 100</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(# <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>генерирует случайное число из заданного в теге диапазона</td>
+                    	<td>(# 1,250)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(1), (2), (3), … (9)</td>
+                    	<td>подставляет указанное после команды значение (или до 9 значений)</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(1=<span style="text-decoration: underline;">?</span>)</td>
+                    	<td>подставляет заданный в теге другой тег без скобок (опционально: указанное после команды значение)</td>
+                    	<td>(1=random)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(alert <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>воспроизводит заданную в теге анимацию GIF, WebM или MP4 (опционально: с заданными длительностью, в секундах, громкостью от 0.1 до 1.0, стилем CSS и текстом)</td>
+                    	<td>(alert banana.gif,15,0.8,color:white;font-family:Helvetica;font-weight:600;font-size:28px;,(sender) передаёт всем привет!)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(adminonlyedit)</td>
+                    	<td>запрещает редактировать команду пользователям с уровнем доступа ниже Администратора</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(age)</td>
+                    	<td>показывает стаж в Twitch вызвавшего команду пользователя (опционально: указанного после команды пользователя)</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(baresender)</td>
+                    	<td>показывает имя вызвавшего команду пользователя в нижнем регистре</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(channelname)</td>
+                    	<td>показывает имя стримера (владельца канала)</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(code=<span style="text-decoration: underline;">?</span>)</td>
+                    	<td>генерирует случайный код с заданным в теге количеством символов</td>
+                    	<td>(code=8)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(command <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>вызывает заданную в теге команду (тег должен быть в начале отклика и без «!» перед именем команды)</td>
+                    	<td>(command topclip)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(commandcostlist)</td>
+                    	<td>показывает стоимость всех платных команд</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(count)</td>
+                    	<td>показывает количество вызовов команды (счётчик)</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <!--tr>
+                    	<td>(countdown=<span style="text-decoration: underline;">?</span>)</td>
+                    	<td>показывает количество времени, оставшееся до заданной даты</td>
+                    	<td>(countdown=December 31 2024 23:59:59 GMT+0300)</td>
+                    </tr-->
+
+                    <!--tr>
+                    	<td>(countup=<span style="text-decoration: underline;">?</span>)</td>
+                    	<td>показывает количество времени, прошедшее с заданной даты</td>
+                    	<td>(countup=January 1 2019 00:00:00 GMT+0300)</td>
+                    </tr-->
+
+                    <tr>
+                    	<td>(currenttime <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>показывает текущее время в заданных в теге часовой зоне (см. подраздел «Часовые зоны») и формате времени</td>
+                    	<td>(currenttime Europe/Moscow, HH:mm:ss)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(customapi <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>вызывает данные по заданной в теге ссылке API</td>
+                    	<td>(customapi http://not.real.com/joke.php?name=$1)</td>
+                	</tr>
+
+                    <tr>
+                    	<td>(customapijson <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>вызывает данные в формате JSON по заданной в теге ссылке API</td>
+                    	<td>(customapijson https://api.apixu.com/v1/current.json?key=ваш_ключ&q=$1&lang=ru {Температура в г. } location.name {: } current.temp_c { °C})</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(downtime)</td>
+                    	<td>показывает количество времени, прошедшее с окончания последнего стрима</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(echo)</td>
+                    	<td>возвращает указанное после команды сообщение от имени бота (осторожно: с тегом также могут использоваться такие команды, как <code>/timeout</code> и <code>/ban</code>)</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(encodeurl <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>переводит пробелы в запросе, указанном после команды, в URL-кодировку (может использоваться внутри такого тега, как (customapi), а также сам содержать в себе такие теги, как (echo) и др.)</td>
+                    	<td>(encodeurl https://google.com/search?q=(echo))</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(followage)</td>
+                    	<td>показывает стаж на канале вызвавшего команду пользователя (опционально: указанного после команды пользователя)</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(followdate)</td>
+                    	<td>показывает дату фолловинга канала вызвавшего команду пользователя (опционально: указанного после команды пользователя)</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(follows)</td>
+                    	<td>показывает количество фолловеров канала</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(game)</td>
+                    	<td>показывает название текущей игры стрима</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(gameinfo)</td>
+                    	<td>показывает название текущей игры стрима и его продолжительность</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(gameonly=<span style="text-decoration: underline;">?</span>)</td>
+                    	<td>разрешает команде работать только во время заданной в теге игры</td>
+                    	<td>(gameonly=Dota 2)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(gamesplayed)</td>
+                    	<td>показывает список игр, сыгранных за текущий стрим</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(hours)</td>
+                    	<td>–</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(keywordcount)</td>
+                    	<td>показывает количество срабатываний триггера, в отклике которого тег установлен (актуально для раздела «Триггеры»)</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(lasttip)</td>
+                    	<td>показывает информацию о последнем донате</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(offlineonly)</td>
+                    	<td>не разрешает команде работать во время стрима</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(onlineonly)</td>
+                    	<td>разрешает команде работать только во время стрима</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(pay)</td>
+                    	<td>показывает вознаграждение, выплачиваемое за вызов команды</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(playsound <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>воспроизводит заданный в теге звук (для этого необходимо добавить в OBS в качестве источника BrowserSource соответствующую ссылку – см. в настройках раздела «Звуки»)</td>
+                    	<td>(playsound airhorn)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(playtime)</td>
+                    	<td>показывает продолжительность текущей игры</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(pointname)</td>
+                    	<td>показывает пользовательское название поинтов в родительном падеже</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(points)</td>
+                    	<td>показывает количество поинтов пользователя, вызвавшего команду, без названия поинтов</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(pointtouser)</td>
+                    	<td>показывает имя пользователя со стрелкой на отклик команды, в случае если оно указано после команды</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(price)</td>
+                    	<td>показывает плату, взимаемую за вызов команды</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(random)</td>
+                    	<td>показывает случайное имя пользователя из чата</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(randomrank)</td>
+                    	<td>показывает случайное имя пользователя из чата с упоминанием его ранга</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(readfile <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>показывает первую строку из заданного в теге текстового файла, лежащего в папке «addons» бота</td>
+                    	<td>(readfile имя_файла.txt)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(readfilerand <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>показывает случайную строку из заданного в теге текстового файла, лежащего в папке «addons» бота</td>
+                    	<td>(readfilerand имя_файла.txt)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(@sender)</td>
+                    	<td>показывает имя пользователя, вызвавшего команду, с символом «@» перед именем</td>
+                    	<td>–</td>
+                    </tr>
+
+                	<tr>
+                    	<td>(sender)</td>
+                    	<td>показывает имя пользователя, вызвавшего команду</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(senderrank)</td>
+                    	<td>показывает имя пользователя, вызвавшего команду, с упоминанием его ранга</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(senderrankonly)</td>
+                    	<td>показывает ранг пользователя, вызвавшего команду</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(status)</td>
+                    	<td>показывает текущий заголовок стрима</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(subscribers)</td>
+                    	<td>показывает количество подписчиков канала (при наличии «партнёрки» или «компаньонки»)</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(team_member_followers <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>показывает количество фолловеров заданного стримера из заданной команды</td>
+                    	<td>(team_member_followers имя_команды, имя_пользователя)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(team_member_game <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>показывает текущую игру заданного стримера из заданной команды</td>
+                    	<td>(team_member_game имя_команды, имя_пользователя)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(team_member_url <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>показывает ссылку на канал заданного стримера из заданной команды</td>
+                    	<td>(team_member_url имя_команды, имя_пользователя)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(team_members <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>показывает список членов заданной команды</td>
+                    	<td>(team_members имя_команды)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(team_name <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>показывает имя заданной команды</td>
+                    	<td>(team_name имя_команды)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(team_random_member <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>показывает случайного члена указанной команды</td>
+                    	<td>(team_random_member имя_команды)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(team_url <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>показывает ссылку на канал указанной команды</td>
+                    	<td>(team_url имя_команды)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(titleinfo)</td>
+                    	<td>показывает текущий заголовок стрима и его продолжительность</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(touser)</td>
+                    	<td>показывает имя пользователя, вызвавшего команду, либо другого пользователя, в случае если оно указано после команды</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(uptime)</td>
+                    	<td>показывает текущую продолжительность стрима</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(useronly=<span style="text-decoration: underline;">?</span>)</td>
+                    	<td>разрешает вызывать команду только заданному в теге пользователю</td>
+                    	<td>(useronly=имя_пользователя)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(viewers)</td>
+                    	<td>показывает текущее количество зрителей</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(views)</td>
+                    	<td>показывает количество просмотров канала</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(writefile <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>записывает текст, указанный после команды, в заданный в теге текстовый файл (true – запись на новую строку, false – замена первой строки файла)</td>
+                    	<td>(writefile имя_файла.txt, true, (echo))</td>
+                    </tr>
+
+                    </table>
+                </div>
+
+                <!-- Discord Modules -->
+                <div class="tab-pane" id="discord_tags">
+                    <table id="discordTagsTable" class="table table-bordered table-hover" width="100%">
+
+                    <tr>
+                    	<td>(#)</td>
+                    	<td>генерирует случайное число от 1 до 100</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(# <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>генерирует случайное число из заданного в теге диапазона</td>
+                    	<td>(# 1,250)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(1), (2), (3), … (9)</td>
+                    	<td>подставляет указанное после команды (при её вызове) значение (или до 9 значений)</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <!--tr>
+                    	<td>требует тестирования (1=<span style="text-decoration: underline;">?</span>)</td>
+                    	<td>подставляет заданный в теге другой тег без скобок, либо указанное после команды (при её вызове) значение</td>
+                    	<td>(1=random)</td>
+                    </tr-->
+
+                    <tr>
+                    	<td>(count)</td>
+                    	<td>показывает количество вызовов команды (счётчик)</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(customapi <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>вызывает данные по заданной в теге ссылке API</td>
+                    	<td>(customapi http://not.real.com/joke.php?name=$1)</td>
+                	</tr>
+
+                    <tr>
+                    	<td>(customapijson <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>вызывает данные в формате JSON по заданной в теге ссылке API</td>
+                    	<td>(customapijson http://api.apixu.com/v1/current.json?key=ваш_ключ&q=$1&lang=ru {Температура в г. } location.name {: } current.temp_c { °C})</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(echo)</td>
+                    	<td>возвращает указанное после команды сообщение от имени бота (осторожно: с тегом также могут использоваться такие команды, как <code>/timeout</code> и <code>/ban</code>)</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(encodeurl <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>переводит пробелы в запросе, указанном после команды, в URL-кодировку (может использоваться внутри такого тега, как (customapi), а также сам содержать в себе такие теги, как (echo) и др.)</td>
+                    	<td>(encodeurl https://google.com/search?q=(echo))</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(follows)</td>
+                    	<td>показывает количество фолловеров канала</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(game)</td>
+                    	<td>показывает название текущей игры стрима</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(lasttip)</td>
+                    	<td>показывает информацию о последнем донате</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(random)</td>
+                    	<td>показывает случайное имя пользователя из чата</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(readfile <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>показывает первую строку из заданного в теге текстового файла, лежащего в папке «addons» бота</td>
+                    	<td>(readfile имя_файла.txt)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(readfilerand <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>показывает случайную строку из заданного в теге текстового файла, лежащего в папке «addons» бота</td>
+                    	<td>(readfilerand имя_файла.txt)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(@sender)</td>
+                    	<td>показывает имя пользователя, вызвавшего команду, с символом «@» перед именем</td>
+                    	<td>–</td>
+                    </tr>
+
+                	<tr>
+                    	<td>(sender)</td>
+                    	<td>показывает имя пользователя, вызвавшего команду</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(setrole <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>назначает роль</td>
+                    	<td>(setrole lirik, Стример)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(status)</td>
+                    	<td>показывает текущий заголовок стрима</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(touser)</td>
+                    	<td>показывает имя пользователя, вызвавшего команду, либо другого пользователя, в случае если оно указано после команды</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(uptime)</td>
+                    	<td>показывает текущую продолжительность стрима</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(viewers)</td>
+                    	<td>показывает текущее количество зрителей</td>
+                    	<td>–</td>
+                    </tr>
+
+                    <tr>
+                    	<td>(writefile <span style="text-decoration: underline;">?</span>)</td>
+                    	<td>записывает текст, указанный после команды, в заданный в теге текстовый файл (true – запись на новую строку, false – замена первой строки файла)</td>
+                    	<td>(writefile имя_файла.txt, true, (echo))</td>
+                    </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- moduleList -->
+    <script src="panel/js/pages/help/tags.js"></script>
+</main>

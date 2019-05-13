@@ -1,0 +1,100 @@
+<main>
+    <!-- Header -->
+    <section class="content-header">
+        <h1>Помощь</h1>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li class="active">Помощь</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    	<div class="box box-solid">
+            <div class="box-header">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Модуль нельзя выключить">
+  						<input type="checkbox" disabled="" checked="true">
+                        <span class="slider round disabled"></span>
+                    </label>
+
+                    <button type="button" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Модуль не имеет настроек" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+                </div>
+                <h3 class="box-title">Информация</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">О системе</h3>
+                    </div>
+
+                    <form role="form">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <p><b>Версия бота: </b><span id="panel-bot-version">…</span></p>
+                            <p><b>Операционная система: </b><span id="panel-os-version">…</span></p>
+                            <p><b>Версия Java: </b><span id="panel-java-version">…</span></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">О пульте</h3>
+                    </div>
+
+                    <form role="form">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <!-- This is the version we give the panel -->
+                            <p><b>Версия панели:</b> <span id="panel-version-number">…</span></p>
+                            <!-- This is the template name, this is static -->
+                            <p><b>Скин панели: </b>AdminLTE</p>
+                            <!-- We never update the template, so this is a static version -->
+                            <p><b>Версия скина: </b>2.4.0</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--div class="row">
+            <div class="col-md-12">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Поиск</h3>
+                    </div>
+
+                    <form role="form"-->
+                        <!-- Box content -->
+                        <!--div class="box-body">
+                            <div style="text-align: center;">
+                                <h3>Поиск на форуме</h3>
+                                <p>Быстрый поиск на <a href="https://community.phantombot.tv" target="_blank">форуме</a></p>
+
+                                <form role="form">
+                                    <div class="input-group" style="width: 50%; margin: 0 auto; text-align: left;">
+                                        <input type="text" class="form-control" placeholder="Поиск" id="forum-search-text" onkeypress="return event.which !== 13">
+
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-primary btn-flat" id="forum-search"><i class="fa fa-search"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div-->
+    </section>
+
+    <!-- help.js -->
+    <script src="panel/js/pages/help/help.js"></script>
+</main>

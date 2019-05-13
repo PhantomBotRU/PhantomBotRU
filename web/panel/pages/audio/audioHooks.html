@@ -1,0 +1,62 @@
+<main>
+    <!-- Header -->
+    <section class="content-header">
+        <!-- Page title and switch toggle. -->
+        <h1>Аудио</h1>
+
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Аудио</li>
+            <li class="active">Звуки</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="nav-tabs-custom">
+        	<div class="box-header with-border">
+            	<div class="box-tools pull-right">
+                	<label class="switch" data-toggle="tooltip" title="Переключить">
+  						<input type="checkbox" id="audioHookModuleToggle" checked="true">
+                    	<span class="slider round"></span>
+                	</label>
+
+                    	<button type="button" class="btn btn-md btn-box-tool" data-toggle="tooltip" id="audio-hooks-settings" title="Настройки" style="margin-bottom: 7px;">
+                        	<i class="fa fa-cog fa-lg"></i>
+                    	</button>
+
+            	</div>
+            	<h3 class="box-title">Звуки</h3>
+        	</div>
+        
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#audiohooks" id="audiohooks_t" data-toggle="tab">Список</a></li>
+                <li><a href="#audiocommands" id="audiocommands_t" data-toggle="tab">Команды</a></li>
+            </ul>
+
+            <div class="tab-content" id="audioHookModule">
+                <!-- Audio hook list -->
+                <div class="tab-pane active" id="audiohooks">
+                    <div class="btn-toolbar pull-right">
+                        <button class="btn btn-primary btn-sm" type="button" id="reload-audio-hooks" data-toggle="tooltip"
+                            title="Добавление нового звука в папку «config/audio-hooks» требует обновления списка">
+                            <i class="fa fa-refresh"></i>&nbsp; Обновить список
+                        </button>
+                    </div>
+
+                    <table id="audioHooksTable" class="table table-bordered table-hover"></table>
+                </div>
+
+                <!-- Audio commands -->
+                <div class="tab-pane" id="audiocommands">
+                    <button class="btn btn-primary btn-sm pull-right" type="button" id="audio-hooks-cmd-add"><i class="fa fa-plus"></i>&nbsp; Создать команду</button>
+
+                    <table id="audioHookCommandsTable" class="table table-bordered table-hover"></table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- audioHooks -->
+    <script src="panel/js/pages/audio/audioHooks.js"></script>
+</main>

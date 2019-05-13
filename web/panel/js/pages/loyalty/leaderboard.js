@@ -1,0 +1,152 @@
+// Function that querys all of the data we need.
+$(function() {
+    // Get top points.
+    socket.getDBTableValuesByOrder('points_top_get_order', 'points', 100, 0, 'DESC', true, function(results) {
+        let tableData = [];
+
+        for (let i = 0; i < results.length; i++) {
+            tableData.push([
+                (i + 1),
+                results[i].key,
+                helpers.parseNumber(results[i].value)
+            ]);
+        }
+
+        // if the table exists, destroy it.
+        if ($.fn.DataTable.isDataTable('#leaderboard-points')) {
+            $('#leaderboard-points').DataTable().destroy();
+            // Remove all of the old events.
+            $('#leaderboard-points').off();
+        }
+
+        // Create table.
+        $('#leaderboard-points').DataTable({
+            'searching': true,
+            'autoWidth': false,
+            'lengthChange': false,
+            'data': tableData,
+            'pageLength': 15,
+            'columnDefs': [
+                { 'width': '5%', 'targets': 0 }
+            ],
+            'columns': [
+                { 'title': '№' },
+                { 'title': 'Пользователь' },
+                { 'title': 'Счёт' }
+            ]
+        });
+
+        // Set the title again in case this is a reload.
+        $('#currency-top-title').html('Топ-100 обладателей поинтов');
+    });
+
+    // Get top time.
+    socket.getDBTableValuesByOrder('time_top_get_order', 'time', 100, 0, 'DESC', true, function(results) {
+        let tableData = [];
+
+        for (let i = 0; i < results.length; i++) {
+            tableData.push([
+                (i + 1),
+                results[i].key,
+                helpers.parseNumber(results[i].value),
+                helpers.parseNumber(Math.floor(parseInt(results[i].value) / 3600))
+            ]);
+        }
+
+        // if the table exists, destroy it.
+        if ($.fn.DataTable.isDataTable('#leaderboard-time')) {
+            $('#leaderboard-time').DataTable().destroy();
+            // Remove all of the old events.
+            $('#leaderboard-time').off();
+        }
+
+        // Create table.
+        $('#leaderboard-time').DataTable({
+            'searching': true,
+            'autoWidth': false,
+            'lengthChange': false,
+            'data': tableData,
+            'pageLength': 15,
+            'columnDefs': [
+                { 'width': '5%', 'targets': 0 },
+                { 'width': '35%', 'targets': 1 }
+            ],
+            'columns': [
+                { 'title': '№' },
+                { 'title': 'Пользователь' },
+                { 'title': 'Стаж, сек' },
+                { 'title': 'Стаж, час' }
+            ]
+        });
+
+        // Set the title again in case this is a reload.
+        $('#loyalty-top-title').html('Топ-100 обладателей стажа');
+    });
+});
+
+// Function that handlers the loading of events.
+$(function() {
+    var currencyOffset = 100,
+        loyaltyOffset = 100;
+
+    // On load more points button.
+    $('#currency-load-more').on('click', function() {
+        let table = $('#leaderboard-points').DataTable(),
+            dataCount = table.rows().count(),
+            tableData = [];
+
+        // Only allow more data to be loaded once the last click was fully loaded.
+        if (currencyOffset === dataCount) {
+            toastr.success('В топ обладателей поинтов загружено больше пользователей');
+
+            // Get the next 100 users.
+            socket.getDBTableValuesByOrder('points_top_get_order_btn', 'points', 100, (currencyOffset + 100), 'DESC', true, function(results) {
+                for (let i = 0; i < results.length; i++) {
+                    tableData.push([
+                        (++currencyOffset),
+                        results[i].key,
+                        helpers.parseNumber(results[i].value)
+                    ]);
+                }
+
+                // Add the rows.
+                table.rows.add(tableData).draw(false);
+                // Edit the title.
+                $('#currency-top-title').html('Топ-' + helpers.parseNumber(currencyOffset) + ' обладателей поинтов');
+            });
+        } else {
+            toastr.error('Не удалось загрузить больше пользователей в топ обладателей поинтов');
+        }
+    });
+
+    // On load more time button.
+    $('#loyalty-load-more').on('click', function() {
+        let table = $('#leaderboard-time').DataTable(),
+            dataCount = table.rows().count(),
+            tableData = [];
+
+        // Only allow more data to be loaded once the last click was fully loaded.
+        if (loyaltyOffset === dataCount) {
+            toastr.success('В топ обладателей стажа загружено больше пользователей');
+
+            // Get the next 100 users.
+            socket.getDBTableValuesByOrder('time_top_get_order_btn', 'time', 100, (loyaltyOffset + 100), 'DESC', true, function(results) {
+                for (let i = 0; i < results.length; i++) {
+                    tableData.push([
+                        (++loyaltyOffset),
+                        results[i].key,
+                        helpers.parseNumber(results[i].value),
+                        helpers.parseNumber(Math.floor(parseInt(results[i].value) / 3600))
+                    ]);
+                }
+
+                // Add the rows.
+                table.rows.add(tableData).draw(false);
+                // Edit the title.
+                $('#loyalty-top-title').html('Топ-' + helpers.parseNumber(loyaltyOffset) + ' обладателей стажа');
+            });
+        } else {
+            toastr.error('Не удалось загрузить больше пользователей в топ обладателей стажа');
+        }
+    });
+});

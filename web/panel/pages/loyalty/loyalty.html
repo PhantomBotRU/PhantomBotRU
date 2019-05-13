@@ -1,0 +1,164 @@
+<main>
+    <!-- Header -->
+    <section class="content-header">
+        <h1>Лояльность</h1>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Лояльность</li>
+            <li class="active">Стаж</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    	<div class="box box-solid">
+            <div class="box-header">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Модуль нельзя выключить">
+  						<input type="checkbox" disabled="" checked="true">
+                        <span class="slider round disabled"></span>
+                    </label>
+
+                    <button type="button" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Модуль не имеет настроек" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+                </div>
+                <h3 class="box-title">Стаж</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left section -->
+            <section class="col-lg-6">
+                <div class="row">
+                    <!-- Loyalty Settings -->
+                    <div class="col-md-12">
+                       <div class="box box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Настройки стажа</h3>
+                            </div>
+                            <form role="form">
+                              <!-- Box content -->
+                                <div class="box-body">
+                                    <div class="form-group">
+                                        <lable>Часовая зона</lable>
+                                        <input type="text" class="form-control" id="loyalty-timezone" data-toggle="tooltip"
+                                            title="Часовая зона в формате IANA Time Zone Database"/>
+                                        <div style="font-size: 80%; margin-top: 2px !important; opacity: 0.65 !important">Список часовых зон в формате IANA Time Zone Database см. в разделе «Помощь»</div>
+                                    </div>
+
+                                    <!-- Add offline time to user -->
+                                    <div class="form-group">
+                                        <lable>Учёт стажа в офлайне</lable>
+                                        <div class="dropdown">
+                                            <select class="form-control" id="time-offline" style="cursor: pointer;">
+                                                <option>Да</option>
+                                                <option>Нет</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <!-- Auto add users to regulars -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Автоназначение роли регуляра</lable>
+                                                <div class="dropdown">
+                                                    <select class="form-control" id="time-promote" style="cursor: pointer;">
+                                                        <option>Да</option>
+                                                        <option>Нет</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Say something in chat when auto promoted. -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Оповещение об автоназначении</lable>
+                                                <div class="dropdown">
+                                                    <select class="form-control" id="time-promote-notice" style="cursor: pointer;">
+                                                        <option>Да</option>
+                                                        <option>Нет</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <!-- Regular promotion hours -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Стаж для автоназначения</lable>
+                                                <input type="number" class="form-control" id="loyalty-promotion" placeholder="100" data-toggle="tooltip"
+                                                    title="Минимальный необходимый стаж для автоназначения роли регуляра, в часах"/>
+                                            </div>
+                                        </div>
+
+                                        <!-- Top list.-->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Количество пользователей</lable>
+                                                <input type="number" class="form-control" id="loyalty-top" max="15" data-toggle="tooltip"
+                                                    title="Количество пользователей в топе обладателей стажа !toptime (не более 15)"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Box footer -->
+                                <div class="box-footer">
+                                    <button type="button" class="btn btn-primary pull-right" id="loyalty-save-all"> Сохранить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right section -->
+            <section class="col-lg-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Редактор стажа</h3>
+                            </div>
+                            <form role="form">
+                                <!-- Box content -->
+                                <div class="box-body">
+                                    <!-- Username -->
+                                    <div class="form-group">
+                                        <lable>Пользователь</lable>
+                                        <input type="text" class="form-control" id="time-username" placeholder="ninja"  data-toggle="tooltip" title="Имя пользователя">
+                                    </div>
+
+                                    <!-- Number of points -->
+                                    <div class="form-group">
+                                        <lable>Стаж</lable>
+                                        <div class="input-group input-group-md">
+                                            <input type="number" class="form-control" id="time-username-time" placeholder="0" data-toggle="tooltip" title="Стаж, который вы хотите установить для указанного пользователя (в секундах)">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-success btn-flat" id="time-get-user" data-toggle="tooltip"
+                                                    title="Показать текущий стаж указанного (выше) пользователя">Показать</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Box footer -->
+                                <div class="box-footer">
+                                    <button type="button" class="btn btn-primary pull-right" id="time-save-user" data-toggle="tooltip" title="Сохранить стаж пользователя"> Сохранить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- loyalty -->
+    <script src="panel/js/pages/loyalty/loyalty.js"></script>
+</main>

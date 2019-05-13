@@ -1,0 +1,136 @@
+<main>
+    <style>
+        .table>tbody>tr>th {
+            border: none !important;
+        }
+    </style>
+    <!-- Header -->
+    <section class="content-header">
+        <!-- Page title and switch toggle. -->
+        <h1>Раздачи</h1>
+
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Раздачи</li>
+            <li class="active">Лотерея</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    	<div class="box box-solid">
+            <div class="box-header">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Переключить">
+  						<input type="checkbox" id="ticketRaffleModuleToggle" checked="true">
+                        <span class="slider round"></span>
+                    </label>
+
+                    <button type="button" id="ticket-raffle-settings" class="btn btn-md btn-box-tool" data-toggle="tooltip" title="Настройки" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+                </div>
+                <h3 class="box-title">Лотерея</h3>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Left section -->
+            <div class="col-md-3" id="ticketRaffleTable">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Участники</h3>
+                    </div>
+
+                    <form role="form" id="ticketRaffleListModule">
+                        <!-- Box content -->
+                        <div class="box-body no-padding" style="height: 569px; overflow-x: auto; overflow-y: auto;">
+                            <div id="raffle-list">
+                                <table class="table table-hover table-custom" id="ticket-raffle-table" style="width: 100%;">
+                                    <tr>
+                                        <th style="width: 80%;">Пользователь</th>
+                                        <th style="width: 20%;">Билетов</th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Middle section -->
+            <div class="col-md-5">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Условия</h3>
+                    </div>
+
+                    <form role="form" id="ticketRaffleModal">
+                        <!-- Box content -->
+                        <div class="box-body" style="padding-bottom: 94px;">
+                            <!-- Command -->
+                            <div class="form-group">
+                                <lable>Команда</lable>
+                                <input type="text" class="form-control" value="!tickets"
+                                    data-toggle="tooltip" title="Название команды для покупки билета (не редактируется)" disabled/>
+                            </div>
+
+                            <!-- Eligibility -->
+                            <div class="form-group">
+                                <lable>Доступ</lable>
+                                <select class="form-control" id="ticket-raffle-perm">
+                                    <option value="-followers">Фолловер</option>
+                                    <option selected="selected" value="">Любой</option>
+                                </select>
+                            </div>
+
+                            <!-- Ticket cost -->
+                            <div class="form-group">
+                                <lable>Стоимость</lable>
+                                <input type="text" class="form-control" id="ticket-raffle-cost" value="1"
+                                    data-toggle="tooltip" title="Стоимость одного билета, в поинтах"/>
+                            </div>
+
+                            <!-- Maximum tickets -->
+                            <div class="form-group">
+                                <lable>Максимум билетов</lable>
+                                <input type="text" class="form-control" id="ticket-raffle-max" value="50"
+                                    data-toggle="tooltip" title="Максимальное допустимое количество билетов на одного пользователя"/>
+                            </div>
+
+                            <!-- Regular luck -->
+                            <div class="form-group">
+                                <lable>Кратность для регуляра</lable>
+                                <input type="number" min="1" max="10" class="form-control" id="ticket-raffle-reg" value="1"
+                                    data-toggle="tooltip" title="Умножение количества приобретённых регуляром билетов, в количество раз"/>
+                            </div>
+
+                            <!-- Subscriber luck -->
+                            <div class="form-group">
+                                <lable>Кратность для подписчика</lable>
+                                <input type="number" min="1" max="10" class="form-control" id="ticket-raffle-sub" value="1"
+                                    data-toggle="tooltip" title="Умножение количества приобретённых подписчиком билетов, в количество раз"/>
+                            </div>
+                        </div>
+
+                        <!-- Footer with buttons -->
+                        <div class="box-footer">
+                            <div class="btn-toolbar pull-right">
+                                <button class="btn btn-success btn-sm" type="button" id="ticket-open-or-close-raffle" data-toggle="tooltip" title="Начать или завершить лотерею"><i class="fa fa-unlock-alt"></i>&nbsp; Начать</button>
+                                <button class="btn btn-primary btn-sm" type="button" id="ticket-draw-raffle" data-toggle="tooltip" title="Выбрать победителя лотереи"><i class="fa fa-trophy"></i>&nbsp; Выбрать</button>
+                                <button class="btn btn-danger btn-sm" type="button" id="ticket-reset-raffle" data-toggle="tooltip" title="Сбросить лотерею без выбора победителя"><i class="fa fa-trash"></i>&nbsp; Сбросить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right section -->
+            <div class="col-md-4" style="height: 610px;">
+                <div id="ticket-raffle-chat"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- raffle -->
+    <script src="panel/js/pages/giveaways/ticketRaffle.js"></script>
+</main>

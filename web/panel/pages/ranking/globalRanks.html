@@ -1,0 +1,47 @@
+<main>
+    <!-- Header -->
+    <section class="content-header">
+        <h1>Ранги</h1>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Ранги</li>
+            <li class="active">Общие</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-solid">
+            		<div class="box-header with-border">
+                		<div class="box-tools pull-right">
+                    		<label class="switch" data-toggle="tooltip" title="Переключить">
+  								<input type="checkbox" id="ranksModuleToggle" checked="true">
+                        		<span class="slider round"></span>
+                    		</label>
+
+                    		<button type="button" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Модуль не имеет настроек" style="margin-bottom: 7px;">
+                        		<i class="fa fa-cog fa-lg"></i>
+                    		</button>
+
+                		</div>
+                		<h3 class="box-title">Общие ранги</h3>
+            		</div>
+
+                    <form role="form" id="ranksModule">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <button class="btn btn-primary btn-sm pull-right" type="button" id="add-rank-button"><i class="fa fa-plus"></i>&nbsp; Создать ранг</button>
+
+                            <table id="ranksTable" class="table table-bordered table-hover"></table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ranking -->
+    <script src="panel/js/pages/ranking/globalRanks.js"></script>
+</main>

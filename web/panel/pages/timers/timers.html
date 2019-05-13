@@ -1,0 +1,43 @@
+<main>
+    <!-- Header -->
+    <section class="content-header">
+        <h1>Таймеры</h1>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li class="active">Таймеры</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    	<div class="box box-solid">
+            <div class="box-header with-border">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Переключить">
+  						<input type="checkbox" id="noticesModuleToggle" checked="true">
+                        <span class="slider round"></span>
+                    </label>
+
+                    <button type="button" class="btn btn-md btn-box-tool" data-toggle="tooltip" id="timer-settings-button" title="Настройки" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+
+                </div>
+                <h3 class="box-title">Таймеры</h3>
+            </div>
+            <form role="form" id="noticesModule">
+                <!-- Box content -->
+                <div class="box-body">
+                    <div class="btn-toolbar pull-right">
+                        <button class="btn btn-primary btn-sm" type="button" id="add-timer-button"><i class="fa fa-plus"></i>&nbsp; Добавить таймер</button>
+                    </div>
+
+                    <table id="timersTable" class="table table-bordered table-hover"></table>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- timers -->
+    <script src="panel/js/pages/timers/timers.js"></script>
+</main>

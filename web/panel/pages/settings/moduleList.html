@@ -1,0 +1,60 @@
+<main>
+    <!-- Overwrite styles -->
+    <style>
+        .dataTables_filter {
+            float: right;
+            text-align: right;
+        }
+    </style>
+
+    <!-- Header -->
+    <section class="content-header">
+        <!-- Page title.-->
+        <h1>Настройки</h1>
+
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Настройки</li>
+            <li class="active">Модули</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="nav-tabs-custom">
+            <div class="box-header with-border">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Модуль нельзя выключить">
+  						<input type="checkbox" disabled="" checked="true">
+                        <span class="slider round disabled"></span>
+                    </label>
+
+                    <button type="button" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Модуль не имеет настроек" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+                </div>
+                <h3 class="box-title">Модули бота</h3>
+            </div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#twitch_modules" data-toggle="tab">Twitch</a></li>
+                <li><a href="#discord_modules" id="discord_modules_t" data-toggle="tab">Discord</a></li>
+                <li style="color:#ff5500;font-size:100%;font-weight:600;line-height:2.7;float:right;">Просьба модули временно не трогать&nbsp;&nbsp;</li>
+            </ul>
+
+            <div class="tab-content">
+                <!-- Twitch Modules -->
+                <div class="tab-pane active" id="twitch_modules">
+                    <table id="twitchModuleTable" class="table table-bordered table-hover"></table>
+                </div>
+
+                <!-- Discord Modules -->
+                <div class="tab-pane" id="discord_modules">
+                    <table id="discordModuleTable" class="table table-bordered table-hover"></table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- moduleList -->
+    <script src="panel/js/pages/settings/moduleList.js"></script>
+</main>

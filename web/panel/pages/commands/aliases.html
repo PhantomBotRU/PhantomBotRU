@@ -1,0 +1,43 @@
+<main>
+    <!-- Header -->
+    <section class="content-header">
+        <h1>Команды</h1>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Команды</li>
+            <li class="active">Псевдонимы</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    	<div class="box box-solid">
+            <div class="box-header with-border">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Переключить">
+  						<input type="checkbox" id="aliasesModuleToggle" checked="true">
+                        <span class="slider round"></span>
+                    </label>
+
+                    <button type="button" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Модуль не имеет настроек" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+
+                </div>
+                <h3 class="box-title">Псевдонимы команд</h3>
+            </div>
+
+            <form role="form" id="aliasesModule">
+                <!-- Box content -->
+                <div class="box-body">
+                    <button class="btn btn-primary btn-sm pull-right" type="button" id="aliascom-button"><i class="fa fa-plus"></i>&nbsp; Создать псевдоним</button>
+
+                    <table id="aliasesTable" class="table table-bordered table-hover"></table>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- aliases -->
+    <script src="panel/js/pages/commands/aliases.js"></script>
+</main>

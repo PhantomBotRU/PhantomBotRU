@@ -1,0 +1,48 @@
+<main>
+    <!-- Header -->
+    <section class="content-header">
+        <h1>Цитаты</h1>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li class="active">Цитаты</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-solid">
+            		<div class="box-header with-border">
+                		<div class="box-tools pull-right">
+                    		<label class="switch" data-toggle="tooltip" title="Переключить">
+  								<input type="checkbox" id="quotesModuleToggle" checked="true">
+                        		<span class="slider round"></span>
+                    		</label>
+
+                    		<button type="button" class="btn btn-md btn-box-tool" id="quote-settings-button" data-toggle="tooltip" title="Настройки" style="margin-bottom: 7px;">
+                        		<i class="fa fa-cog fa-lg"></i>
+                    		</button>
+
+                		</div>
+                		<h3 class="box-title">Цитаты</h3>
+            		</div>
+
+                    <form role="form" id="quotesModule">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <div class="btn-toolbar pull-right">
+                                <button class="btn btn-primary btn-sm" type="button" id="add-quote-button"><i class="fa fa-plus"></i>&nbsp; Добавить цитату</button>
+                            </div>
+
+                            <table id="quotesTable" class="table table-bordered table-hover"></table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- quotes -->
+    <script src="panel/js/pages/quotes/quotes.js"></script>
+</main>

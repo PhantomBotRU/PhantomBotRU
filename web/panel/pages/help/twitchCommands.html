@@ -1,0 +1,229 @@
+<main>
+	<style>
+		.table>tbody>tr>th {
+			border: none !important;
+		}
+	</style>
+
+    <!-- Header -->
+    <section class="content-header">
+        <h1>Помощь</h1>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Помощь</li>
+            <li class="active">Команды Twitch</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    	<div class="box box-solid">
+            <div class="box-header with-border">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Модуль нельзя выключить">
+  						<input type="checkbox" disabled="" checked="true">
+                        <span class="slider round disabled"></span>
+                    </label>
+
+                    <button type="button" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Модуль не имеет настроек" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+                </div>
+                <h3 class="box-title">Базовые команды Twitch</h3>
+            </div>
+
+            <form role="form">
+                <!-- Box content -->
+                <div class="box-body">
+                    <table id="twitchCommandsTable" class="table table-bordered table-hover">
+
+                    <tr>
+                    	<td>/ban</td>
+                    	<td>бан указанного пользователя</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/block</td>
+                    	<td>личная блокировка указанного пользователя</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/clear</td>
+                    	<td>очистка чата от всех сообщений для каждого пользователя в чате</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/color</td>
+                    	<td>окрашивание собственного никнейма указанным цветом</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/commercial</td>
+                    	<td>запуск рекламы на 30 секунд (опционально: с указанной длительностью 30, 60, 90, 120, 150 или 180 секунд)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/disconnect</td>
+                    	<td>временное отключение чата</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/emoteonly</td>
+                    	<td>включение режима чата только для сообщений, состоящих из смайлов Twitch</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/emoteonlyoff</td>
+                    	<td>отключение режима чата только для сообщений, состоящих из смайлов Twitch</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/followers</td>
+                    	<td>включение режима чата только для фолловеров (опционально: с указанным стажем от 1 минуты до 3 месяцев)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/followersoff</td>
+                    	<td>отключение режима чата только для фолловеров</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/help</td>
+                    	<td>справка по базовым командам Twitch</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/host</td>
+                    	<td>включение ретрансляции указанного канала (опционально: с указанным заголовком)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/ignore</td>
+                    	<td>добавление указанного пользователя в личный игнор</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/marker</td>
+                    	<td>установка метки на понравившемся моменте стрима (опционально: с указанным описанием)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/me</td>
+                    	<td>цветное сообщение</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/mod</td>
+                    	<td>присвоение роли модератора указанному пользователю</td>
+                	</tr>
+
+                    <tr>
+                    	<td>/mods</td>
+                    	<td>список всех модераторов канала</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/raid</td>
+                    	<td>рейд указанного канала</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/r9kbeta</td>
+                    	<td>включение фильтра повторяющихся сообщений</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/r9kbetaoff</td>
+                    	<td>отключение фильтра повторяющихся сообщений</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/slow</td>
+                    	<td>включение медленного режима чата (опционально: с частотой 1 сообщение в указанные от 1 до 86400 секунд)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/slowoff</td>
+                    	<td>отключение медленного режима чата</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/subscribers</td>
+                    	<td>включение режима чата только для подписчиков</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/subscribersoff</td>
+                    	<td>отключение режима чата только для подписчиков</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/timeout</td>
+                    	<td>таймаут указанного пользователя на 600 секунд (опционально: на указанный срок от 1 до 1209600 секунд и по указанной причине)</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/unban</td>
+                    	<td>снятие бана или таймаута с указанного пользователя</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/unblock</td>
+                    	<td>снятие личной блокировки указанного пользователя</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/unhost</td>
+                    	<td>отмена ретрансляции другого канала</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/unignore</td>
+                    	<td>снятие личного игнора с указанного пользователя</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/unmod</td>
+                    	<td>снятие роли модератора с указанного пользователя</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/unraid</td>
+                    	<td>отмена рейда</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/untimeout</td>
+                    	<td>снятие таймаута с указанного пользователя</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/unvip</td>
+                    	<td>снятие статуса VIP с указанного пользователя</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/vip</td>
+                    	<td>присвоение статуса VIP указанному пользователю</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/vips</td>
+                    	<td>список всех VIP-пользователей канала</td>
+                    </tr>
+
+                    <tr>
+                    	<td>/w</td>
+                    	<td>личное сообщение указанному пользователю</td>
+                    </tr>
+
+                    </table>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- moduleList -->
+    <script src="panel/js/pages/help/twitchCommands.js"></script>
+
+</main>

@@ -1,0 +1,407 @@
+<main>
+    <!-- Header -->
+    <section class="content-header">
+        <h1>Лояльность</h1>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Лояльность</li>
+            <li class="active">Счёт</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    	<div class="box box-solid">
+            <div class="box-header">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Модуль нельзя выключить">
+  						<input type="checkbox" disabled="" checked="true">
+                        <span class="slider round disabled"></span>
+                    </label>
+
+                    <button type="button" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Модуль не имеет настроек" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+                </div>
+                <h3 class="box-title">Счёт</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left section -->
+            <section class="col-lg-6">
+                <div class="row">
+                    <!-- Currency settings -->
+                    <div class="col-md-12">
+                        <div class="nav-tabs-custom">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Вознаграждения</h3>
+                            </div>
+                            <ul class="nav nav-tabs">
+                                <li class="active" id="main-settings"><a href="#loyalty_settings" data-toggle="tab" aria-expanded="true">Основные</a></li>
+                                <li><a href="#loyalty_settings_adv" data-toggle="tab" aria-expanded="false">Дополнительные</a></li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="loyalty_settings">
+                                    <div class="row">
+                                        <!-- Points message -->
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <lable>Сообщение</lable>
+                                                <input type="text" class="form-control" id="points-message" data-toggle="tooltip"
+                                                    title="Отклик при вызове команды !points"/>
+                                                <div style="font-size: 80%; margin-top: 2px !important; opacity: 0.65 !important">Доступные теги: (userprefix), (user), (points), (pointsname), (pointstring), (time) и (rank)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <!-- Points name single -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Название поинта</lable>
+                                                <input type="text" class="form-control" id="points-name-single" placeholder="поинт" data-toggle="tooltip"
+                                                    title="Название поинта в единственном числе"/>
+                                            </div>
+                                        </div>
+
+                                        <!-- Points name multiple -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Название поинтов <small>(род. падеж)</small></lable>
+                                                <input type="text" class="form-control" id="points-name-multiple" placeholder="поинтов" data-toggle="tooltip"
+                                                    title="Название поинтов в родительном падеже"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <!-- online interval -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Интервал в онлайне</lable>
+                                                <input type="number" min="1" class="form-control" id="points-interval-online" placeholder="10" data-toggle="tooltip"
+                                                    title="Интервал времени между вознаграждениями в онлайне, в минутах"/>
+                                            </div>
+                                        </div>
+
+                                        <!-- offline interval -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Интервал в офлайне</lable>
+                                                <input type="number" min="1" class="form-control" id="points-interval-offline" placeholder="30" data-toggle="tooltip"
+                                                    title="Интервал времени между вознаграждениями в офлайне, в минутах"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <!-- online payout -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Сумма в онлайне</lable>
+                                                <input type="number" min="0" class="form-control" id="points-payout-online" placeholder="1" data-toggle="tooltip" title="Сумма вознаграждения в онлайне, в поинтах"/>
+                                            </div>
+                                        </div>
+
+                                        <!-- offline payout -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Сумма в офлайне</lable>
+                                                <input type="number" min="0" class="form-control" id="points-payout-offline" placeholder="1" data-toggle="tooltip" title="Сумма вознаграждения в офлайне, в поинтах"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <!-- Active bonus -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Бонус за активность</lable>
+                                                <input type="number" min="0" class="form-control" id="points-active" placeholder="1" data-toggle="tooltip"
+                                                    title="Дополнительное вознаграждение за активность в чате, в поинтах"/>
+                                            </div>
+                                        </div>
+
+                                        <!-- Top list amount -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Количество пользователей</lable>
+                                                <input type="number" min="3" class="form-control" id="points-top" max="15" placeholder="5" data-toggle="tooltip"
+                                                    title="Количество пользователей в топе обладателей поинтов !top (не более 15)"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane" id="loyalty_settings_adv">
+                                    <div class="row">
+                                        <!-- Caster payout online -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Владельцам в онлайне</lable>
+                                                <input type="number" min="-1" class="form-control" id="points-payout-caster-on" placeholder="1" data-toggle="tooltip"
+                                                    title="Вознаграждение владельцам в онлайне, в поинтах («-1» означает вознаграждение по умолчанию)"/>
+                                            </div>
+                                        </div>
+
+                                        <!-- Caster payout offline -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Владельцам в офлайне</lable>
+                                                <input type="number" min="-1" class="form-control" id="points-payout-caster-off" placeholder="5" data-toggle="tooltip"
+                                                    title="Вознаграждение владельцам в офлайне, в поинтах («-1» означает вознаграждение по умолчанию)"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <!-- Caster payout online -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Администраторам в онлайне</lable>
+                                                <input type="number" min="-1" class="form-control" id="points-payout-administrator-on" placeholder="1" data-toggle="tooltip"
+                                                    title="Вознаграждение администраторам в онлайне, в поинтах («-1» означает вознаграждение по умолчанию)"/>
+                                            </div>
+                                        </div>
+
+                                        <!-- Caster payout offline -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Администраторам в офлайне</lable>
+                                                <input type="number" min="-1" class="form-control" id="points-payout-administrator-off" placeholder="5" data-toggle="tooltip"
+                                                    title="Вознаграждение администраторам в офлайне, в поинтах («-1» означает вознаграждение по умолчанию)"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <!-- Caster payout online -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Модераторам в онлайне</lable>
+                                                <input type="number" min="-1" class="form-control" id="points-payout-moderator-on" placeholder="1" data-toggle="tooltip"
+                                                    title="Вознаграждение модераторам в онлайне, в поинтах («-1» означает вознаграждение по умолчанию)"/>
+                                            </div>
+                                        </div>
+
+                                        <!-- Caster payout offline -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Модераторам в офлайне</lable>
+                                                <input type="number" min="-1" class="form-control" id="points-payout-moderator-off" placeholder="5" data-toggle="tooltip"
+                                                    title="Вознаграждение модераторам в офлайне, в поинтах («-1» означает вознаграждение по умолчанию)"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <!-- Caster payout online -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Подписчикам в онлайне</lable>
+                                                <input type="number" min="-1" class="form-control" id="points-payout-subscriber-on" placeholder="1" data-toggle="tooltip"
+                                                    title="Вознаграждение подписчикам в онлайне, в поинтах («-1» означает вознаграждение по умолчанию)"/>
+                                            </div>
+                                        </div>
+
+                                        <!-- Caster payout offline -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Подписчикам в офлайне</lable>
+                                                <input type="number" min="-1" class="form-control" id="points-payout-subscriber-off" placeholder="5" data-toggle="tooltip"
+                                                    title="Вознаграждение подписчикам в офлайне, в поинтах («-1» означает вознаграждение по умолчанию)"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <!-- Caster payout online -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Донаторам в онлайне</lable>
+                                                <input type="number" min="-1" class="form-control" id="points-payout-donator-on" placeholder="1" data-toggle="tooltip"
+                                                    title="Вознаграждение донаторам в онлайне, в поинтах («-1» означает вознаграждение по умолчанию)"/>
+                                            </div>
+                                        </div>
+
+                                        <!-- Caster payout offline -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Донаторам в офлайне</lable>
+                                                <input type="number" min="-1" class="form-control" id="points-payout-donator-off" placeholder="5" data-toggle="tooltip"
+                                                    title="Вознаграждение донаторам в офлайне, в поинтах («-1» означает вознаграждение по умолчанию)"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <!-- Caster payout online -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Регулярам в онлайне</lable>
+                                                <input type="number" min="-1" class="form-control" id="points-payout-regular-on" placeholder="1" data-toggle="tooltip"
+                                                    title="Вознаграждение регулярам в онлайне, в поинтах («-1» означает вознаграждение по умолчанию)"/>
+                                            </div>
+                                        </div>
+
+                                        <!-- Caster payout offline -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Регулярам в офлайне</lable>
+                                                <input type="number" min="-1" class="form-control" id="points-payout-regular-off" placeholder="5" data-toggle="tooltip"
+                                                    title="Вознаграждение регулярам в офлайне, в поинтах («-1» означает вознаграждение по умолчанию)"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <!-- Caster payout online -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Зрителям в онлайне</lable>
+                                                <input type="number" min="-1" class="form-control" id="points-payout-viewer-on" placeholder="1" data-toggle="tooltip"
+                                                    title="Вознаграждение зрителям в онлайне, в поинтах («-1» означает вознаграждение по умолчанию)"/>
+                                            </div>
+                                        </div>
+
+                                        <!-- Caster payout offline -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <lable>Зрителям в офлайне</lable>
+                                                <input type="number" min="-1" class="form-control" id="points-payout-viewer-off" placeholder="5" data-toggle="tooltip"
+                                                    title="Вознаграждение зрителям в офлайне, в поинтах («-1» означает вознаграждение по умолчанию)"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Box footer -->
+                                <div class="box-footer" style="padding-right: 0px; padding-bottom: 0px;">
+                                    <button type="button" class="btn btn-primary pull-right" id="points-save-all"> Сохранить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Штрафная санкция</h3>
+                            </div>
+                            <form role="form">
+                                <!-- Box content -->
+                                <div class="box-body">
+                                    <!-- Username -->
+                                    <div class="form-group">
+                                        <lable>Пользователь</lable>
+                                        <input type="text" class="form-control" id="points-panalty-user" placeholder="ninja" data-toggle="tooltip"
+                                            title="Имя пользователя">
+                                    </div>
+
+                                    <!-- Bonus Time -->
+                                    <div class="form-group">
+                                        <lable>Штрафное время</lable>
+                                        <input type="number" min="1" class="form-control" id="points-panalty-time" placeholder="1" data-toggle="tooltip"
+                                            title="Штрафное время (в минутах), в течение которого указанному пользователю не будут начисляться поинты">
+                                    </div>
+                                </div>
+
+                                <!-- Box footer -->
+                                <div class="box-footer">
+                                    <button type="button" class="btn btn-primary pull-right" id="points-panalty-btn"> Применить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right section -->
+            <section class="col-lg-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Редактор счёта</h3>
+                            </div>
+                            <form role="form">
+                                <!-- Box content -->
+                                <div class="box-body">
+                                    <!-- Username -->
+                                    <div class="form-group">
+                                        <lable>Пользователь</lable>
+                                        <input type="text" class="form-control" id="points-username" placeholder="ninja"  data-toggle="tooltip" title="Имя пользователя">
+                                    </div>
+
+                                    <!-- Number of points -->
+                                    <div class="form-group">
+                                        <lable>Счёт</lable>
+                                        <div class="input-group input-group-md">
+                                            <input type="number" min="0" class="form-control" id="points-username-points" placeholder="0" data-toggle="tooltip" title="Количество поинтов, которое вы хотите установить для указанного пользователя" />
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-success btn-flat" id="points-get-user" data-toggle="tooltip"
+                                                    title="Показать текущий счёт указанного (выше) пользователя">Показать</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Box footer -->
+                                <div class="box-footer">
+                                    <button type="button" class="btn btn-primary pull-right" id="points-save-user" data-toggle="tooltip" title="Сохранить счёт пользователя"> Сохранить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Бонус</h3>
+                            </div>
+                            <form role="form">
+                                <!-- Box content -->
+                                <div class="box-body">
+                                    <!-- Amount -->
+                                    <div class="form-group">
+                                        <lable>Количество поинтов</lable>
+                                        <input type="number" min="1" class="form-control" id="points-bonus-amount" placeholder="30" data-toggle="tooltip" title="Количество поинтов">
+                                    </div>
+
+                                    <!-- Bonus Time -->
+                                    <div class="form-group">
+                                        <lable>Продолжительность</lable>
+                                        <input type="number" min="1" class="form-control" id="points-bonus-time" placeholder="1" data-toggle="tooltip" title="Продолжительность действия бонуса (в минутах), в течение которого будет начисляться дополнительное количество поинтов (актуально только для кнопки «Бонус»)">
+                                    </div>
+                                </div>
+
+                                <!-- Box footer -->
+                                <div class="box-footer">
+                                    <div class="btn-toolbar pull-right">
+                                        <button type="button" min="1" class="btn btn-default" id="points-bonus-btn" data-toggle="tooltip"
+                                            title="Дополнительное количество поинтов при каждом вознаграждении в течение указанного количества времени"> Бонус</button>
+                                        <button type="button" class="btn btn-default" id="points-makeitrain-btn" data-toggle="tooltip"
+                                            title="Раздать указанное количество поинтов случайными долями между пользователями в чате"> Раздать</button>
+                                        <button type="button" class="btn btn-default" id="points-giveall-btn" data-toggle="tooltip"
+                                            title="Передать указанное количество поинтов каждому зрителю"> Передать</button>
+                                        <button type="button" class="btn btn-default" id="points-takeall-btn" data-toggle="tooltip"
+                                            title="Отнять указанное количество поинтов у каждого зрителя"> Отнять</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- currency -->
+    <script src="panel/js/pages/loyalty/currency.js"></script>
+</main>

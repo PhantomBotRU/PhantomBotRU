@@ -1,0 +1,59 @@
+<main>
+    <!-- Overwrite styles -->
+    <style>
+        .dataTables_filter {
+            float: right;
+            text-align: right;
+        }
+    </style>
+
+    <!-- Header -->
+    <section class="content-header">
+        <h1>История</h1>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>История</li>
+            <li class="active">Рейды</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    	<div class="nav-tabs-custom">
+            <div class="box-header with-border">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Модуль нельзя выключить">
+  						<input type="checkbox" disabled="" checked="true">
+                        <span class="slider round disabled"></span>
+                    </label>
+
+                    <button type="button" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Модуль не имеет настроек" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+                </div>
+                <h3 class="box-title">Рейды</h3>
+            </div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#incommingRaids" id="incommingRaids_t" data-toggle="tab">Входящие</a></li>
+                <li><a href="#outgoingRaids" id="outgoingRaids_t" data-toggle="tab">Исходящие</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="incommingRaids">
+                    <form role="form">
+                        <table id="raidHistoryTable" class="table table-bordered table-hover"></table>
+                    </form>
+                </div>
+
+                <div class="tab-pane" id="outgoingRaids">
+                    <form role="form">
+                        <table id="outRaidHistoryTable" class="table table-bordered table-hover"></table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- raidHistory -->
+    <script src="panel/js/pages/history/raidHistory.js"></script>
+</main>

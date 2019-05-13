@@ -1,0 +1,149 @@
+<main>
+	<style>
+		.table>tbody>tr>th {
+			border: none !important;
+		}
+	</style>
+    <!-- Header -->
+    <section class="content-header">
+        <!-- Page title and switch toggle. -->
+        <h1>Раздачи</h1>
+
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Раздачи</li>
+            <li class="active">Розыгрыш</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    	<div class="box box-solid">
+            <div class="box-header">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Переключить">
+  						<input type="checkbox" id="raffleModuleToggle" checked="true">
+                        <span class="slider round"></span>
+                    </label>
+
+                    <button type="button" id="raffle-settings" class="btn btn-md btn-box-tool" data-toggle="tooltip" title="Настройки" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+                </div>
+                <h3 class="box-title">Розыгрыш</h3>
+            </div>
+        </div>
+        <div class="row">
+        	<!-- Left section -->
+            <div class="col-md-3" id="raffleTable">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Участники</h3>
+                    </div>
+
+                    <form role="form" id="raffleListModule">
+                        <!-- Box content -->
+                        <div class="box-body no-padding" style="height: 569px; overflow-x: auto; overflow-y: auto;">
+                            <div id="raffle-list">
+                                <table class="table table-hover table-custom" id="raffle-table" style="width: 100%;">
+                                	<tr>
+                                        <th style="width: 100%;">Список</th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Middle section -->
+            <div class="col-md-5">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Условия</h3>
+                    </div>
+
+                    <form role="form" id="raffleModal">
+                        <!-- Box content -->
+                        <div class="box-body" style="padding-bottom: 94px;">
+                        	<!-- Keyword -->
+                            <div class="form-group">
+                                <lable>Ключевое слово</lable>
+                                <input type="text" class="form-control" id="raffle-keyword" placeholder="!enter"
+                                    data-toggle="tooltip" title="Ключевое слово для участия в розыгрыше"/>
+                            </div>
+
+                            <!-- Cost -->
+                            <div class="row">
+                            	<div class="col-md-8">
+                            		<div class="form-group">
+                            		    <lable id="raffle-cost-title">Плата</lable>
+                            		    <input type="text" class="form-control" id="raffle-cost" value="0"
+                            		        data-toggle="tooltip" title="Плата за участие в розыгрыше, в поинтах, либо минимальный необходимый стаж на канале для участия в розыгрыше, в минутах"/>
+                            		</div>
+                            	</div>
+                            	<div class="col-md-4">
+                            		<div class="form-group">
+                            			<lable>Условие</lable>
+                            			<select class="form-control" id="raffle-req" data-toggle="tooltip" title="Условие для участия в розыгрыше">
+  											<option selected="selected" value="-usepoints">Плата</option>
+  											<option value="-usetime">Стаж</option>
+										</select>
+                            		</div>
+                            	</div>
+                            </div>
+
+                            <!-- Eligibility -->
+                            <div class="form-group">
+                            	<lable>Доступ</lable>
+                            	<select class="form-control" id="raffle-perm" data-toggle="tooltip" title="Уровень доступа для участия в розыгрыше">
+  									<option value="-subscribers">Подписчик</option>
+  									<option value="-followers">Фолловер</option>
+  									<option selected="selected" value="">Любой</option>
+								</select>
+                            </div>
+
+                            <!-- Timer -->
+                            <div class="form-group">
+                                <lable>Продолжительность</lable>
+                                <input type="number" min="0" class="form-control" id="raffle-timer" value="0"
+                                    data-toggle="tooltip" title="Продолжительность розыгрыша, в минутах («0» означает до завершения вручную)"/>
+                            </div>
+
+                            <!-- Regular luck -->
+                            <div class="form-group">
+                                <lable>Кратность для регуляра</lable>
+                                <input type="number" min="1" max="10" class="form-control" id="raffle-reg" value="1"
+                                    data-toggle="tooltip" title="Умножение шанса выигрыша регуляра, в количество раз"/>
+                            </div>
+
+                            <!-- Subscriber luck -->
+                            <div class="form-group">
+                                <lable>Кратность для подписчика</lable>
+                                <input type="number" min="1" max="10" class="form-control" id="raffle-sub" value="1"
+                                    data-toggle="tooltip" title="Умножение шанса выигрыша подписчика, в количество раз"/>
+                            </div>
+                        </div>
+
+                        <!-- Footer with buttons -->
+                        <div class="box-footer">
+                        	<div class="btn-toolbar pull-right">
+                        		<button class="btn btn-success btn-sm" type="button" id="open-or-close-raffle" data-toggle="tooltip" title="Начать или завершить розыгрыш"><i class="fa fa-unlock-alt"></i>&nbsp; Начать</button>
+                        		<button class="btn btn-primary btn-sm" type="button" id="draw-raffle" data-toggle="tooltip" title="Выбрать победителя розыгрыша"><i class="fa fa-trophy"></i>&nbsp; Выбрать</button>
+                        	    <button class="btn btn-danger btn-sm" type="button" id="reset-raffle" data-toggle="tooltip" title="Сбросить розыгрыш без выбора победителя"><i class="fa fa-trash"></i>&nbsp; Сбросить</button>
+                        	</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right section -->
+            <div class="col-md-4" style="height: 610px;">
+                <div id="raffle-chat"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- raffle -->
+    <script src="panel/js/pages/giveaways/raffle.js"></script>
+</main>

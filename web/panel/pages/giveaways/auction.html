@@ -1,0 +1,98 @@
+<main>
+    <!-- Header -->
+    <section class="content-header">
+        <h1>Раздачи</h1>
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Раздачи</li>
+            <li class="active">Аукцион</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    	<div class="box box-solid">
+            <div class="box-header">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Переключить">
+  						<input type="checkbox" id="auctionSystemModuleToggle" checked="true">
+                        <span class="slider round"></span>
+                    </label>
+
+                    <button type="button" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Модуль не имеет настроек" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+                </div>
+                <h3 class="box-title">Аукцион</h3>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Poll menu -->
+            <div class="col-md-8">
+               <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Торг</h3>
+                    </div>
+
+                    <form role="form" id="auctionOptions">
+                        <!-- Box content -->
+                        <div class="box-body" style="padding-bottom: 67px;">
+                            <!-- Minimum bet -->
+                            <div class="form-group">
+                                <lable>Ставка</lable>
+                                <input type="number" min="1" class="form-control" id="auction-bet" value="1"
+                                    data-toggle="tooltip" title="Минимальная ставка, в поинтах"/>
+                            </div>
+
+                            <!-- Increments -->
+                            <div class="form-group">
+                                <lable>Шаг</lable>
+                                <input type="number" min="1" class="form-control" id="auction-inc" value="1"
+                                    data-toggle="tooltip" title="Минимальный интервал между двумя соседними предложениями, в поинтах"/>
+                            </div>
+
+                            <!-- Eligibility -->
+                            <div class="form-group">
+                                <lable>Доступ</lable>
+                                <select class="form-control" id="auction-perm">
+                                    <option value="subscribers">Подписчик</option>
+                                    <option value="regulars">Регуляр</option>
+                                    <option selected="selected" value="viewers">Любой</option>
+                                </select>
+                            </div>
+
+                            <!-- Timer -->
+                            <div class="form-group">
+                                <lable>Продолжительность</lable>
+                                <input type="number" min="0" class="form-control" id="auction-timer" value="0"
+                                    data-toggle="tooltip" title="Продолжительность аукциона, в секундах («0» означает до завершения вручную)"/>
+                            </div>
+
+                            <!-- Show results -->
+                            <div class="form-group" style="padding-top: 70px;">
+                                <p style="font-size: 25px; margin-left: 10%;">Наивысшая ставка: <span id="auction-points">…</span></p>
+                                <p style="font-size: 25px; margin-left: 10%;">Пользователь: <span id="auction-top-bidder">…</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Footer with buttons -->
+                        <div class="box-footer">
+                            <div class="btn-toolbar pull-right">
+                                <button class="btn btn-success btn-sm" type="button" id="open-or-close-auction"><i class="fa fa-unlock-alt"></i>&nbsp; Начать</button>
+                                <button class="btn btn-danger btn-sm" type="button" id="reset-auction"><i class="fa fa-trash"></i>&nbsp; Сбросить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Twitch chat. -->
+            <div class="col-md-4">
+                <div id="twitch-chat-auction"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- auctions -->
+    <script src="panel/js/pages/giveaways/auction.js"></script>
+</main>

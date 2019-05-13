@@ -1,0 +1,129 @@
+<main>
+	<style>
+		.table>tbody>tr>th {
+			border: none !important;
+		}
+	</style>
+    <!-- Header -->
+    <section class="content-header">
+        <!-- Page title and switch toggle. -->
+        <h1>Очередь</h1>
+
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Экстра</li>
+            <li class="active">Очередь</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+    	<div class="box box-solid">
+            <div class="box-header">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Переключить">
+  						<input type="checkbox" id="queueModuleToggle" checked="true">
+                        <span class="slider round"></span>
+                    </label>
+
+                    <button type="button" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Модуль не имеет настроек" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+
+                </div>
+                <h3 class="box-title">Очередь</h3>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Left section -->
+            <div class="col-md-3" id="queueTable">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Участники</h3>
+                    </div>
+
+                    <form role="form" id="queueListModule">
+                        <!-- Box content -->
+                        <div class="box-body no-padding" style="height: 569px; overflow-x: auto; overflow-y: auto;">
+                            <div id="queue-list">
+                                <table class="table table-hover table-custom" id="queue-table" style="width: 100%;">
+                                    <tr>
+                                        <th style="width: 5%;">№</th>
+                                        <th style="width: 42.5%;">Пользователь</th>
+                                        <th style="width: 42.5%;">Игровое&nbsp;имя</th>
+                                        <th style="width: 10%; text-align: right; padding-right: 16px;">Опции</th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Middle section -->
+            <div class="col-md-5">
+                <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Условия</h3>
+                    </div>
+
+                    <form role="form" id="queueModule">
+                        <!-- Box content -->
+                        <div class="box-body" style="padding-bottom: 232px;">
+                            <!-- Queue title -->
+                            <div class="form-group">
+                                <lable>Заголовок</lable>
+                                <input type="text" class="form-control" id="queue-title" placeholder="Очередь на игру со стримером"
+                                    data-toggle="tooltip" title="Название очереди"/>
+                            </div>
+
+                            <!-- Queue cost -->
+                            <div class="form-group">
+                                <lable>Плата</lable>
+                                <input type="number" class="form-control" id="queue-cost" value="0" data-toggle="tooltip" title="Плата за вступление в очередь, в поинтах"/>
+                            </div>
+
+                            <!-- Queue max size -->
+                            <div class="form-group">
+                                <lable>Максимум</lable>
+                                <input type="number" class="form-control" id="queue-size" value="0" data-toggle="tooltip" title="Максимальное количество пользователей в очереди («0» означает неограниченное количество)"/>
+                            </div>
+
+                            <!-- Queue permission -->
+                            <div class="form-group">
+                                <lable>Доступ</lable>
+                                <select class="form-control" id="queue-permission" data-toggle="tooltip" title="Уровень доступа">
+                                    <option selected="selected" hidden="hidden">Зритель</option>
+                                    <option>Владелец</option>
+                                    <option>Администратор</option>
+                                    <option>Модератор</option>
+                                    <option>Подписчик</option>
+                                    <option>Донатор</option>
+                                    <option>Регуляр</option>
+                                    <option>Зритель</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Footer with buttons -->
+                        <div class="box-footer">
+                            <div class="btn-toolbar pull-right">
+                                <button class="btn btn-success btn-sm" type="button" id="open-or-close-queue"><i class="fa fa-unlock-alt"></i>&nbsp; Открыть</button>
+                                <button class="btn btn-primary btn-sm" type="button" id="draw-queue"><i class="fa fa-trophy"></i>&nbsp; Выбрать</button>
+                                <button class="btn btn-danger btn-sm" type="button" id="reset-queue"><i class="fa fa-trash"></i>&nbsp; Очистить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right section -->
+            <div class="col-md-4" style="height: 532px;">
+                <div id="queue-chat"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- queue -->
+    <script src="panel/js/pages/extra/queue.js"></script>
+</main>

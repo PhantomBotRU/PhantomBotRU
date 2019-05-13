@@ -1,0 +1,131 @@
+<main>
+    <!-- Header -->
+    <section class="content-header">
+        <!-- Page title.-->
+        <h1>Настройки</h1>
+
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Настройки</li>
+            <li class="active">Бот</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="nav-tabs-custom">
+            <div class="box-header with-border">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Модуль нельзя выключить">
+  						<input type="checkbox" disabled="" checked="true">
+                        <span class="slider round disabled"></span>
+                    </label>
+
+                    <button type="button" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Модуль не имеет настроек" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+                </div>
+                <h3 class="box-title">Настройки бота</h3>
+            </div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#bot_logging" data-toggle="tab">Логи</a></li>
+                <li><a href="#bot_out" data-toggle="tab">Режимы</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <!-- Logging settings -->
+                <div class="tab-pane active" id="bot_logging">
+                    <div class="form-group">
+                        <!-- Log events toggle. -->
+                        <lable>События</lable>
+                        <div class="dropdown">
+                            <select class="form-control" id="logging-events" style="cursor: pointer;" data-toggle="tooltip"
+                                title="Запись событий взаимодействия с ботом (необходимо для отладки бота)">
+                                <option>Да</option>
+                                <option>Нет</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Log errors toggle. -->
+                    <div class="form-group">
+                        <lable>Ошибки</lable>
+                        <div class="dropdown">
+                            <select class="form-control" id="logging-errors" style="cursor: pointer;" data-toggle="tooltip"
+                                title="Запись ошибок взаимодействия с ботом (необходимо для отладки бота)">
+                                <option>Да</option>
+                                <option>Нет</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Log chat toggle. -->
+                    <div class="form-group">
+                        <lable>Чат</lable>
+                        <div class="dropdown">
+                            <select class="form-control" id="logging-chat" style="cursor: pointer;" data-toggle="tooltip"
+                                title="Запись всех сообщений чата (хранится в папке «logs» бота)">
+                                <option>Да</option>
+                                <option>Нет</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Logs keep days. -->
+                    <div class="form-group">
+                        <lable>Срок</lable>
+                        <input type="number" class="form-control" id="log-days" placeholder="15" data-toggle="tooltip"
+                            title="Срок хранения логов, в днях («0» означает неограниченный срок)"/>
+                    </div>
+                </div>
+
+                <!-- Output mode -->
+                <div class="tab-pane" id="bot_out">
+                    <!-- Whisper mode. -->
+                    <div class="form-group">
+                        <lable>Шёпот</lable>
+                        <div class="dropdown">
+                            <select class="form-control" id="bot-whisper-mode" style="cursor: pointer;" data-toggle="tooltip"
+                                title="Все отклики бота посредством личных сообщений (кроме пользовательских команд)">
+                                <option>Да</option>
+                                <option>Нет</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Action mode. -->
+                    <div class="form-group">
+                        <lable>Цвет</lable>
+                        <div class="dropdown">
+                            <select class="form-control" id="bot-action-mode" style="cursor: pointer;" data-toggle="tooltip"
+                                title="Все отклики бота в виде цветных сообщений (начинающихся с «/me»)">
+                                <option>Да</option>
+                                <option>Нет</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Mute mode. -->
+                    <div class="form-group">
+                        <lable>Тишина</lable>
+                        <div class="dropdown">
+                            <select class="form-control" id="bot-mute-mode" style="cursor: pointer;" data-toggle="tooltip"
+                                title="Бесшумная работа бота без откликов (кроме таймаутов и банов)">
+                                <option>Да</option>
+                                <option>Нет</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box footer -->
+                <div class="box-footer" style="padding-right: 0px; padding-bottom: 0px;">
+                    <button type="button" class="btn btn-primary pull-right" id="bot-logging-save"> Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- botSettings -->
+    <script src="panel/js/pages/settings/botSettings.js"></script>
+</main>

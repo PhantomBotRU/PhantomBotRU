@@ -1,0 +1,123 @@
+<main>
+    <!-- Header -->
+    <section class="content-header">
+        <!-- Page title.-->
+        <h1>Настройки</h1>
+
+        <ol class="breadcrumb">
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Настройки</li>
+            <li class="active">Команды</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="nav-tabs-custom">
+            <div class="box-header with-border">
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Модуль нельзя выключить">
+  						<input type="checkbox" disabled="" checked="true">
+                        <span class="slider round disabled"></span>
+                    </label>
+
+                    <button type="button" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Модуль не имеет настроек" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+                </div>
+                <h3 class="box-title">Настройки команд</h3>
+            </div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#cmd_settings_messages" data-toggle="tab">Предупреждения</a></li>
+                <li><a href="#cmd_settings_mods" data-toggle="tab">Модераторы</a></li>
+                <li><a href="#cmd_settings_cooldown" data-toggle="tab">Кулдаун</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <!-- Command Messages -->
+                <div class="tab-pane active" id="cmd_settings_messages">
+                    <div class="form-group">
+                        <!-- Pricecom toggle. -->
+                        <lable>Плата</lable>
+                        <div class="dropdown">
+                            <select class="form-control" id="cmd-cost-messages" style="cursor: pointer;" data-toggle="tooltip"
+                                title="Предупреждения о нехватке средств при вызове платной команды">
+                                <option>Да</option>
+                                <option>Нет</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <!-- Permcom toggle. -->
+                        <lable>Доступ</lable>
+                        <div class="dropdown">
+                            <select class="form-control" id="cmd-perm-messages" style="cursor: pointer;" data-toggle="tooltip"
+                                title="Предупреждения об отсутствии прав доступа при вызове команды">
+                                <option>Да</option>
+                                <option>Нет</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <!-- Cooldown toggle. -->
+                        <lable>Кулдаун</lable>
+                        <div class="dropdown">
+                            <select class="form-control" id="cmd-cooldown-messages" style="cursor: pointer;" data-toggle="tooltip"
+                                title="Предупреждения о нахождении команды в кулдауне">
+                                <option>Да</option>
+                                <option>Нет</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Command Moderators Exeptions. -->
+                <div class="tab-pane" id="cmd_settings_mods">
+                    <div class="form-group">
+                        <!-- Pricecom mods toggle. -->
+                        <lable>Плата</lable>
+                        <div class="dropdown">
+                            <select class="form-control" id="pricecom-mods" style="cursor: pointer;" data-toggle="tooltip"
+                                title="Освобождение модераторов от платы за платные команды">
+                                <option>Да</option>
+                                <option>Нет</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <!-- Cooldown for mods. -->
+                        <lable>Кулдаун</lable>
+                        <div class="dropdown">
+                            <select class="form-control" id="cooldown-mods" style="cursor: pointer;" data-toggle="tooltip"
+                                title="Освобождение модераторов от кулдаунов">
+                                <option>Да</option>
+                                <option>Нет</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Command Cooldown -->
+                <div class="tab-pane" id="cmd_settings_cooldown">
+                    <!-- Logs keep days. -->
+                    <div class="form-group">
+                        <lable>Глобальный кулдаун</lable>
+                        <input type="number" class="form-control" id="global-cooldown" data-toggle="tooltip"
+                            title="Глобальный кулдаун для команд без персонального кулдауна, в секундах"/>
+                    </div>
+                </div>
+
+                <!-- Box footer -->
+                <div class="box-footer" style="padding-right: 0px; padding-bottom: 0px;">
+                    <button type="button" class="btn btn-primary pull-right" id="cmd-save-btn"> Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- moduleList -->
+    <script src="panel/js/pages/settings/commandSettings.js"></script>
+</main>
