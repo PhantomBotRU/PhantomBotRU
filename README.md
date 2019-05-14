@@ -4,8 +4,8 @@
 На данный момент версия PhantomBotRU совместима с оригинальной ночной сборкой PhantomBot-3.0.0-NB-20190509.
 
 ## Как скачать PhantomBotRU?
-* Скачать PhantomBotRU можно, нажав на эту [ссылку](https://github.com/PhantomBotRU/PhantomBotRU/archive/master.zip). В результате должен скачаться файл *PhantomBotRU-master.zip*.
-* Если по какой-то причине не получилось скачать PhantomBotRU по ссылке выше, то необходимо в правом верхнем углу главной страницы проекта [PhantomBotRU](https://github.com/PhantomBotRU/PhantomBotRU) на GitHub.com нажать зелёную кнопку **Clone or download**, затем ссылку **Download ZIP**.
+Скачать PhantomBotRU можно, нажав на эту [ссылку](https://github.com/PhantomBotRU/PhantomBotRU/archive/master.zip). В результате должен скачаться файл *PhantomBotRU-master.zip*.
+<!-- Если по какой-то причине не получилось скачать PhantomBotRU по ссылке выше, то необходимо в правом верхнем углу главной страницы проекта [PhantomBotRU](https://github.com/PhantomBotRU/PhantomBotRU) на GitHub.com нажать зелёную кнопку **Clone or download**, затем ссылку **Download ZIP**. -->
 
 ## Как установить PhantomBotRU?
 * Остановить работу оригинального PhantomBot (команда `exit` в консоли бота), если он запущен, и на всякий случай создать его резервную копию.
