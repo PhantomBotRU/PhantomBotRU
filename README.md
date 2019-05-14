@@ -1,7 +1,7 @@
-# <img src="https://github.com/PhantomBotRU/PhantomBotRU/blob/master/web/panel/img/logo.png" width="84px" align="left" alt="PhantomBotRU"/> PhantomBotRU <br> русская версия [PhantomBot](https://phantom.bot)
+# <img src="https://github.com/PhantomBotRU/PhantomBotRU/blob/master/web/panel/img/logo.png" width="84px" align="left" alt="PhantomBotRU"/> PhantomBotRU <br> русская локализация [PhantomBot](https://phantom.bot)
 
 ## Текущая версия
-На данный момент версия PhantomBotRU совместима с оригинальной ночной сборкой PhantomBot-3.0.0-NB-20190509.
+На данный момент локализация PhantomBotRU совместима с оригинальной ночной сборкой PhantomBot-3.0.0-NB-20190509.
 
 ## Как скачать?
 Загрузить PhantomBotRU можно, нажав на эту [ссылку](https://github.com/PhantomBotRU/PhantomBotRU/archive/master.zip). В результате должен скачаться файл *PhantomBotRU-master.zip*.
