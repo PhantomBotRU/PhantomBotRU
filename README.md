@@ -16,7 +16,8 @@
 «Служебные» сообщения бота в консоли, не публикуемые в чате Twitch, остаются на английском языке, чтобы при возникновении вопросов можно было по-прежнему получать поддержку на [форуме](https://community.phantom.bot) разработчиков оригинального PhantomBot.
 
 ## Как скачать PhantomBotRU?
-В правом верхнем углу главной страницы проекта [PhantomBotRU](https://github.com/PhantomBotRU/PhantomBotRU) на GitHub.com нажать зелёную кнопку **Clone or download**, затем ссылку **Download ZIP**. В результате должен скачаться файл *PhantomBotRU-master.zip*.
+* Скачать PhantomBotRU можно, нажав на эту [ссылку](https://github.com/PhantomBotRU/PhantomBotRU/archive/master.zip). В результате должен скачаться файл *PhantomBotRU-master.zip*.
+* Если по какой-то причине не получилось скачать PhantomBotRU по ссылке выше, то необходимо в правом верхнем углу главной страницы проекта [PhantomBotRU](https://github.com/PhantomBotRU/PhantomBotRU) на GitHub.com нажать зелёную кнопку **Clone or download**, затем ссылку **Download ZIP**.
 
 ## Как установить PhantomBotRU?
 * Остановить работу оригинального PhantomBot (команда `exit` в консоли бота), если он запущен, и на всякий случай создать его резервную копию.
