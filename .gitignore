@@ -41,18 +41,6 @@ Temporary Items
 bin/
 .vscode/
 
-# Folders and files from the original PhantomBot
-addons/
-config/
-dbbackup/
-lib/
-licenses/
-logs/
-launch.sh
-PhantomBot.jar
-launch-service.sh
-launch.bat
-
 # IntelliJ Project files
 dist/
 build/
@@ -67,6 +55,18 @@ nbproject/
 .settings/
 .classpath
 .project
+
+# Folders and files from the original PhantomBot
+addons/
+config/
+dbbackup/
+lib/
+licenses/
+logs/
+launch.sh
+PhantomBot.jar
+launch-service.sh
+launch.bat
 web/common/js/wsConfig.js
 web/panel/js/utils/panelConfig.js
 web/playlist/js/playerConfig.js
