@@ -1,1 +1,2 @@
 # PhantomBotRU
+Русская версия PhantomBot
