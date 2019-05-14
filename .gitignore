@@ -67,3 +67,7 @@ nbproject/
 .settings/
 .classpath
 .project
+web/common/js/wsConfig.js
+web/panel/js/utils/panelConfig.js
+web/playlist/js/playerConfig.js
+web/ytplayer/js/playerConfig.js
