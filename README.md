@@ -1,4 +1,5 @@
-# <img src="https://github.com/PhantomBotRU/PhantomBotRU/blob/master/web/panel/img/logo.png" width="84px" align="left" alt="PhantomBotRU"/> PhantomBotRU <br> русская локализация [PhantomBot](https://phantom.bot)
+# <img src="https://github.com/PhantomBotRU/PhantomBotRU/blob/master/web/panel/img/logo.png" width="94px" align="left" alt="PhantomBotRU"/> PhantomBotRU
+## русская локализация [PhantomBot](https://phantom.bot)
 
 ## Текущая версия
 На данный момент локализация PhantomBotRU совместима с оригинальной ночной сборкой PhantomBot-3.0.0-NB-20190509.
