@@ -15,21 +15,21 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-$.lang.register('ranks.edit.usage', 'Применение: !rankedit [add [количество часов] [название ранга] или del [количество часов] или custom [имя пользователя] [название ранга] или customdel [имя пользователя] или settime [количество часов] или setcost [количество поинтов]]');
-$.lang.register('ranks.settime.usage', 'Применение: !rankedit settime [количество часов]');
-$.lang.register('ranks.settime.success', 'Set time for users to create custom rank to $1 hours.');
-$.lang.register('ranks.setcost.usage', 'Применение: !rankedit setcost [$1]');
-$.lang.register('ranks.setcost.success', 'Set cost for users to create custom rank to $1 $2.');
-$.lang.register('ranks.custom.usage', 'Применение: !rankedit custom [имя пользователя] [rankname]');
+$.lang.register('ranks.edit.usage', 'применение: !rankedit [add [количество часов] [название ранга] / del [количество часов] / custom [имя пользователя] [название ранга] / customdel [имя пользователя] / settime [количество часов] / setcost [количество поинтов]]');
+$.lang.register('ranks.settime.usage', 'применение: !rankedit settime [количество часов]');
+$.lang.register('ranks.settime.success', 'минимальный необходимый стаж для присвоения персонального ранга установлен на $1 час');
+$.lang.register('ranks.setcost.usage', 'применение: !rankedit setcost [количество $1]');
+$.lang.register('ranks.setcost.success', 'плата за персональный ранг установлена на $1 $2');
+$.lang.register('ranks.custom.usage', 'применение: !rankedit custom [имя пользователя] [название ранга]');
 $.lang.register('ranks.custom.404', 'Cannot find user to give a custom rank: $1');
 $.lang.register('ranks.custom.success', '$1 has received a custom rank of: $2');
-$.lang.register('ranks.customdel.usage', 'Применение: !rankedit customdel [имя пользователя]');
+$.lang.register('ranks.customdel.usage', 'применение: !rankedit customdel [имя пользователя]');
 $.lang.register('ranks.customdel.404', '$1 не имеет персонального ранга');
 $.lang.register('ranks.customdel.success', 'с $1 снят персональный ранг');
-$.lang.register('ranks.add.usage', 'Применение: !rankedit add [hour] [rankname]');
+$.lang.register('ranks.add.usage', 'применение: !rankedit add [количество часов] [название ранга]');
 $.lang.register('ranks.add.success-new', 'Added new rank for hour $1 with name: $2');
 $.lang.register('ranks.add.success-update', 'Updated rank for hour $1 with name: $2');
-$.lang.register('ranks.del.usage', 'Применение: !rankedit del [hour]');
+$.lang.register('ranks.del.usage', 'применение: !rankedit del [количество часов]');
 $.lang.register('ranks.del.404', 'Cannot find rank with hours value of $1');
 $.lang.register('ranks.del.success', 'Deleted rank with hours value of $1');
 $.lang.register('ranks.rank.404', 'There are no ranks defined!');
@@ -37,10 +37,10 @@ $.lang.register('ranks.rank.success', '$1 has reached the rank of $2 and is $3 h
 $.lang.register('ranks.rank.norank.success', '$1 does not yet have a rank but is $2 hours away from rank $3!');
 $.lang.register('ranks.rank.maxsuccess', '$1 has reached the maximum rank of $2!');
 $.lang.register('ranks.rank.customsuccess', '$1 has been designated the rank of $2!');
-$.lang.register('ranks.set.usage', 'Применение: !rank set [rankname] Requires $1 hours in chat and $2 $3.');
-$.lang.register('ranks.set.usage.nopoints', 'Применение: !rank set [rankname] Requires $1 hours in chat.');
+$.lang.register('ranks.set.usage', 'применение: !rank set [rankname] Requires $1 hours in chat and $2 $3.');
+$.lang.register('ranks.set.usage.nopoints', 'применение: !rank set [rankname] Requires $1 hours in chat.');
 $.lang.register('ranks.set.failure', 'Either not enough hours ($1) or $2 ($3) to set rank!');
 $.lang.register('ranks.set.failure.nopoints', 'Not enough hours ($1) to set rank!');
-$.lang.register('ranks.set.success', 'Установлен ранг «$1»');
-$.lang.register('ranks.delself.404', 'Вы не имеете персонального ранга');
-$.lang.register('ranks.delself.success', 'С вас снят персональный ранг');
+$.lang.register('ranks.set.success', 'установлен ранг «$1»');
+$.lang.register('ranks.delself.404', 'вы не имеете персонального ранга');
+$.lang.register('ranks.delself.success', 'с вас снят персональный ранг');
