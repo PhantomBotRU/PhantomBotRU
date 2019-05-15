@@ -1,11 +1,11 @@
 <main>
     <!-- Header -->
     <section class="content-header">
-        <h1>Automatic Commercials</h1>
+        <h1>Экстра</h1>
         <ol class="breadcrumb">
-            <li><a href="javascript:void(0);"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li>Extra</li>
-            <li class="active">Automatic Commercials</li>
+            <li><i class="fa fa-twitch"></i>&nbsp; Пульт управления</li>
+            <li>Экстра</li>
+            <li class="active">Реклама</li>
         </ol>
     </section>
 
@@ -13,25 +13,30 @@
     <section class="content">
     	<div class="box box-solid">
             <div class="box-header with-border">
-            	<label class="switch" data-toggle="tooltip" title="Module toggle">
-  					<input type="checkbox" id="commercialsModuleToggle" checked="true">
-  					<span class="slider round"></span>
-				</label>
+                <div class="box-tools pull-right">
+                    <label class="switch" data-toggle="tooltip" title="Переключить">
+  						<input type="checkbox" id="commercialsModuleToggle" checked="true">
+                        <span class="slider round"></span>
+                    </label>
 
-                <h3 class="box-title">Реклама</h3>
+                    <button type="button" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Модуль не имеет настроек" style="margin-bottom: 7px;">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </button>
+                </div>
+                <h3 class="box-title">Автоматическая реклама</h3>
             </div>
             <form role="form" id="commercialsModule">
                 <!-- Box content -->
                 <div class="box-body">
                     <!-- Commercial Interval -->
                     <div class="form-group">
-                        <label>Interval Between Automatic Commercials, in Minutes</label>
-                        <input type="number" class="form-control" id="commercial-interval" value="8" min="8" data-toggle="tooltip" title="Interval between commercials, minimum 8."/>
+                        <label>Интервал</label>
+                        <input type="number" class="form-control" id="commercial-interval" value="8" min="8" data-toggle="tooltip" title="Интервал между рекламными блоками, в минутах"/>
                     </div>
                     <!-- Commercial Length -->
                     <div class="form-group">
-                        <label>Commercial Length, in Seconds</label>
-                        <select class="form-control" id="commercial-length">
+                        <label>Продолжительность</label>
+                        <select class="form-control" id="commercial-length" data-toggle="tooltip" title="Продолжительность каждого рекламного блока, в минутах">
                             <option selected="selected">30</option>
                             <option>60</option>
                             <option>90</option>
@@ -43,17 +48,17 @@
                     
                     <!-- Optional Commercial Message -->
                     <div class="form-group">
-                        <label>Optional Message Posted to Chat</label>
-                        <input type="text" class="form-control" id="commercial-message" placeholder="Optional message posted to chat"
-                            data-toggle="tooltip" title="Optional message posted to chat."/>
+                        <label>Сообщение</label>
+                        <input type="text" class="form-control" id="commercial-message" placeholder="Сообщение при срабатывании автоматической рекламы"
+                            data-toggle="tooltip" title="Сообщение при срабатывании автоматической рекламы (опционально)"/>
                     </div>
                 </div>
                 
                 <!-- Footer with buttons -->
                 <div class="box-footer">
                     <div class="btn-toolbar pull-right">
-                        <button class="btn btn-success" type="button" id="commercials-autotimer-on"><i class="fa fa-check"></i>&nbsp; Set Autotimer</button>
-                        <button class="btn btn-danger hidden" type="button" id="commercials-autotimer-off"><i class="fa fa-trash"></i>&nbsp; Disable Autotimer</button>
+                        <button class="btn btn-success" type="button" id="commercials-autotimer-on"><i class="fa fa-check"></i>&nbsp; Включить</button>
+                        <button class="btn btn-danger hidden" type="button" id="commercials-autotimer-off"><i class="fa fa-trash"></i>&nbsp; Выключить</button>
                     </div>
                 </div>
             </form>

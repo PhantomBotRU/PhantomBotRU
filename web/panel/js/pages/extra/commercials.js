@@ -29,7 +29,7 @@ $(run = function() {
         if (e['commercialtimer'] === 'true') {
             $('#commercials-autotimer-on').html($('<i/>', {
                 'class': 'fa fa-check'
-            })).append('&nbsp; Update Autotimer');
+            })).append('&nbsp; Обновить');
             $('#commercials-autotimer-off').removeClass('hidden');
         }
 
@@ -61,11 +61,11 @@ $(function() {
                 break;
             default:
                 socket.wsEvent('commercials_setautotimer_ws', COMMERCIAL_SCRIPT, null, ['setautotimer', cinterval.val(), clength, cmessage.val()], function() {
-                    toastr.success('Successfully set the autotimer!');
+                    toastr.success('Настройки автоматической рекламы успешно обновлены');
                     // Update the button.
                     $('#commercials-autotimer-on').html($('<i/>', {
                         'class': 'fa fa-check'
-                    })).append('&nbsp; Update Autotimer');
+                    })).append('&nbsp; Обновить');
                     $('#commercials-autotimer-off').removeClass('hidden');
                 });
         }
@@ -74,11 +74,11 @@ $(function() {
     // Disable autotimer button.
     $('#commercials-autotimer-off').on('click', function() {
         socket.wsEvent('commercials_autotimeroff_ws', COMMERCIAL_SCRIPT, null, ['autotimeroff'], function() {
-            toastr.success('Successfully turned off autotimer!');
+            toastr.success('Автоматическая реклама успешно выключена');
             // Update the button.
             $('#commercials-autotimer-on').html($('<i/>', {
                 'class': 'fa fa-check'
-            })).append('&nbsp; Set Autotimer');
+            })).append('&nbsp; Включить');
             $('#commercials-autotimer-off').addClass('hidden');
         });
     });
