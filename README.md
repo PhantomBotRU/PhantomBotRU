@@ -1,4 +1,4 @@
-# <img src="https://github.com/PhantomBotRU/PhantomBotRU/blob/master/web/panel/img/logo.png" width="100px" align="left" alt="PhantomBotRU"/> PhantomBotRU
+# <img src="https://github.com/PhantomBotRU/PhantomBotRU/blob/master/web/panel/img/logo.png" width="108px" align="left" alt="PhantomBotRU"/> PhantomBotRU
 ## русская локализация [PhantomBot](https://phantom.bot)
 
 ## Текущая версия
