@@ -149,7 +149,7 @@ $.lang.register('chatmoderator.blacklist.message.set', 'установлено �
 $.lang.register('chatmoderator.blacklistban.message.usage', 'применение: !moderation blacklistmessageban [текст сообщения]');
 $.lang.register('chatmoderator.blacklistban.message.set', 'установлена причина бана для чёрного списка: «$1»');
 $.lang.register('chatmoderator.permit.time.usage', 'применение: !moderation permittime [время в секундах]');
-$.lang.register('chatmoderator.permit.time.set', 'link permit time set to: $1 seconds.');
+$.lang.register('chatmoderator.permit.time.set', 'продолжительность действия разрешения на публикацию ссылки установлена на $1 сек');
 $.lang.register('chatmoderator.caps.limit.usage', 'применение: !moderation capslimit [amount in percent]');
 $.lang.register('chatmoderator.caps.limit.set', 'cap limit set to: $1% of caps.');
 $.lang.register('chatmoderator.caps.trigger.length.set', 'cap trigger length set to: $1');
@@ -158,7 +158,7 @@ $.lang.register('chatmoderator.spam.limit.usage', 'применение: !modera
 $.lang.register('chatmoderator.spam.limit.set', 'spam limit set to: $1');
 $.lang.register('chatmoderator.spamtracker.limit.usage', 'применение: !moderation spamtrackerlimit [amount]');
 $.lang.register('chatmoderator.spamtracker.limit.set', 'spam tracker limit set to: $1 message');
-$.lang.register('chatmoderator.spamtracker.time.usage', 'применение: !moderation spamtrackertime [amount in seconds]');
+$.lang.register('chatmoderator.spamtracker.time.usage', 'применение: !moderation spamtrackertime [время в секундах]');
 $.lang.register('chatmoderator.spamtracker.time.set', 'spam tracker time set to: $1 seconds');
 $.lang.register('chatmoderator.symbols.limit.usage', 'применение: !moderation symbolslimit [amount]');
 $.lang.register('chatmoderator.symbols.limit.set', 'symbol limit set to: $1% of symbols');
@@ -172,10 +172,10 @@ $.lang.register('chatmoderator.permit.usage', 'применение: !permit [и
 $.lang.register('chatmoderator.permited', ' может опубликовать одну ссылку в течение $1 сек');
 $.lang.register('chatmoderator.blacklist.usage', 'применение: !blackList [add / remove]');
 $.lang.register('chatmoderator.blacklist.add.usage', 'применение: !blackList add [timeout time] [message / regex] - Use regex: to specify a regex.');
-$.lang.register('chatmoderator.blacklist.added', 'слово добавлено в чёрный список');
-$.lang.register('chatmoderator.blacklist.remove.usage', 'применение: !blackList remove [message / regex] - Use regex: to specify a regex.');
+$.lang.register('chatmoderator.blacklist.added', 'фраза добавлена в чёрный список');
+$.lang.register('chatmoderator.blacklist.remove.usage', 'применение: !blackList remove [message / regex]'); // Use regex: to specify a regex
 $.lang.register('chatmoderator.err', 'That\'s an invalid option.');
-$.lang.register('chatmoderator.blacklist.removed', 'слово удалено из чёрного списка');
+$.lang.register('chatmoderator.blacklist.removed', 'фраза удалена из чёрного списка');
 $.lang.register('chatmoderator.blacklist.show.usage', 'применение: !blacklist show (id)');
 $.lang.register('chatmoderator.whitelist.usage', 'применение: !whitelist [add / remove]');
 $.lang.register('chatmoderator.whitelist.add.usage', 'применение: !whitelist add (ссылка)');
