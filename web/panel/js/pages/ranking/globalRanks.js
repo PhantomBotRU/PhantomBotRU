@@ -98,7 +98,7 @@ $(run = function() {
                     // Rank name
                     .append(helpers.getInputGroup('rank-name', 'text', 'Ранг', '', e.ranksMapping, 'Название общего ранга'))
                     // Rank hours
-                    .append(helpers.getInputGroup('rank-hours', 'number', 'Стаж', '50', rank, 'Стаж для достижения ранга, в часах')), function() {// Callback once we click the save button.
+                    .append(helpers.getInputGroup('rank-hours', 'number', 'Стаж', '50', rank, 'Стаж для получения ранга, в часах')), function() {// Callback once we click the save button.
                         let rankName = $('#rank-name'),
                             rankHours = $('#rank-hours');
 
@@ -150,7 +150,7 @@ $(function() {
         // Append alias name.
         .append(helpers.getInputGroup('rank-name', 'text', 'Ранг', 'Друг', '', 'Название ранга'))
         // Append alias.
-        .append(helpers.getInputGroup('rank-hours', 'number', 'Стаж', '50', '', 'Стаж для достижения ранга, в часах')), function() {// Callback once we click the save button.
+        .append(helpers.getInputGroup('rank-hours', 'number', 'Стаж', '50', '', 'Стаж для получения ранга, в часах')), function() {// Callback once we click the save button.
             let rankName = $('#rank-name'),
                 rankHours = $('#rank-hours');
 
