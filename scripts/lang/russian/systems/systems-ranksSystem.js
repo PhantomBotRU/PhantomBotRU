@@ -37,10 +37,10 @@ $.lang.register('ranks.rank.success', '$1 имеет общий ранг «$2» 
 $.lang.register('ranks.rank.norank.success', '$1 не имеет ранга (до получения общего ранга «$3» осталось ~$2 час)');
 $.lang.register('ranks.rank.maxsuccess', '$1 имеет высший общий ранг «$2»');
 $.lang.register('ranks.rank.customsuccess', '$1 имеет ранг «$2»');
-$.lang.register('ranks.set.usage', 'применение: !rank set [название ранга] (для создания своего персонального ранга необходимо иметь стаж $1 час и счёт $2 $3)');
-$.lang.register('ranks.set.usage.nopoints', 'применение: !rank set [название ранга] (для создания своего персонального ранга необходимо иметь стаж $1 час)');
+$.lang.register('ranks.set.usage', 'применение: !rank set [название ранга] (для создания своего персонального ранга необходимо иметь стаж не менее $1 час и счёт не менее $2 $3)');
+$.lang.register('ranks.set.usage.nopoints', 'применение: !rank set [название ранга] (для создания своего персонального ранга необходимо иметь стаж не менее $1 час)');
 $.lang.register('ranks.set.failure', 'у вас нет необходимого стажа $1 час или счёта $3 $2 для создания своего персонального ранга');
 $.lang.register('ranks.set.failure.nopoints', 'у вас нет необходимого стажа $1 час для создания своего персонального ранга');
 $.lang.register('ranks.set.success', 'вы создали свой персональный ранг «$1»');
-$.lang.register('ranks.delself.404', 'у вас нет своего персонального ранга');
+$.lang.register('ranks.delself.404', 'у вас нет своего персонального ранга, для его создания наберите !rank set');
 $.lang.register('ranks.delself.success', 'вы удалили свой персональный ранг');
