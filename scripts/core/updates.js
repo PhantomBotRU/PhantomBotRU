@@ -18,14 +18,14 @@
 /**
  * updater.js
  *
- * Update Talion database
+ * Update PhantomBot database
  *
  * This module will be executed before loading any of the other scripts even the core!
  * Add a new wrapped function if you want to apply updates for a new version
  */
 
 /**
- * Talion v2.0
+ * PhantomBot v2.0
  */
 (function() {
     var modules,
@@ -36,7 +36,7 @@
     /** New setup */
     if ($.changed == true && $.changed != null && $.changed != undefined && !$.inidb.exists('updates', 'installedNewBot') && $.inidb.get('updates', 'installedNewBot') != 'true') {
         $.consoleLn('');
-        $.consoleLn('Initializing Talion version ' + $.version + ' for the first time...');
+        $.consoleLn('Initializing PhantomBot version ' + $.version + ' for the first time...');
 
         modules = [
             './commands/customCommands.js',
@@ -136,7 +136,7 @@
 
     /** Version 2.0 updates */
     if (!$.inidb.exists('updates', 'installedv2') || $.inidb.get('updates', 'installedv2') != 'true') {
-        $.consoleLn('Starting Talion version 2.0 updates...');
+        $.consoleLn('Starting PhantomBot version 2.0 updates...');
         var tableNamesList = $.inidb.GetFileList(),
             commandsBackup,
             timeBackup,
@@ -193,37 +193,37 @@
             $.inidb.set('modules', defaultDisabledModules[i], 'false');
         }
 
-        $.consoleLn('Talion v2.0 updates completed!');
+        $.consoleLn('PhantomBot v2.0 updates completed!');
         $.inidb.set('updates', 'installedv2', 'true');
     }
 
     /** Version 2.0.5 updates */
     if (!$.inidb.exists('updates', 'installedv2.0.5') || $.inidb.get('updates', 'installedv2.0.5') != 'true') {
-        $.consoleLn('Starting Talion version 2.0.5 updates...');
+        $.consoleLn('Starting PhantomBot version 2.0.5 updates...');
 
         $.consoleLn('Removing commandCooldown table...');
         $.inidb.RemoveFile('commandCooldown');
 
-        $.consoleLn('Talion v2.0.5 updates completed!');
+        $.consoleLn('PhantomBot v2.0.5 updates completed!');
         $.inidb.set('updates', 'installedv2.0.5', 'true');
     }
 
     /** Version 2.0.6 updates */
     if (!$.inidb.exists('updates', 'installedv2.0.6') || $.inidb.get('updates', 'installedv2.0.6') != 'true') {
-        $.consoleLn('Starting Talion version 2.0.6 updates...');
+        $.consoleLn('Starting PhantomBot version 2.0.6 updates...');
 
 
         if ($.inidb.exists('chatModerator', 'capsLimit')) {
             $.inidb.del('chatModerator', 'capsLimit');
         }
 
-        $.consoleLn('Talion v2.0.6 updates completed!');
+        $.consoleLn('PhantomBot v2.0.6 updates completed!');
         $.inidb.set('updates', 'installedv2.0.6', 'true');
     }
 
     /** Version 2.0.7 updates */
     if (!$.inidb.exists('updates', 'installedv2.0.7') || $.inidb.get('updates', 'installedv2.0.7') != 'true') {
-        $.consoleLn('Starting Talion version 2.0.7 updates...');
+        $.consoleLn('Starting PhantomBot version 2.0.7 updates...');
 
         if ($.inidb.exists('chatModerator', 'regularsToggle')) {
             if ($.inidb.get('chatModerator', 'regularsToggle').equalsIgnoreCase('true')) {
@@ -252,13 +252,13 @@
             $.inidb.del('command', 'uptime');
         }
 
-        $.consoleLn('Talion v2.0.7 updates completed!');
+        $.consoleLn('PhantomBot v2.0.7 updates completed!');
         $.inidb.set('updates', 'installedv2.0.7', 'true');
     }
 
     /** Version 2.0.7.2 updates */
     if (!$.inidb.exists('updates', 'installedv2.0.7.2') || $.inidb.get('updates', 'installedv2.0.7.2') != 'true') {
-        $.consoleLn('Starting Talion version 2.0.7.2 updates...');
+        $.consoleLn('Starting PhantomBot version 2.0.7.2 updates...');
 
         if ($.inidb.exists('chatModerator', 'longMessageMessage')) {
             if ($.inidb.get('chatModerator', 'longMessageMessage').equalsIgnoreCase('false')) {
@@ -266,36 +266,36 @@
             }
         }
 
-        $.consoleLn('Talion v2.0.7.2 updates completed!');
+        $.consoleLn('PhantomBot v2.0.7.2 updates completed!');
         $.inidb.set('updates', 'installedv2.0.7.2', 'true');
     }
 
     /** Version 2.0.9 updates */
     if (!$.inidb.exists('updates', 'installedv2.0.9') || $.inidb.get('updates', 'installedv2.0.9') != 'true') {
-        $.consoleLn('Starting Talion version 2.0.9 updates...');
+        $.consoleLn('Starting PhantomBot version 2.0.9 updates...');
 
         $.consoleLn('Deleting old emotes cache...');
         $.inidb.del('emotescache', 'emotes');
 
-        $.consoleLn('Talion v2.0.9 updates completed!');
+        $.consoleLn('PhantomBot v2.0.9 updates completed!');
         $.inidb.set('updates', 'installedv2.0.9', 'true');
     }
 
     /** Version 2.1/2.0.10 updates */
     if (!$.inidb.exists('updates', 'installedv2.1.0') || $.inidb.get('updates', 'installedv2.1.0') != 'true') {
-        $.consoleLn('Starting Talion version 2.1 updates...');
+        $.consoleLn('Starting PhantomBot version 2.1 updates...');
 
         $.consoleLn('Setting up the new Twitter post delay...');
         $.inidb.set('twitter', 'postdelay_update', 180);
 
-        $.consoleLn('Talion v2.1 updates completed!');
+        $.consoleLn('PhantomBot v2.1 updates completed!');
         $.inidb.set('updates', 'installedv2.1.0', 'true');
         $.inidb.set('updates', 'installedNewBot', 'true'); //If bot login is deleted after updates were installed we don't want to reset the modules.
     }
 
     /** Version 2.3 updates */
     if (!$.inidb.exists('updates', 'installedv2.3s') || $.inidb.get('updates', 'installedv2.3s') != 'true') {
-        $.consoleLn('Starting Talion v2.3 updates...');
+        $.consoleLn('Starting PhantomBot v2.3 updates...');
 
         if ($.inidb.exists('permcom', 'game set')) {
             $.inidb.set('permcom', 'setgame', $.inidb.get('permcom', 'game set'));
@@ -311,13 +311,13 @@
         $.inidb.set('adventureSettings', 'warningMessage', true);
         $.inidb.set('adventureSettings', 'enterMessage', true);
 
-        $.consoleLn('Talion v2.3 updates completed!');
+        $.consoleLn('PhantomBot v2.3 updates completed!');
         $.inidb.set('updates', 'installedv2.3s', 'true');
     }
 
     /* version 2.3.3s updates */
     if (!$.inidb.exists('updates', 'installedv2.3.3ss') || $.inidb.get('updates', 'installedv2.3.3ss') != 'true') {
-        $.consoleLn('Starting Talion update 2.3.3 updates...');
+        $.consoleLn('Starting PhantomBot update 2.3.3 updates...');
 
         $.consoleLn('Deleting the old emotes cache.');
         $.inidb.RemoveFile('emotecache');
@@ -343,13 +343,13 @@
             $.inidb.del('settings', 'raffleMessageInterval');
         }
 
-        $.consoleLn('Talion update 2.3.3 completed!');
+        $.consoleLn('PhantomBot update 2.3.3 completed!');
         $.inidb.set('updates', 'installedv2.3.3ss', 'true');
     }
 
     /* version 2.3.5 updates */
     if (!$.inidb.exists('updates', 'installedv2.3.5ss') || $.inidb.get('updates', 'installedv2.3.5ss') != 'true') {
-        $.consoleLn('Starting Talion update 2.3.5 updates...');
+        $.consoleLn('Starting PhantomBot update 2.3.5 updates...');
 
         $.inidb.set('chatModerator', 'moderationLogs', 'false');
         $.inidb.set('modules', './systems/bettingSystem.js', 'true');
@@ -387,13 +387,13 @@
             $.inidb.set('permcom', 'group', '1');
         }
 
-        $.consoleLn('Talion update 2.3.5 completed!');
+        $.consoleLn('PhantomBot update 2.3.5 completed!');
         $.inidb.set('updates', 'installedv2.3.5ss', 'true');
     }
 
     /* version 2.3.5.1 updates */
     if (!$.inidb.exists('updates', 'installedv2.3.5.1') || $.inidb.get('updates', 'installedv2.3.5.1') != 'true') {
-        $.consoleLn('Starting Talion update 2.3.5.1 updates...');
+        $.consoleLn('Starting PhantomBot update 2.3.5.1 updates...');
 
         if ($.inidb.exists('aliases', 'points')) {
             $.inidb.del('aliases', 'points');
@@ -403,13 +403,13 @@
             $.inidb.del('aliases', 'point');
         }
 
-        $.consoleLn('Talion update 2.3.5.1 completed!');
+        $.consoleLn('PhantomBot update 2.3.5.1 completed!');
         $.inidb.set('updates', 'installedv2.3.5.1', 'true');
     }
 
     /* version 2.3.5.2 updates */
     if (!$.inidb.exists('updates', 'installedv2.3.5.2') || $.inidb.get('updates', 'installedv2.3.5.2') != 'true') {
-        $.consoleLn('Starting Talion update 2.3.5.2 updates...');
+        $.consoleLn('Starting PhantomBot update 2.3.5.2 updates...');
 
         $.consoleLn('Reloading quotes... Please do not turn off your bot.');
         var keys = $.inidb.GetKeyList('quotes', ''),
@@ -434,35 +434,35 @@
 
         $.inidb.del('modules', './handlers/discordHandler.js');
 
-        $.consoleLn('Talion update 2.3.5.2 completed!');
+        $.consoleLn('PhantomBot update 2.3.5.2 completed!');
         $.inidb.set('updates', 'installedv2.3.5.2', 'true');
     }
 
     /* version 2.3.5.3 updates */
     if (!$.inidb.exists('updates', 'installedv2.3.5.3') || $.inidb.get('updates', 'installedv2.3.5.3') != 'true') {
-        $.consoleLn('Starting Talion update 2.3.5.3 updates...');
+        $.consoleLn('Starting PhantomBot update 2.3.5.3 updates...');
 
         if (!$.inidb.exists('settings', 'followDelay') || ($.inidb.exists('settings', 'followDelay') && parseInt($.inidb.get('settings', 'followDelay')) < 5)) {
             $.inidb.set('settings', 'followDelay', 5);
         }
 
-        $.consoleLn('Talion update 2.3.5.3 completed!');
+        $.consoleLn('PhantomBot update 2.3.5.3 completed!');
         $.inidb.set('updates', 'installedv2.3.5.3', 'true');
     }
 
     /* version 2.3.6 updates */
     if (!$.inidb.exists('updates', 'installedv2.3.6') || $.inidb.get('updates', 'installedv2.3.6') != 'true') {
-        $.consoleLn('Starting Talion update 2.3.6 updates...');
+        $.consoleLn('Starting PhantomBot update 2.3.6 updates...');
 
         $.inidb.set('permcom', $.botName.toLowerCase(), '2');
 
-        $.consoleLn('Talion update 2.3.6 completed!');
+        $.consoleLn('PhantomBot update 2.3.6 completed!');
         $.inidb.set('updates', 'installedv2.3.6', 'true');
     }
 
     /* version 2.3.6s updates */
     if (!$.inidb.exists('updates', 'installedv2.3.6ss') || $.inidb.get('updates', 'installedv2.3.6ss') != 'true') {
-        $.consoleLn('Starting Talion update 2.3.6s updates...');
+        $.consoleLn('Starting PhantomBot update 2.3.6s updates...');
 
         $.inidb.del('cooldown', 'globalCooldownTime');
         $.inidb.del('cooldown', 'modCooldown');
@@ -495,13 +495,13 @@
             }));
         }
 
-        $.consoleLn('Talion update 2.3.6s completed!');
+        $.consoleLn('PhantomBot update 2.3.6s completed!');
         $.inidb.set('updates', 'installedv2.3.6ss', 'true');
     }
 
     /* version 2.3.6b updates */
     if (!$.inidb.exists('updates', 'installedv2.3.6b') || $.inidb.get('updates', 'installedv2.3.6b') != 'true') {
-        $.consoleLn('Starting Talion update 2.3.6b updates...');
+        $.consoleLn('Starting PhantomBot update 2.3.6b updates...');
 
         $.consoleLn('Fixing uppercase usernames in tables.');
 
@@ -539,13 +539,13 @@
         $.inidb.setAutoCommit(true);
         $.inidb.SaveAll(true);
 
-        $.consoleLn('Talion update 2.3.6b completed!');
+        $.consoleLn('PhantomBot update 2.3.6b completed!');
         $.inidb.set('updates', 'installedv2.3.6b', 'true');
     }
 
     /* version 2.3.7 updates */
     if (!$.inidb.exists('updates', 'installedv2.3.7b') || $.inidb.get('updates', 'installedv2.3.7b') != 'true') {
-        $.consoleLn('Starting Talion update 2.3.7 updates...');
+        $.consoleLn('Starting PhantomBot update 2.3.7 updates...');
 
         var keys = $.inidb.GetKeyList('blackList', ''),
             timeout = $.getIniDbNumber('chatModerator', 'blacklistTimeoutTime', 600),
@@ -574,13 +574,13 @@
             $.inidb.set('blackList', keys[i], JSON.stringify(obj));
         }
 
-        $.consoleLn('Talion update 2.3.7 completed!');
+        $.consoleLn('PhantomBot update 2.3.7 completed!');
         $.inidb.set('updates', 'installedv2.3.7b', 'true');
     }
 
     /* version 2.3.9 updates */
     if (!$.inidb.exists('updates', 'installedv2.3.9') || $.inidb.get('updates', 'installedv2.3.9') != 'true') {
-        $.consoleLn('Starting Talion update 2.3.9 updates...');
+        $.consoleLn('Starting PhantomBot update 2.3.9 updates...');
 
         $.consoleLn('Removing old discord handler...');
         $.inidb.del('modules', './handlers/discordHandler.js');
@@ -591,13 +591,13 @@
         $.inidb.set('modules', './discord/handlers/streamElementsHandler.js', 'false');
         $.inidb.set('modules', './handlers/streamElementsHandler.js', 'false');
 
-        $.consoleLn('Talion update 2.3.9 completed!');
+        $.consoleLn('PhantomBot update 2.3.9 completed!');
         $.inidb.set('updates', 'installedv2.3.9', 'true');
     }
 
     /* version 2.3.9.1 updates */
     if (!$.inidb.exists('updates', 'installedv2.3.9.1') || $.inidb.get('updates', 'installedv2.3.9.1') != 'true') {
-        $.consoleLn('Starting Talion update 2.3.9.1 updates...');
+        $.consoleLn('Starting PhantomBot update 2.3.9.1 updates...');
 
         $.consoleLn('Updating old variables...');
 
@@ -606,26 +606,26 @@
             $.inidb.set('discordSettings', 'onlineMessage', '(name) just went online on Twitch!');
         }
 
-        $.consoleLn('Talion update 2.3.9.1 completed!');
+        $.consoleLn('PhantomBot update 2.3.9.1 completed!');
         $.inidb.set('updates', 'installedv2.3.9.1', 'true');
     }
 
     /* version 2.3.9.1b updates */
     if (!$.inidb.exists('updates', 'installedv2.3.9.1b') || $.inidb.get('updates', 'installedv2.3.9.1b') != 'true') {
-        $.consoleLn('Starting Talion update 2.3.9.1b updates...');
+        $.consoleLn('Starting PhantomBot update 2.3.9.1b updates...');
 
         if ($.inidb.FileExists('discordStreamStats')) {
             $.consoleLn('Removing old Discord stats...');
             $.inidb.RemoveFile('discordStreamStats');
         }
 
-        $.consoleLn('Talion update 2.3.9.1b completed!');
+        $.consoleLn('PhantomBot update 2.3.9.1b completed!');
         $.inidb.set('updates', 'installedv2.3.9.1b', 'true');
     }
 
     /* version 2.4.0 updates */
     if (!$.inidb.exists('updates', 'installedv2.4.0') || $.inidb.get('updates', 'installedv2.4.0') != 'true') {
-        $.consoleLn('Starting Talion update 2.4.0 updates...');
+        $.consoleLn('Starting PhantomBot update 2.4.0 updates...');
 
         if ($.getIniDbNumber('cooldownSettings', 'defaultCooldownTime', 5) < 5) {
             $.inidb.set('cooldownSettings', 'defaultCooldownTime', 5);
@@ -714,18 +714,18 @@
         $.inidb.set('aliases', 'volume', 'ytp volume');
         $.inidb.set('aliases', 'social', 'vk;instagram;discord');
 
-        $.consoleLn('Talion update 2.4.0 completed!');
+        $.consoleLn('PhantomBot update 2.4.0 completed!');
         $.inidb.set('updates', 'installedv2.4.0', 'true');
     }
 
     /* version 2.4.2.1 updates */
     if (!$.inidb.exists('updates', 'installedv2.4.2.1') || $.inidb.get('updates', 'installedv2.4.2.1') != 'true') {
-        $.consoleLn('Starting Talion update 2.4.2.1 updates...');
+        $.consoleLn('Starting PhantomBot update 2.4.2.1 updates...');
 
         $.inidb.del('modules', './discord/handlers/gamewispHandler.js');
         $.inidb.del('modules', './handlers/gameWispHandler.js');
 
-        $.consoleLn('Talion update 2.4.2.1 completed!');
+        $.consoleLn('PhantomBot update 2.4.2.1 completed!');
         $.inidb.set('updates', 'installedv2.4.2.1', 'true');
     }
 

@@ -975,7 +975,7 @@ $(function() {
         if (version !== null) {
             if ($('#notifications-total').data('isset') === false) {
                 // Send a warning to the user.
-                toastr.warning('Доступно обновление бота Talion', {
+                toastr.warning('Доступно обновление бота PhantomBot', {
                     'timeOut': 2000
                 });
 
@@ -987,18 +987,18 @@ $(function() {
                 $('#notifications-menu-ul').append($('<li/>').append($('<a/>', {
                     'href': 'javascript:void(0);',
                     'click': function() {
-                        helpers.getModal('pb-update', 'Обновление Talion', 'Понятно', $('<form/>', {
+                        helpers.getModal('pb-update', 'Обновление PhantomBot', 'Понятно', $('<form/>', {
                             'role': 'form'
                         })
                         .append($('<p/>', {
-                            'html': 'Доступна новая версия Talion ' + version /*+ '<br>' +
+                            'html': 'Доступна новая версия PhantomBot ' + version /*+ '<br>' +
                             'You can view the changes of this version ' +
                                 $('<a/>', { 'target': '_blank' }).prop('href', 'https://github.com/PhantomBot/PhantomBot/releases/' + version).append('here.')[0].outerHTML + ' <br>' +
-                            'You can grab your own copy of version ' + version + ' of Talion ' +
+                            'You can grab your own copy of version ' + version + ' of PhantomBot ' +
                                 $('<a/>', { 'target': '_blank' }).prop('href', downloadLink).append('here.')[0].outerHTML + ' <br>' +
                             '<b>Please check ' +
                                 $('<a/>', { 'target': '_blank' }).prop('href', 'https://community.phantombot.tv/t/how-to-update-phantombot').append('this guide')[0].outerHTML +
-                                ' on how to properly update Talion.</b>'*/
+                                ' on how to properly update PhantomBot.</b>'*/
                         })), function() {
                             $('#pb-update').modal('toggle');
                         }).modal('toggle');
@@ -1027,7 +1027,7 @@ $(function() {
      */
     helpers.log = function(message, type) {
         if (helpers.DEBUG_STATE === helpers.DEBUG_STATES.DEBUG || type === helpers.DEBUG_STATE || type === helpers.LOG_TYPE.FORCE) {
-            console.log('%c[Talion Log]', 'color: #6441a5; font-weight: 900;', message);
+            console.log('%c[PhantomBot Log]', 'color: #6441a5; font-weight: 900;', message);
         }
     };
 
@@ -1038,7 +1038,7 @@ $(function() {
      * @param {Number} type
      */
     helpers.logError = function(message, type) {
-        console.log('%c[Talion Error]', 'color: red; font-weight: 900;', message);
+        console.log('%c[PhantomBot Error]', 'color: red; font-weight: 900;', message);
     };
 
     /*

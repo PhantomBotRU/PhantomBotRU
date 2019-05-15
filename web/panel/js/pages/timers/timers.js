@@ -136,7 +136,7 @@ $(function() {
             'role': 'form'
         })
         // Append timer text.
-        .append(helpers.getTextAreaGroup('notice-text', 'text', 'Сообщение', 'Мой канал Twitch: https://twitch.tv/bottalion', '', 'Сообщение для публикации через заданные интервалы времени')
+        .append(helpers.getTextAreaGroup('notice-text', 'text', 'Сообщение', 'Мой канал Twitch: https://twitch.tv/phantombotru', '', 'Сообщение для публикации через заданные интервалы времени')
             // Append a sub-comment.
             .append(helpers.getSubComment('Подсказка: используйте «command:имя_команды», если нужно, чтобы публиковался отклик на указанную команду'))),
         // Callback once the user clicks save.

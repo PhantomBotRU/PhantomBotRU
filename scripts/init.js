@@ -404,9 +404,9 @@
         consoleLn('');
 
         if ($.isNightly) {
-            consoleLn('Talion Beta Build');
+            consoleLn('PhantomBot Beta Build');
         } else if ($.isPrerelease) {
-            consoleLn('Talion Pre-Release Build');
+            consoleLn('PhantomBot Pre-Release Build');
         } else {
             consoleLn('For support please contact developer');
         }
