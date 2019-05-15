@@ -175,7 +175,7 @@ $(function() {
             // Append alias name.
             .append(helpers.getInputGroup('rank-cost', 'number', 'Плата', '', e.rankEligableCost, 'Плата за персональный ранг, в поинтах'))
             // Append alias.
-            .append(helpers.getInputGroup('rank-time', 'number', 'Минимальный стаж', '', e.rankEligableTime, 'Минимальный необходимый стаж для присвоения персонального ранга, в часах')), function() {// Callback once we click the save button.
+            .append(helpers.getInputGroup('rank-time', 'number', 'Минимальный стаж', '', e.rankEligableTime, 'Минимальный необходимый стаж для получения персонального ранга, в часах')), function() {// Callback once we click the save button.
                 let rankCost = $('#rank-cost'),
                     rankTime = $('#rank-time');
 
