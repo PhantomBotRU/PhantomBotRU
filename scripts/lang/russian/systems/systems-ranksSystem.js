@@ -17,21 +17,21 @@
 
 $.lang.register('ranks.edit.usage', 'применение: !rankedit [add [количество часов] [название ранга] / del [количество часов] / custom [имя пользователя] [название ранга] / customdel [имя пользователя] / settime [количество часов] / setcost [количество поинтов]]');
 $.lang.register('ranks.settime.usage', 'применение: !rankedit settime [количество часов]');
-$.lang.register('ranks.settime.success', 'минимальный необходимый стаж для создания персонального ранга установлен на $1 час');
+$.lang.register('ranks.settime.success', 'минимальный необходимый стаж для получения персонального ранга установлен на $1 час');
 $.lang.register('ranks.setcost.usage', 'применение: !rankedit setcost [количество $1]');
 $.lang.register('ranks.setcost.success', 'плата за персональный ранг установлена на $1 $2');
 $.lang.register('ranks.custom.usage', 'применение: !rankedit custom [имя пользователя] [название ранга]');
-$.lang.register('ranks.custom.404', '$1 не имеет необходимого стажа для создания персонального ранга');
-$.lang.register('ranks.custom.success', 'для $1 создан ранг «$2»');
+$.lang.register('ranks.custom.404', '$1 не имеет необходимого стажа для получения персонального ранга');
+$.lang.register('ranks.custom.success', 'для $1 создан персональный ранг «$2»');
 $.lang.register('ranks.customdel.usage', 'применение: !rankedit customdel [имя пользователя]');
 $.lang.register('ranks.customdel.404', '$1 не имеет персонального ранга');
 $.lang.register('ranks.customdel.success', 'персональный ранг $1 удалён');
 $.lang.register('ranks.add.usage', 'применение: !rankedit add [количество часов] [название ранга]');
-$.lang.register('ranks.add.success-new', 'Added new rank for hour $1 with name: $2');
-$.lang.register('ranks.add.success-update', 'Updated rank for hour $1 with name: $2');
+$.lang.register('ranks.add.success-new', 'для стажа $1 час создан общий ранг «$2»');
+$.lang.register('ranks.add.success-update', 'общий ранг для стажа $1 час изменён на «$2»');
 $.lang.register('ranks.del.usage', 'применение: !rankedit del [количество часов]');
-$.lang.register('ranks.del.404', 'Cannot find rank with hours value of $1');
-$.lang.register('ranks.del.success', 'Deleted rank with hours value of $1');
+$.lang.register('ranks.del.404', 'общий ранг для стажа $1 час не найден');
+$.lang.register('ranks.del.success', 'общий ранг для стажа $1 час удалён');
 $.lang.register('ranks.rank.404', 'There are no ranks defined!');
 $.lang.register('ranks.rank.success', '$1 has reached the rank of $2 and is $3 hours away from rank $4!');
 $.lang.register('ranks.rank.norank.success', '$1 does not yet have a rank but is $2 hours away from rank $3!');
