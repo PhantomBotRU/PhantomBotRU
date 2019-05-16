@@ -394,8 +394,8 @@ $.lang.register('common.hours3', ' час');
 $.lang.register('common.minutes', ' мин и ');
 $.lang.register('common.minutes2', ' мин');
 $.lang.register('common.seconds', ' сек');
-$.lang.register('common.get.age.days', '$1 $2 в Twitch с $3 ($4 сут)');
-$.lang.register('common.get.age', '$1 $2 в Twitch с $3 (менее 1 сут)');
+$.lang.register('common.get.age.days', '$2 в Twitch с $3 ($4 сут)'); // $1 – имя пользователя, вызвавшего команду
+$.lang.register('common.get.age', '$2 в Twitch с $3 (менее 1 сут)'); // $1 – имя пользователя, вызвавшего команду
 $.lang.register('channel.age.user.404', 'указанный пользователь не найден');
 $.lang.register('main.donation.last.tip.message', '$3 $2 от $1');
 $.lang.register('common.time.month', 'мес');
