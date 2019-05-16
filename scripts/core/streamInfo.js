@@ -395,7 +395,7 @@
         }
 
         var date = new Date(channelData.getString('created_at')),
-            dateFormat = new java.text.SimpleDateFormat("dd MMMM yyyy' года'"),
+            dateFormat = new java.text.SimpleDateFormat("d MMMM yyyy' года'"),
             dateFinal = dateFormat.format(date),
             days = Math.floor((Math.abs((date.getTime() - $.systemTime()) / 1000)) / 86400);
 
