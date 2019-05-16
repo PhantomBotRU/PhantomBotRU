@@ -18,7 +18,7 @@
 /**
  * audioPanelSystem.js
  *
- * Play audio on the Talion Control Panel Audio Panel
+ * Play audio on the PhantomBot Control Panel Audio Panel
  */
 (function() {
     var messageToggle = $.getSetIniDbBoolean('settings', 'audiohookmessages', false);
