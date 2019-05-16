@@ -370,7 +370,7 @@
         }
 
         var date = new Date(user.getString('created_at')),
-            dateFormat = new java.text.SimpleDateFormat("dd MMMM yyyy' года'"),
+            dateFormat = new java.text.SimpleDateFormat("d MMMM yyyy' года'"),
             dateFinal = dateFormat.format(date),
             days = Math.floor((($.systemTime() - date.getTime()) / 1000) / 86400);
 
