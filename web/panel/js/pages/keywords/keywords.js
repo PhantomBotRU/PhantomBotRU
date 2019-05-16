@@ -1,3 +1,20 @@
+/*
+ * Copyright (C) 2016-2018 phantombot.tv
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 // Function that querys all of the data we need.
 $(run = function() {
     // Check if the module is enabled.
@@ -141,7 +158,6 @@ $(run = function() {
                             case helpers.handleInputNumber(keywordCount, 0):
                                 break;
                             default:
-                                keywordKey.val(keywordKey.val().toLowerCase());
 
                                 // Remove the old keyword.
                                 socket.removeDBValue('edit_keyword_rm', 'keywords', keyword, function() {
@@ -231,7 +247,6 @@ $(function() {
                 case helpers.handleInputNumber(keywordCount, 0):
                     break;
                 default:
-                    keywordKey.val(keywordKey.val().toLowerCase());
 
                     // Update the values.
                     socket.updateDBValues('add_keyword', {
