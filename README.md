@@ -1,5 +1,5 @@
 # <img src="https://github.com/PhantomBotRU/PhantomBotRU/blob/nightly/web/panel/img/logo.png" width="100px" align="left" alt="PhantomBotRU"/> PhantomBotRU
-#### русская версия [PhantomBot](https://phantom.bot "Открыть сайт phantom.bot")
+#### русская версия [PhantomBot](https://phantom.bot "Перейти на сайт phantom.bot")
 
 ---
 
@@ -9,7 +9,7 @@
 | :------------: |
 |     3.0.1a    |
 
-> Данная версия совместима с версией 3.0.1 оригинального [PhantomBot](https://phantom.bot "Открыть сайт phantom.bot").
+> Данная версия совместима с версией 3.0.1 оригинального [PhantomBot](https://phantom.bot "Перейти на сайт phantom.bot").
 
 ---
 
@@ -17,10 +17,10 @@
 
 |      Версия       | Ссылка на скачивание |
 | ----------------- | -------------------- |
-| Стабильная        | [PhantomBotRU-v3.0.1a.zip](https://github.com/PhantomBotRU/PhantomBotRU/tree/v3.0.1a.zip) |
-| Экспериментальная | [PhantomBotRU-nightly.zip](https://github.com/PhantomBotRU/PhantomBotRU/archive/nightly.zip) |
+| Стабильная        | [PhantomBotRU-v3.0.1a.zip](https://github.com/PhantomBotRU/PhantomBotRU/tree/v3.0.1a.zip "Скачать стабильную версию PhantomBotRU") |
+| Экспериментальная | [PhantomBotRU-nightly.zip](https://github.com/PhantomBotRU/PhantomBotRU/archive/nightly.zip "Скачать экспериментальную версию PhantomBotRU") |
 
-> Экспериментальная версия, как правило, содержит новые тестовые функции и исправления, и поэтому совместимость с оригинальным [PhantomBot](https://phantom.bot "Открыть сайт phantom.bot") не гарантируется.
+> Экспериментальная версия, как правило, содержит новые тестовые функции и исправления, и поэтому совместимость с оригинальным [PhantomBot](https://phantom.bot "Перейти на сайт phantom.bot") не гарантируется.
 
 ---
 
@@ -28,7 +28,7 @@
 
 |  Шаг  | Действие |
 | :---: | -------- |
-|   1   | Перед установкой PhantomBotRU убедитесь, что Вы уже скачали и распаковали оригинальный [PhantomBot](https://phantom.bot "Открыть сайт phantom.bot")
+|   1   | Перед установкой PhantomBotRU убедитесь, что Вы уже скачали и распаковали оригинальный [PhantomBot](https://phantom.bot "Перейти на сайт phantom.bot")
 |   2   | Если ранее Вы уже успели запустить и настроить оригинальный PhantomBot, то убедитесь, что он остановлен (команда `exit` в консоли бота), и, на всякий случай, создайте его резервную копию |
 |   3   | Распакуйте скачанный архив *PhantomBotRU-v3.0.1a.zip* |
 |   4   | В распакованном архиве *PhantomBotRU-v3.0.1a* перейдите в директорию *…\scripts\lang* и скопируйте папку *russian* в папку Вашего бота в аналогичную директорию *…\scripts\lang* (таким образом папка *russian* должна оказаться рядом с уже существующей папкой *english*) |
@@ -41,7 +41,7 @@
 
 ### Описание
 
-| Отличия от оригинального PhantomBot |
+| Отличия от оригинального [PhantomBot](https://phantom.bot "Перейти на сайт phantom.bot") |
 | ----------------------------------- |
 | Полностью русскоязычный веб-интерфейс |
 | Русскоязычные отклика бота (на текущий момент около 90%, планируется довести до 100%) |
@@ -53,7 +53,7 @@
 | Отклики бота не содержат ни единой точки (за исключением многоточий) |
 | Косметические улучшения веб-интерфейса и модулей бота |
 
-> «Служебные» сообщения бота в консоли, не публикуемые в чате Twitch, остаются на английском языке, чтобы при возникновении вопросов можно было по-прежнему получать поддержку на [форуме](https://community.phantom.bot) оригинального PhantomBot.
+> «Служебные» сообщения бота в консоли, не публикуемые в чате Twitch, остаются на английском языке, чтобы при возникновении вопросов можно было по-прежнему получать поддержку на [форуме](https://community.phantom.bot "Перейти на форум community.phantom.bot")) оригинального PhantomBot.
 
 ---
 
@@ -71,4 +71,4 @@
 
 ### Лицензия
 
-> PhantomBotRU лицензирован согласно условиям [GNU General Public License v3.0](https://github.com/PhantomBotRU/PhantomBotRU/blob/nightly/LICENSE "Посмотреть лицению").
+> PhantomBotRU лицензирован согласно условиям [GNU General Public License v3.0](https://github.com/PhantomBotRU/PhantomBotRU/blob/nightly/LICENSE "Посмотреть лицению GNU GPL v3.0").
