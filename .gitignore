@@ -24,13 +24,11 @@ $RECYCLE.BIN/
 *.DS_Store
 *.AppleDouble
 *.LSOverride
+*.Spotlight-V100
+*.Trashes
 
 # Thumbnails
 ._*
-
-# Files that might appear on external disk
-*.Spotlight-V100
-*.Trashes
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -41,32 +39,17 @@ Temporary Items
 bin/
 .vscode/
 
-# IntelliJ Project files
-dist/
-build/
-out/
-.idea
-*.iml
-
-# Netbeans Project files
-nbproject/
-
-# Eclipse Project files
-.settings/
-.classpath
-.project
-
-# Folders and files from the original PhantomBot
+# Folders and files from the full PhantomBotRU
 addons/
 config/
 dbbackup/
 lib/
 licenses/
 logs/
-launch.sh
-PhantomBot.jar
-launch-service.sh
 launch.bat
+launch.sh
+launch-service.sh
+PhantomBot.jar
 web/common/js/wsConfig.js
 web/panel/js/utils/panelConfig.js
 web/playlist/js/playerConfig.js
