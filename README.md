@@ -1,5 +1,5 @@
 # <img src="https://github.com/PhantomBotRU/PhantomBotRU/blob/nightly/web/panel/img/logo.png" width="100px" align="left" alt="PhantomBotRU"/> PhantomBotRU
-### Русская локализация [PhantomBot](https://phantom.bot "phantom.bot")
+#### РУССКАЯ ЛОКАЛИЗАЦИЯ [PhantomBot](https://phantom.bot "phantom.bot")
 
 ---
 
