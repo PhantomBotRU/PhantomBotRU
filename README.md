@@ -3,15 +3,21 @@
 
 ---
 
-### Текущая версия
+### Версия
 
-На данный момент PhantomBotRU имеет версию 3.0.1a и совместим с версией 3.0.1 оригинального [PhantomBot](https://phantom.bot "phantom.bot").
+| Текущая версия |
+| :------------: |
+|     3.0.1a     |
+
+> На данный момент PhantomBotRU имеет версию 3.0.1a и совместим с версией 3.0.1 оригинального [PhantomBot](https://phantom.bot "phantom.bot").
 
 ---
 
 ### Загрузка
 
-Ссылка на скачивание: *[PhantomBotRU-v3.0.1a.zip](https://github.com/PhantomBotRU/PhantomBotRU/tree/v3.0.1a.zip)*.
+| Ссылка на скачивание |
+| :------------------: |
+| *[PhantomBotRU-v3.0.1a.zip](https://github.com/PhantomBotRU/PhantomBotRU/tree/v3.0.1a.zip)* |
 
 ---
 
