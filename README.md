@@ -3,21 +3,17 @@
 
 ---
 
-### Версия
-
 | Текущая версия |
 | :------------: |
 |     3.0.1a     |
 
-> На данный момент PhantomBotRU имеет версию 3.0.1a и совместим с версией 3.0.1 оригинального [PhantomBot](https://phantom.bot "phantom.bot").
+Данная версия совместима с версией 3.0.1 оригинального [PhantomBot](https://phantom.bot "phantom.bot").
 
 ---
 
-### Загрузка
-
 | Ссылка на скачивание |
 | :------------------: |
-| *[PhantomBotRU-v3.0.1a.zip](https://github.com/PhantomBotRU/PhantomBotRU/tree/v3.0.1a.zip)* |
+| [PhantomBotRU-v3.0.1a.zip](https://github.com/PhantomBotRU/PhantomBotRU/tree/v3.0.1a.zip) |
 
 ---
 
@@ -25,7 +21,7 @@
 
 > Перед установкой PhantomBotRU убедитесь, что у вас уже скачан и распакован оригинальный [PhantomBot](https://phantom.bot "phantom.bot").
 
-|  Шаг  | Действие |
+|  Установка |
 | :---: | -------- |
 |   1   | Остановить работу оригинального PhantomBot (команда `exit` в консоли бота), если он запущен, и на всякий случай создать его резервную копию. |
 |   2   | Распаковать скачанный архив *PhantomBotRU-v3.0.1a.zip*. |
