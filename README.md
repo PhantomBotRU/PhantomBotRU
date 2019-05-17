@@ -20,7 +20,7 @@
 | Стабильная        | [PhantomBotRU-v3.0.1a.zip](https://github.com/PhantomBotRU/PhantomBotRU/tree/v3.0.1a.zip) |
 | Экспериментальная | [PhantomBotRU-nightly.zip](https://github.com/PhantomBotRU/PhantomBotRU/archive/nightly.zip) |
 
-> Экспериментальная версия является более продвинутой и может быть не полностью совместима с оригинальным [PhantomBot](https://phantom.bot "Открыть сайт phantom.bot").
+> Экспериментальная версия, как правило, содержит новые тестовые функции и исправления, и поэтому совместимость с оригинальным [PhantomBot](https://phantom.bot "Открыть сайт phantom.bot") не гарантируется.
 
 ---
 
