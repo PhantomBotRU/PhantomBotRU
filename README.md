@@ -15,9 +15,9 @@
 
 ### Загрузка
 
-|      Версия       | Ссылка на скачивание |
-| ----------------- | -------------------- |
-| Стабильная        | [PhantomBotRU-v3.0.1a.zip](https://github.com/PhantomBotRU/PhantomBotRU/tree/v3.0.1a.zip "Скачать стабильную версию PhantomBotRU") |
+| Ссылка на скачивание |
+| -------------------- |
+| [PhantomBotRU-v3.0.1a.zip](https://github.com/PhantomBotRU/PhantomBotRU/tree/v3.0.1a.zip "Скачать стабильную версию PhantomBotRU") |
 
 ---
 
