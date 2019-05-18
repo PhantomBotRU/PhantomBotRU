@@ -18,9 +18,6 @@
 |      Версия       | Ссылка на скачивание |
 | ----------------- | -------------------- |
 | Стабильная        | [PhantomBotRU-v3.0.1a.zip](https://github.com/PhantomBotRU/PhantomBotRU/tree/v3.0.1a.zip "Скачать стабильную версию PhantomBotRU") |
-| Экспериментальная | [PhantomBotRU-nightly.zip](https://github.com/PhantomBotRU/PhantomBotRU/archive/nightly.zip "Скачать экспериментальную версию PhantomBotRU") |
-
-> Экспериментальная версия, как правило, содержит новые тестовые функции и исправления, и поэтому полная совместимость с оригинальным [PhantomBot](https://phantom.bot "Перейти на сайт phantom.bot") не гарантируется.
 
 ---
 
