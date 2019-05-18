@@ -60,11 +60,9 @@
 
 ### Благодарность
 
-| Ваша поддержка |
-| -------------- |
-| [QIWI Копилка](https://qiwi.me/5e78d024-a014-4334-80d8-a0911dceb328 "Сделать пожертвование в QIWI Копилку") |
-| [Яндекс Деньги](https://money.yandex.ru/to/410014576985955 "Сделать пожертвование через Яндекс Деньги") |
-| Patreon (скоро) |
+[![](https://img.shields.io/badge/QIWI-Копилка-FF8C00.svg?logoWidth=16&style=for-the-badge&logoColor=FFFFFF&colorA=FF8C00&colorB=FF8C00)](https://qiwi.me/5e78d024-a014-4334-80d8-a0911dceb328 "Сделать пожертвование в QIWI Копилку")
+[![](https://img.shields.io/badge/Яндекс-Деньги-FFCC00.svg?logoWidth=16&style=for-the-badge&logoColor=FFFFFF&colorA=FFCC00&colorB=FFCC00)](https://money.yandex.ru/to/410014576985955 "Сделать пожертвование через Яндекс Деньги")
+[![](https://img.shields.io/badge/-Patreon-F96854.svg?logo=patreon&logoWidth=16&style=for-the-badge&logoColor=ffffff&colorA=F96854&colorB=F96854)](Скоро "Перейти на страницу PhantomBotRU на Patreon")
 
 > **Имена людей, внёсших свою лепту в поддержку PhantomBotRU на сумму от 300₽ (либо от $5, либо от €5), будут вписаны прямо в веб-интерфейс бота во вкладку *Помощь* –> *Информация* со следующим обновлением бота.** Ваша поддержка — стимул не забрасывать PhantomBotRU и своевременно его обновлять. Без регулярных обновлений русская версия становится всё менее совместима с оригинальным PhantomBot с каждой его новой версией.
 
@@ -72,6 +70,6 @@
 
 ### Контакты
 
-[![](https://img.shields.io/badge/-Twitch-6441A4.svg?logoWidth=20&logo=twitch&style=flat-square&logoColor=ffffff&colorA=6441A4&colorB=6441A4)](https://twitch.tv/phantombotru "Перейти на канал PhantomBotRU в Twitch")
-[![](https://img.shields.io/badge/-Discord-7289DA.svg?logoWidth=20&logo=discord&style=flat-square&logoColor=ffffff&colorA=7289DA&colorB=7289DA)](https://discord.com "Перейти на сервер PhantomBotRU в Discord")
-[![](https://img.shields.io/badge/-Email-168DE2.svg?logoWidth=20&logo=mail.ru&style=flat-square&logoColor=ffffff&colorA=168DE2&colorB=168DE2)](mailto:phantombotru@mail.ru "Написать письмо на phantombotru@mail.ru")
+[![](https://img.shields.io/badge/-Twitch-6441A4.svg?logo=twitch&logoWidth=16&style=for-the-badge&logoColor=ffffff&colorA=6441A4&colorB=6441A4)](https://twitch.tv/phantombotru "Перейти на канал PhantomBotRU в Twitch")
+[![](https://img.shields.io/badge/-Discord-7289DA.svg?logo=discord&logoWidth=16&style=for-the-badge&logoColor=ffffff&colorA=7289DA&colorB=7289DA)](https://discord.com "Перейти на сервер PhantomBotRU в Discord")
+[![](https://img.shields.io/badge/-Email-168DE2.svg?logo=mail.ru&logoWidth=16&style=for-the-badge&logoColor=ffffff&colorA=168DE2&colorB=168DE2)](mailto:phantombotru@mail.ru "Написать письмо на phantombotru@mail.ru")
