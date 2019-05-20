@@ -55,7 +55,7 @@ $(run = function() {
 		'lengthChange': false,
 		'columnDefs': [
     		{ 'className': 'default-table' },
-    		{ 'orderable': true, 'targets': 1 }
+    		{ 'orderable': true }
     	],
 		'columns': [
 			{ 'title': 'Имя' },
