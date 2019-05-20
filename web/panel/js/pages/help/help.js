@@ -21,7 +21,7 @@ $(function() {
 
 		// Make sure that there's something in the box.
 		if (search.length > 0) {
-			window.open('https://community.phantombot.tv/search?q=' + encodeURI(search));
+			window.open('https://community.phantom.bot/search?q=' + encodeURI(search));
 
 			// Remove the box content.
 			$('#forum-search-text').val('');
@@ -35,7 +35,7 @@ $(function() {
 
 			// Make sure that there's something in the box.
 			if (search.length > 0) {
-				window.open('https://community.phantombot.tv/search?q=' + encodeURI(search));
+				window.open('https://community.phantom.bot/search?q=' + encodeURI(search));
 
 				// Remove the box content.
 				$('#forum-search-text').val('');
@@ -43,3 +43,26 @@ $(function() {
 		}
 	});
 });
+
+// PhantomBotRU Start
+// Function that querys all of the data we need.
+$(run = function() {
+
+	// Create table.
+	$('#helpTable').DataTable({
+		'searching': false,
+		'autoWidth': true,
+		'lengthChange': false,
+		'columnDefs': [
+    		{ 'className': 'default-table' },
+    		{ 'orderable': true, 'targets': 1 }
+    	],
+		'columns': [
+			{ 'title': 'Имя' },
+			{ 'title': 'Канал в Twitch' },
+			{ 'title': 'Сумма поддержки' }
+		]
+	});
+});
+// PhantomBotRU End
+
