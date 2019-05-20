@@ -1,8 +1,6 @@
 # <img src="https://github.com/PhantomBotRU/PhantomBotRU/blob/nightly/web/panel/img/logo.png" width="100px" align="left" alt="PhantomBotRU"/> PhantomBotRU
 
-[![](https://img.shields.io/badge/PhantomBot-русская_версия-006496.svg?style=for-the-badge&logoWidth=20&logoColor=FFFFFF&colorA=6441A4&colorB=006496&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NzQgNDQ3Ij48ZGVmcz48c3R5bGU%2BLmNscy0xe2ZpbGw6I2ZmZjt9PC9zdHlsZT48L2RlZnM%2BPHRpdGxlPnBoYW50b21ib3Q8L3RpdGxlPjxnIGlkPSLQodC70L7QuV8yIiBkYXRhLW5hbWU9ItCh0LvQvtC5IDIiPjxnIGlkPSLQodC70L7QuV8xLTIiIGRhdGEtbmFtZT0i0KHQu9C%2B0LkgMSI%2BPHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNDAyLDE4Nyw0NzQsMCwzMTcsMTAybC0yLTUxTDI3Niw5Ni42N3EtNC43NS0xLjM1LTkuNjItMi40MkwyNTQsNiwxOTIuMzEsOTMuNDhjLTIuMzkuNDctNC43NSwxLTcuMDksMS41N0wxNzgsNzFsLTMsMjEtNS0xMC0zLjI1LDE4LjYxTDEzNiw2NWwtMyw0MkwwLDIsNTIsMTc2LDAsMTY1bDU0Ljc4LDU4LjI5YTE3OC41MSwxNzguNTEsMCwxLDAsMzQ3LDYuNzRMNDUzLDE3N1ptLTUzLDcxczIsNDEtMTEsNTMtNzgsMTctODksMTVDMjQ5LDMyNiwzMzgsMjcxLDM0OSwyNThaTTEwMSwyMTJsODYsMTA1cy00NCwxNS03Mi0xOUM5NSwyNzAsMTAxLDIxMiwxMDEsMjEyWk0zMDgsMzk1bC0xMy04LTksMTQtMTMtMTAtMTAsMTMtMTQtMTItNiw5LTktOS04LDExSDIwN2wtNy0xMS05LDktMTgtMy01LTEzLTE1LDktMTMtNi00LTEzLTExLDlzLTE1LTctMjktNTVsNDEsMzUsOSwxNSwxMC0xMSwyMCw1LDksMTUsMTMtMTNoMzVsOCwxMywxMC0xNCw0NS05LDksMTMsOS0xNiw0Mi0zMFMzNTEsMzY3LDMwOCwzOTVaIi8%2BPC9nPjwvZz48L3N2Zz4%3D)](https://phantom.bot "Перейти на сайт PhantomBot")
-
-#### русская версия [PhantomBot](https://phantom.bot "Перейти на сайт PhantomBot")
+[![](https://img.shields.io/badge/PhantomBot-русская_версия-006496.svg?style=for-the-badge&logoWidth=20&logoColor=FFFFFF&colorA=6441A4&colorB=006496&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NzQgNDQ3Ij48ZGVmcz48c3R5bGU%2BLmNscy0xe2ZpbGw6I2ZmZjt9PC9zdHlsZT48L2RlZnM%2BPHRpdGxlPnBoYW50b21ib3Q8L3RpdGxlPjxnIGlkPSLQodC70L7QuV8yIiBkYXRhLW5hbWU9ItCh0LvQvtC5IDIiPjxnIGlkPSLQodC70L7QuV8xLTIiIGRhdGEtbmFtZT0i0KHQu9C%2B0LkgMSI%2BPHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNDAyLDE4Nyw0NzQsMCwzMTcsMTAybC0yLTUxTDI3Niw5Ni42N3EtNC43NS0xLjM1LTkuNjItMi40MkwyNTQsNiwxOTIuMzEsOTMuNDhjLTIuMzkuNDctNC43NSwxLTcuMDksMS41N0wxNzgsNzFsLTMsMjEtNS0xMC0zLjI1LDE4LjYxTDEzNiw2NWwtMyw0MkwwLDIsNTIsMTc2LDAsMTY1bDU0Ljc4LDU4LjI5YTE3OC41MSwxNzguNTEsMCwxLDAsMzQ3LDYuNzRMNDUzLDE3N1ptLTUzLDcxczIsNDEtMTEsNTMtNzgsMTctODksMTVDMjQ5LDMyNiwzMzgsMjcxLDM0OSwyNThaTTEwMSwyMTJsODYsMTA1cy00NCwxNS03Mi0xOUM5NSwyNzAsMTAxLDIxMiwxMDEsMjEyWk0zMDgsMzk1bC0xMy04LTksMTQtMTMtMTAtMTAsMTMtMTQtMTItNiw5LTktOS04LDExSDIwN2wtNy0xMS05LDktMTgtMy01LTEzLTE1LDktMTMtNi00LTEzLTExLDlzLTE1LTctMjktNTVsNDEsMzUsOSwxNSwxMC0xMSwyMCw1LDksMTUsMTMtMTNoMzVsOCwxMywxMC0xNCw0NS05LDksMTMsOS0xNiw0Mi0zMFMzNTEsMzY3LDMwOCwzOTVaIi8%2BPC9nPjwvZz48L3N2Zz4%3D)](https://phantom.bot "Перейти на сайт оригинального PhantomBot")
 
 ---
 
@@ -10,7 +8,7 @@
 
 [![](https://img.shields.io/badge/-3.0.1a-006596.svg?style=for-the-badge&logoWidth=16&logoColor=FFFFFF&colorB=006496&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgNTAwIj48ZGVmcz48c3R5bGU%2BLmNscy0xe2ZpbGw6I2ZmZjt9PC9zdHlsZT48L2RlZnM%2BPHRpdGxlPmdwbF92M18xPC90aXRsZT48ZyBpZD0i0KHQu9C%2B0LlfMiIgZGF0YS1uYW1lPSLQodC70L7QuSAyIj48ZyBpZD0i0KHQu9C%2B0LlfMS0yIiBkYXRhLW5hbWU9ItCh0LvQvtC5IDEiPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTI4Ny41LDE4Ny41VjEwNC43M2ExNTEsMTUxLDAsMCwwLTc1LDBWMTg3LjVaIi8%2BPHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMjEyLjUsMzEyLjV2ODIuNzdhMTUxLDE1MSwwLDAsMCw3NSwwVjMxMi41WiIvPjxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iMjEyLjUiIHk9IjIxMi41IiB3aWR0aD0iNzUiIGhlaWdodD0iNzUiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik00MjUsMjUwYTE3NS41MSwxNzUuNTEsMCwwLDEtNCwzNy41SDQ5Ny4yYTI1Mi41MiwyNTIuNTIsMCwwLDAsMC03NUg0MjFBMTc1LjUxLDE3NS41MSwwLDAsMSw0MjUsMjUwWiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTc1LDI1MGExNzUuNTEsMTc1LjUxLDAsMCwxLDQtMzcuNUgyLjhhMjUyLjUyLDI1Mi41MiwwLDAsMCwwLDc1SDc5QTE3NS41MSwxNzUuNTEsMCwwLDEsNzUsMjUwWiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTIxMi41LDIuOFY3OWExNzYuMDYsMTc2LjA2LDAsMCwxLDc1LDBWMi44YTI1Mi41MiwyNTIuNTIsMCwwLDAtNzUsMFoiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0yODcuNSw0OTcuMlY0MjFhMTc2LjA2LDE3Ni4wNiwwLDAsMS03NSwwVjQ5Ny4yYTI1Mi41MiwyNTIuNTIsMCwwLDAsNzUsMFoiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik04Ni41LDE4Ny41YTE3NS41NiwxNzUuNTYsMCwwLDEsMTAxLTEwMVY3Ljg4QTI1MC40MiwyNTAuNDIsMCwwLDAsNy44OCwxODcuNVoiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0zMTIuNSw4Ni41YTE3NS41NiwxNzUuNTYsMCwwLDEsMTAxLDEwMWg3OC42MkEyNTAuNDIsMjUwLjQyLDAsMCwwLDMxMi41LDcuODhaIi8%2BPHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTg3LjUsNDEzLjVhMTc1LjU2LDE3NS41NiwwLDAsMS0xMDEtMTAxSDcuODhBMjUwLjQyLDI1MC40MiwwLDAsMCwxODcuNSw0OTIuMTJaIi8%2BPHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNDEzLjUsMzEyLjVhMTc1LjU2LDE3NS41NiwwLDAsMS0xMDEsMTAxdjc4LjYyQTI1MC40MiwyNTAuNDIsMCwwLDAsNDkyLjEyLDMxMi41WiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTEwMCwyNTBhMTUwLjA1LDE1MC4wNSwwLDAsMCw0LjczLDM3LjVIMTg3LjV2LTc1SDEwNC43M0ExNTAuMDUsMTUwLjA1LDAsMCwwLDEwMCwyNTBaIi8%2BPHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMzEyLjUsMjg3LjVoODIuNzdhMTUxLDE1MSwwLDAsMCwwLTc1SDMxMi41WiIvPjwvZz48L2c%2BPC9zdmc%2B)](https://github.com/PhantomBotRU/PhantomBotRU/releases/latest "Посмотреть информацию о версии")
 
-> Текущая версия совместима с версией 3.0.1 оригинального [PhantomBot](https://phantom.bot "Перейти на сайт PhantomBot").
+> Текущая версия совместима с версией 3.0.1 оригинального [PhantomBot](https://phantom.bot "Перейти на сайт оригинального PhantomBot").
 
 ---
 
@@ -24,7 +22,7 @@
 
 |  Шаг  | Действие |
 | :---: | -------- |
-|   ↓   | Перед установкой PhantomBotRU убедитесь, что Вы уже скачали и распаковали оригинальный [PhantomBot](https://phantom.bot "Перейти на сайт PhantomBot")
+|   ↓   | Перед установкой PhantomBotRU убедитесь, что Вы уже скачали и распаковали оригинальный [PhantomBot](https://phantom.bot "Перейти на сайт оригинального PhantomBot")
 |   1   | Если ранее Вы уже успели запустить и настроить оригинальный PhantomBot, то убедитесь, что он остановлен (команда `exit` в консоли бота), и, на всякий случай, создайте его резервную копию |
 |   2   | Распакуйте скачанный архив *PhantomBotRU-v3.0.1a.zip* |
 |   3   | В распакованном архиве *PhantomBotRU-v3.0.1a* перейдите в директорию *…\scripts\lang* и скопируйте папку *russian* в папку Вашего бота в аналогичную директорию *…\scripts\lang* (таким образом папка *russian* должна оказаться рядом с уже существующей папкой *english*) |
@@ -37,7 +35,7 @@
 
 ### Описание
 
-| Отличия от оригинального [PhantomBot](https://phantom.bot "Перейти на сайт PhantomBot") |
+| Отличия от оригинального [PhantomBot](https://phantom.bot "Перейти на сайт оригинального PhantomBot") |
 | --- |
 | Полностью русскоязычный веб-интерфейс |
 | Русскоязычные отклика бота (на текущий момент около 90%, планируется довести до 100%) |
@@ -49,7 +47,7 @@
 | Отклики бота не содержат ни единой точки (за исключением многоточий) |
 | Косметические улучшения веб-интерфейса и модулей бота |
 
-> «Служебные» сообщения бота в консоли, не публикуемые в чате Twitch, остаются на английском языке, чтобы при вероятном возникновении неполадок можно было эффективно получать поддержку на [форуме](https://community.phantom.bot "Перейти на форум PhantomBot") оригинального PhantomBot.
+> «Служебные» сообщения бота в консоли, не публикуемые в чате Twitch, остаются на английском языке, чтобы при вероятном возникновении неполадок можно было эффективно получать поддержку на [форуме](https://community.phantom.bot "Перейти на форум оригинального PhantomBot") оригинального PhantomBot.
 
 ---
 
