@@ -1,6 +1,6 @@
 # <img src="https://github.com/PhantomBotRU/PhantomBotRU/blob/nightly/web/panel/img/logo.png" width="96px" align="left" alt="PhantomBotRU"/> PhantomBotRU
 
-![](https://img.shields.io/badge/русская_версия-PhantomBot-006496.svg?style=popout-square&logoColor=006496&colorA=006496&colorB=6441A4?link=&link=http://phantom.bot)
+![](https://img.shields.io/badge/русская_версия-PhantomBot-006496.svg?style=popout-square&logoColor=006496&colorA=006496&colorB=6441A4&link=&link=http://phantom.bot)
 
 #### русская версия [PhantomBot](https://phantom.bot "Перейти на сайт PhantomBot")
 
