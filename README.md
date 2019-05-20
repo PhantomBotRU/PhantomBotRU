@@ -4,15 +4,15 @@
 
 ---
 
-### Содержание
-
-1. [Версия](README#Версия)
-2. [Загрузка](#Загрузка)
-3. [Установка](#Установка)
-4. [Описание](#Описание)
-5. [Лицензия](#Лицензия)
-6. [Благодарность](#Благодарность)
-7. [Контакты](#Контакты)
+|   #   | Содержание                      |
+| :---: | ------------------------------- |
+|   1   | [Версия](#Версия)               |
+|   2   | [Загрузка](#Загрузка)           |
+|   3   | [Установка](#Установка)         |
+|   4   | [Описание](#Описание)           |
+|   5   | [Лицензия](#Лицензия)           |
+|   6   | [Благодарность](#Благодарность) |
+|   7   | [Контакты](#Контакты)           |
 
 ---
 
@@ -65,7 +65,7 @@
 
 ### Лицензия
 
-[![](https://img.shields.io/badge/-GNU_GPL3-BD0000.svg?style=for-the-badge&logoWidth=16&logoColor=FFFFFF&colorB=BD0000&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDQuMzEgMTEwLjM4Ij48ZGVmcz48c3R5bGU%2BLmNscy0xe2ZpbGw6I2ZmZjt9PC9zdHlsZT48L2RlZnM%2BPHRpdGxlPtCg0LXRgdGD0YDRgSA3PC90aXRsZT48ZyBpZD0i0KHQu9C%2B0LlfMiIgZGF0YS1uYW1lPSLQodC70L7QuSAyIj48ZyBpZD0i0KHQu9C%2B0LlfMS0yIiBkYXRhLW5hbWU9ItCh0LvQvtC5IDEiPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTkxLjc2LDExMC4zOCwxMTYuMiwwaDU4LjkyYzQuMjUsMCw3LjY2Ljg2LDEwLjEzLDIuNTRhNy4xNiw3LjE2LDAsMCwxLDMuMjksNy43OWwtMTAuNyw0OC4zNGMtLjYzLDIuODgtMi42NSw1LjI0LTYsN0EyMy4xOCwyMy4xOCwwLDAsMSwxNjEsNjguMTJoLTQwbC03LjcsMzQuNzMtMS42NSw3LjUzWm02Ny01NC44LDkuNTEtNDNoLTM1bC05LjU1LDQzWiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTEzLjYyLDExMC4zOGMtNC4zNCwwLTcuNjctLjgzLTEwLjE3LTIuNTRDLS4xMiwxMDUuMzktLjI5LDEwMi4yOC4yLDEwMC4xTDIwLjI1LDkuNDZjLjY2LTIuOTQsMi42Ni01LjMsNS45NS03YTIuMzEsMi4zMSwwLDAsMSwuNDUtLjE4QTIzLjE5LDIzLjE5LDAsMCwxLDM2LjQsMEg4Mi42N0M4NywwLDkwLjM0LjgzLDkyLjg0LDIuNTRhNy4xMSw3LjExLDAsMCwxLDMuMjYsNy43OEw5MC4zMiwzNi40MUg3MC4xN2w1LjI4LTIzLjg3SDM5LjM2bC0xNC4xNiw2NEwyMC41LDk3Ljg4SDU2LjU1bDcuMi0zMi40OUg0NC44OWwyLjY5LTEyLjJoMzlMNzYsMTAxYTguMTEsOC4xMSwwLDAsMS0uOSwyLjM1QTExLjg5LDExLjg5LDAsMCwxLDcwLjA2LDEwOGEyMy4zLDIzLjMsMCwwLDEtMTAuOTQsMi40MloiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xODIuOTMsMTEwLjM4LDIwNy4zNywwaDE5LjhMMjA1LjUsOTcuODhoMzYuODJsLjI0LDEuNzNjLjM1LDIuNTguNzksNS4zMywxLjM0LDguNDNsLjQxLDIuMzRaIi8%2BPC9nPjwvZz48L3N2Zz4%3D)](LICENSE "Посмотреть лицензию GNU GPL v3.0")
+[![](https://img.shields.io/badge/-GNU_GPL_3.0-BD0000.svg?style=for-the-badge&logoWidth=16&logoColor=FFFFFF&colorB=BD0000&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDQuMzEgMTEwLjM4Ij48ZGVmcz48c3R5bGU%2BLmNscy0xe2ZpbGw6I2ZmZjt9PC9zdHlsZT48L2RlZnM%2BPHRpdGxlPtCg0LXRgdGD0YDRgSA3PC90aXRsZT48ZyBpZD0i0KHQu9C%2B0LlfMiIgZGF0YS1uYW1lPSLQodC70L7QuSAyIj48ZyBpZD0i0KHQu9C%2B0LlfMS0yIiBkYXRhLW5hbWU9ItCh0LvQvtC5IDEiPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTkxLjc2LDExMC4zOCwxMTYuMiwwaDU4LjkyYzQuMjUsMCw3LjY2Ljg2LDEwLjEzLDIuNTRhNy4xNiw3LjE2LDAsMCwxLDMuMjksNy43OWwtMTAuNyw0OC4zNGMtLjYzLDIuODgtMi42NSw1LjI0LTYsN0EyMy4xOCwyMy4xOCwwLDAsMSwxNjEsNjguMTJoLTQwbC03LjcsMzQuNzMtMS42NSw3LjUzWm02Ny01NC44LDkuNTEtNDNoLTM1bC05LjU1LDQzWiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTEzLjYyLDExMC4zOGMtNC4zNCwwLTcuNjctLjgzLTEwLjE3LTIuNTRDLS4xMiwxMDUuMzktLjI5LDEwMi4yOC4yLDEwMC4xTDIwLjI1LDkuNDZjLjY2LTIuOTQsMi42Ni01LjMsNS45NS03YTIuMzEsMi4zMSwwLDAsMSwuNDUtLjE4QTIzLjE5LDIzLjE5LDAsMCwxLDM2LjQsMEg4Mi42N0M4NywwLDkwLjM0LjgzLDkyLjg0LDIuNTRhNy4xMSw3LjExLDAsMCwxLDMuMjYsNy43OEw5MC4zMiwzNi40MUg3MC4xN2w1LjI4LTIzLjg3SDM5LjM2bC0xNC4xNiw2NEwyMC41LDk3Ljg4SDU2LjU1bDcuMi0zMi40OUg0NC44OWwyLjY5LTEyLjJoMzlMNzYsMTAxYTguMTEsOC4xMSwwLDAsMS0uOSwyLjM1QTExLjg5LDExLjg5LDAsMCwxLDcwLjA2LDEwOGEyMy4zLDIzLjMsMCwwLDEtMTAuOTQsMi40MloiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xODIuOTMsMTEwLjM4LDIwNy4zNywwaDE5LjhMMjA1LjUsOTcuODhoMzYuODJsLjI0LDEuNzNjLjM1LDIuNTguNzksNS4zMywxLjM0LDguNDNsLjQxLDIuMzRaIi8%2BPC9nPjwvZz48L3N2Zz4%3D)](LICENSE "Посмотреть лицензию GNU GPL v3.0")
 
 ---
 
