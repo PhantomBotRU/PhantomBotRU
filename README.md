@@ -70,9 +70,9 @@
 
 ### Контакты
 
-[![](https://img.shields.io/badge/-Twitch-6441A4.svg?style=for-the-badge&logoWidth=20&logoColor=FFFFFF&logo=twitch)](https://twitch.tv/phantombotrussian "Перейти на канал PhantomBotRU в Twitch")
+[![](https://img.shields.io/badge/-Twitch-6441A4.svg?style=for-the-badge&logoWidth=20&logoColor=FFFFFF&logo=twitch)](https://twitch.tv/phantombotru "Перейти на канал PhantomBotRU в Twitch")
 [![](https://img.shields.io/badge/-Discord-7289DA.svg?style=for-the-badge&logoWidth=20&logoColor=FFFFFF&logo=discord)](https://discord.gg/jQfKfb3 "Перейти на сервер PhantomBotRU в Discord")
-[![](https://img.shields.io/badge/-Email-168DE2.svg?style=for-the-badge&logoWidth=20&logoColor=FFFFFF&logo=mail.ru)](mailto:phantombotru@mail.ru "Написать письмо на phantombotru@mail.ru")
+[![](https://img.shields.io/badge/-Email-168DE2.svg?style=for-the-badge&logoWidth=20&logoColor=FFFFFF&logo=mail.ru)](mailto:phantombotru@mail.ru "Написать письмо на PhantomBotRU@mail.ru")
 
 ---
 
