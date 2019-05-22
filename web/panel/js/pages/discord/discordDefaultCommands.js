@@ -56,8 +56,8 @@ $(run = function() {
 
                     tableData.push([
                         '!' + results[i].key,
-                        (perms.roles.length > 0 ? perms.roles.join(', ') : 'None'),
-                        (perms.permissions.length > 0 ? perms.permissions.join(', ') : 'None'),
+                        (perms.roles.length > 0 ? perms.roles.join(', ') : 'Нет'),
+                        (perms.permissions.length > 0 ? perms.permissions.join(', ') : 'Нет'),
                         $('<div/>', {
                             'class': 'btn-group'
                         }).append($('<button/>', {
@@ -65,7 +65,7 @@ $(run = function() {
                             'class': 'btn btn-xs btn-danger',
                             'style': 'float: right',
                             'data-toggle': 'tooltip',
-                            'title': 'Deletes the command permission and resets it to default on startup. This does not remove the command unless it doesn\'t exist anymore.',
+                            'title': 'Восстановить уровень доступа команды по умолчанию (срабатывает после рестарта бота)',
                             'data-command': results[i].key,
                             'html': $('<i/>', {
                                 'class': 'fa fa-refresh'
@@ -74,6 +74,8 @@ $(run = function() {
                             'type': 'button',
                             'class': 'btn btn-xs btn-warning',
                             'style': 'float: right',
+                            'data-toggle': 'tooltip',
+                            'title': 'Редактировать команду',
                             'data-command': results[i].key,
                             'html': $('<i/>', {
                                 'class': 'fa fa-edit'
@@ -139,7 +141,7 @@ $(run = function() {
                         let perms = JSON.parse(e.discordPermsObj);
 
                         // Get advance modal from our util functions in /utils/helpers.js
-                        helpers.getAdvanceModal('edit-command', 'Настройки команды', 'Сохранить', $('<form/>', {
+                        helpers.getAdvanceModal('edit-command', 'Редактирование команды', 'Сохранить', $('<form/>', {
                             'role': 'form'
                         })
                         // Append input box for the command name. This one is disabled.
@@ -241,7 +243,7 @@ $(run = function() {
                                         // Close the modal.
                                         $('#edit-command').modal('hide');
                                         // Tell the user the command was added.
-                                        toastr.success('Настройки команды «!' + commandName.val() + '» успешно обновлены');
+                                        toastr.success('Команда «!' + commandName.val() + '» успешно отредактирована');
 
                                         // I hate doing this, but the logic is fucked anyways.
                                         helpers.setTimeout(function() {

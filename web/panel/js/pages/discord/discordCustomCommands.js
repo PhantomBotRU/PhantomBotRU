@@ -258,27 +258,27 @@ $(function() {
             let perms = JSON.parse(permObj.discordPermsObj);
 
             // Get advance modal from our util functions in /utils/helpers.js
-            helpers.getAdvanceModal('add-command', 'Add Command', 'Save', $('<form/>', {
+            helpers.getAdvanceModal('add-command', 'Создание команды', 'Сохранить', $('<form/>', {
                 'role': 'form'
             })
             // Append input box for the command name.
-            .append(helpers.getInputGroup('command-name', 'text', 'Command', '!example'))
+            .append(helpers.getInputGroup('command-name', 'text', 'Имя', '!команда','','Имя команды'))
             // Append a text box for the command response.
-            .append(helpers.getTextAreaGroup('command-response', 'text', 'Response', 'Response example!'))
+            .append(helpers.getTextAreaGroup('command-response', 'text', 'Отклик', 'Текст отклика','','Текст отклика на вызов команды'))
             // Append a select option for the command permission.
-            .append(helpers.getMultiDropdownGroup('command-permission', 'Allowed Roles and Permissions', [
+            .append(helpers.getMultiDropdownGroup('command-permission', 'Доступ', [
                 {
-                    'title': 'Permissions',
+                    'title': 'Права',
                     'options': [{
                         'name': 'Administrators',
                         'selected': 'true'
                     }]
                 },
                 {
-                    'title': 'Roles',
+                    'title': 'Роли',
                     'options': perms.roles
                 }
-            ], 'Which roles are allowed to run this command. The Administrator permission is people with the Administrator permission selected on their role in Discord'))
+            ], 'Уровень доступа команды'))
             // Add an advance section that can be opened with a button toggle.
             .append($('<div/>', {
                 'class': 'collapse',
@@ -287,20 +287,20 @@ $(function() {
                         'role': 'form'
                     })
                     // Append input box for the command cost.
-                    .append(helpers.getInputGroup('command-cost', 'number', 'Cost', '0', '0',
-                        'Cost in points that will be taken from the user when running the command.'))
+                    .append(helpers.getInputGroup('command-cost', 'number', 'Плата', '0', '0',
+                        'Плата за вызов команды, в поинтах'))
                     // Append input box for the command channel.
-                    .append(helpers.getInputGroup('command-channel', 'text', 'Channel', '#commands', '',
-                        'Channel you want this command to work in. Seperate with a space and comma for multiple. If left empty, the command will work in all channels.'))
+                    .append(helpers.getInputGroup('command-channel', 'text', 'Канал(ы)', '#general', '',
+                        'Канал(ы) в Discord, где команда будет работать (через запятую с пробелом; если поле не заполнено, то во всех каналах)'))
                     // Append input box for the command alias.
-                    .append(helpers.getInputGroup('command-alias', 'text', 'Alias', '!ex', '',
-                        'Another command name that will also trigger this command.'))
+                    .append(helpers.getInputGroup('command-alias', 'text', 'Псевдоним', '!ярлык', '',
+                        'Имя псевдонима, который будет привязан к команде'))
                     // Append input box for the command cooldown.
-                    .append(helpers.getInputGroup('command-cooldown', 'number', 'Cooldown (Seconds)', '0', '5',
-                        'Cooldown of the command in seconds.')
+                    .append(helpers.getInputGroup('command-cooldown', 'number', 'Кулдаун', '0', '5',
+                        'Длительность кулдауна, в секундах')
                         // Append checkbox for if the cooldown is global or per-user.
-                        .append(helpers.getCheckBox('command-cooldown-global', true, 'Global',
-                            'If checked the cooldown will be applied to everyone in the channel. When not checked, the cooldown is applied per-user.')))
+                        .append(helpers.getCheckBox('command-cooldown-global', true, 'глобально',
+                            'Когда галочка установлена, кулдаун действует на всех пользователей сразу, а когда не установлена – на каждого пользователя персонально')))
                     // Callback function to be called once we hit the save button on the modal.
             })), function() {
                 let commandName = $('#command-name'),

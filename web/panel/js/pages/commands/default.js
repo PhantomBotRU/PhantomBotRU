@@ -115,7 +115,7 @@ $(function() {
                     let cooldownJson = (e.cooldown === null ? { isGlobal: 'true', seconds: 0 } : JSON.parse(e.cooldown));
 
                     // Get advance modal from our util functions in /utils/helpers.js
-                    helpers.getAdvanceModal('edit-command', 'Настройки команды', 'Сохранить', $('<form/>', {
+                    helpers.getAdvanceModal('edit-command', 'Редактирование команды', 'Сохранить', $('<form/>', {
                         'role': 'form'
                     })
                     // Append input box for the command name. This one is disabled.
@@ -174,7 +174,7 @@ $(function() {
                                             // Close the modal.
                                             $('#edit-command').modal('hide');
                                             // Tell the user the command was edited.
-                                            toastr.success('Настройки команды «!' + command + '» успешно обновлены');
+                                            toastr.success('Команда «!' + command + '» успешно отредактирована');
                                         });
                                     });
                                 });
