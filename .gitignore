@@ -50,6 +50,9 @@ launch.bat
 launch.sh
 launch-service.sh
 PhantomBot.jar
+scripts/lang/custom/
+scripts/lang/english/
+scripts/lang/german/
 web/common/js/wsConfig.js
 web/panel/js/utils/panelConfig.js
 web/playlist/js/playerConfig.js
