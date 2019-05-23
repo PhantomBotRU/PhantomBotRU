@@ -4,7 +4,7 @@
 
 ---
 
-###### [<img src="https://github.com/lipis/flag-icon-css/blob/master/flags/4x3/ru.svg" width="15px"/> Читать на русском языке](README.md "Read in Russian")
+###### [<img src="https://github.com/lipis/flag-icon-css/blob/master/flags/4x3/ru.svg" width="15px"/>&nbsp;&nbsp;Читать на русском языке](README.md "Read in Russian")
 
 ---
 
