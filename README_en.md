@@ -38,8 +38,7 @@
 | Fixed Russian language handling by the moderation filters. |
 | Added win counter (the `!wins` command and its subcommands). |
 | Added *Command Tags* tab to the *Help* section. |
-| In-chat responses without the dot symbol (except for the ellipsis). |
-| Various web interface and module improvements. |
+| Various web interface and modules improvements. |
 
 ---
 
