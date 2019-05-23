@@ -28,14 +28,14 @@
 
 | Features |
 | -------- |
-| Full Russian web interface, including player and playlist. |
+| Russian web interface, including player and playlist. |
 | Russian in-chat responses in Twitch and Discord. |
-| Preset custom commands and alerts in Russian. |
-| Fixed handling of the Russian language by the moderation filters. |
+| Preset custom commands and alerts in Russian language. |
+| Fixed Russian language handling by the moderation filters. |
 | Added win counter (`!wins` command and its subcommands). |
-| Added *Command Tags* tab. |
-| Responses without the dot symbol. |
-| Visual web interface improvements. |
+| Added *Command Tags* tab to *Help* section. |
+| In-chat responses without the dot symbol (except for ellipsis). |
+| Various web interface and module improvements. |
 
 ---
 
