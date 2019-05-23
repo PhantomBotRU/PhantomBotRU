@@ -5,14 +5,14 @@
 ---
 
 |   #   | Contents                      |
-| :---: | ------------------------------- |
-|   1   | [Version](#Version)               |
-|   2   | [Description](#Description)           |
-|   3   | [Download](#Download)           |
-|   4   | [Installation](#Installation)         |
+| :---: | ----------------------------- |
+|   1   | [Version](#Version)           |
+|   2   | [Description](#Description)   |
+|   3   | [Download](#Download)         |
+|   4   | [Installation](#Installation) |
 |   5   | [License](#License)           |
 |   6   | [Contact](#Contact)           |
-|   7   | [Donation](#Donation) |
+|   7   | [Donation](#Donation)         |
 
 ---
 
@@ -26,17 +26,14 @@
 
 ### Description
 
-| Отличия от оригинального [PhantomBot](https://phantom.bot "Перейти на сайт PhantomBot") |
-| --- |
 | Full Russian web interface, including player and playlist. |
-| Русскоязычные отклики (на текущий момент около 90%, планируется довести до 100%). |
-| Предустановленные пользовательские команды и оповещения на русском языке. |
-| Корректная обработка русского языка (в частности, фильтрами капса, символов и подлога), а также, за некоторыми исключениями, украинского, белорусского, болгарского, сербского, татарского и прочих языков. |
-| Счётчик смертей (команда `!deathctr` и её подкоманды) вместо счётчика побед (команда `!wins` и её подкоманды). |
-| Дополнительные вкладки *Теги команд* и *Часовые зоны* в разделе *Помощь*. |
-| Всплывающие подсказки абсолютно для всех полей в веб-интерфейсе (также множество постоянно видимых подсказок и предупреждений). |
-| Отклики без символа точки (за исключением многоточий). |
-| Косметические улучшения веб-интерфейса и модулей. |
+| Russian in-chat responses in Russian. |
+| Preset custom commands and alerts in Russian. |
+| Fixed handling of the Russian language by the moderation filters. |
+| Added win counter (`!wins` command and its subcommands). |
+| Added *Command tabs* tab. |
+| Responses without the dot symbols. |
+| Visual web interface improvements. |
 
 > «Служебные» сообщения бота в консоли, не публикуемые в чате Twitch, остаются на английском языке, чтобы при вероятном возникновении неполадок можно было эффективно получить поддержку на [форуме](https://community.phantom.bot "Перейти на форум PhantomBot") оригинального PhantomBot.
 
