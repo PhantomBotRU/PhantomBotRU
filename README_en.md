@@ -4,7 +4,7 @@
 
 ---
 
-###### <img src="https://github.com/lipis/flag-icon-css/blob/master/flags/4x3/gb.svg" width="20px" align="left" alt="PhantomBotRU"/> [Читать на русском языке](README.md "Read in Russian")
+###### [<img src="https://github.com/lipis/flag-icon-css/blob/master/flags/4x3/ru.svg" width="20px" align="left" alt="Read in Russian"/>Читать на русском языке](README.md "Read in Russian")
 
 ---
 
