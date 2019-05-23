@@ -57,7 +57,7 @@
 |   1   | Unpack downloaded *PhantomBotRU-v3.0.1-beta1.zip* archive. |
 |   2   | Copy a *russian* folder from a *\scripts\lang* directory of the exctracted *PhantomBotRU-3.0.1-beta1.zip* file to the same directory of your original PhantomBot folder. |
 |   3   | Replace *web* folder in your original PhantomBot folder with the same folder from the exctracted *PhantomBotRU-3.0.1-beta1.zip* file. |
-|   4   | Если ранее Вы уже запускали PhantomBot, и Вам нечего в нём терять (команды, поинты, ранги и пр.), то для установки расширенного набора русскоязычных пользовательских команд, а также оповещений (о фолловинге, подписке, донате и пр.) «обнулите» бота, удалив файл *phantombot.db* из директории *…\config*. В противном случае Вам придётся настраивать оповещения на русском языке самостоятельно, для чего в веб-интерфейсе бота предусмотрены соответствующие поля. |
+|   4   | If you have previously launched PhantomBot, and have nothing to lose (commands, points, ranks, etc.), and you want to install the extended set of custom commands and alerts in Russian language, you need to «reset» the bot by deleting the *phantombot.db* file in the *…\config* directory. |
 |   5   | Start PhantomBot, wait for its loading to complete, and type the command `lang russian` in the console, after which the bot will respond with the `язык изменён на russian` (`changed language to russian`) message. |
 |   ✓   | PhantomBot is now ready to work in Russian. |
 
