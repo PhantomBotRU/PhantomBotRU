@@ -4,7 +4,7 @@
 
 ---
 
-###### [<img src="https://github.com/lipis/flag-icon-css/blob/master/flags/4x3/gb.svg" width="20px"/> <img src="https://github.com/lipis/flag-icon-css/blob/master/flags/4x3/us.svg" width="20px"/> Read in English](README_en.md "Читать на английском языке")
+###### [<img src="https://github.com/lipis/flag-icon-css/blob/master/flags/4x3/gb.svg" width="16px"/> <img src="https://github.com/lipis/flag-icon-css/blob/master/flags/4x3/us.svg" width="16px"/> Read in English](README_en.md "Читать на английском языке")
 
 ---
 
