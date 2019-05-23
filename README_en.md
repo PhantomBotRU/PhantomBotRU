@@ -27,7 +27,7 @@
 ### Description
 
 | Features |
-| :------: |
+| -------- |
 | Full Russian web interface, including player and playlist. |
 | Russian in-chat responses in Twitch and Discord. |
 | Preset custom commands and alerts in Russian. |
