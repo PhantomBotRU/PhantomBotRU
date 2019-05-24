@@ -29,6 +29,9 @@ $(run = function() {
             socket.getDBValue('get_death_count', 'deaths', JSON.parse(e.panelData).game, function(e) {
                 $('#death-number').html(helpers.parseNumber(helpers.getDefaultIfNullOrUndefined(e.deaths, '0')));
             });
+            socket.getDBValue('get_win_count', 'wins', JSON.parse(e.panelData).game, function(e) {
+                $('#win-number').html(helpers.parseNumber(helpers.getDefaultIfNullOrUndefined(e.wins, '0')));
+            });
         });
     });
 });
@@ -109,7 +112,7 @@ $(function() {
     // Settings button.
     $('#settings-deaths-button').on('click', function() {
         // Create custom modal for this module.
-        helpers.getModal('death-settings', 'Настройки счётчика побед', 'Сохранить', $('<form/>', {
+        helpers.getModal('death-settings', 'Настройки счётчика смертей', 'Сохранить', $('<form/>', {
             'role': 'form'
         })
         // Main div for the browser source link.
@@ -153,7 +156,7 @@ $(function() {
         }))))
         // Append box with current deaths.
         .append(helpers.getInputGroup('deaths-t', 'number', 'Количество', '',
-            $('#death-number').html().replace(/,/g, ''), 'Количество побед в текущей игре')),
+            $('#death-number').html().replace(/,/g, ''), 'Количество смертей в текущей игре')),
         function() { // callback.
             let deaths = $('#deaths-t');
 
@@ -169,6 +172,135 @@ $(function() {
                         socket.updateDBValue('update_deaths_game', 'deaths', JSON.parse(e.panelData).game, deaths.val(), function() {
                             // Close the modal.
                             $('#death-settings').modal('toggle');
+                            // Alert the user.
+                            toastr.success('Настройки счётчика смертей успешно обновлены');
+                        });
+                    });
+            }
+        }).modal('toggle');
+    });
+
+    // Increase win button.
+    $('#incr-wins-button').on('click', function() {
+        // Don't update wins until new value is set.
+        canUpdate = false;
+
+        // Get current game.
+        socket.getDBValue('get_current_stream_info', 'panelData', 'stream', function(e) {
+            // Increase the wins.
+            socket.incrDBValue('incr_wins_1', 'wins', JSON.parse(e.panelData).game, '1', function() {
+                // Set the new number.
+                $('#win-number').html(helpers.parseNumber(parseInt($('#win-number').html().replace(/,/g, '')) + 1));
+                // New value is set so we can let the updates work.
+                canUpdate = true;
+            });
+        });
+    });
+
+    // Increase win button.
+    $('#decr-wins-button').on('click', function() {
+        // Don't update wins until new value is set.
+        canUpdate = false;
+
+        let wins = parseInt($('#win-number').html().replace(/,/g, ''));
+
+        // Make sure we don't go into the negatives.
+        if (wins < 1) {
+            return;
+        }
+
+        // Get current game.
+        socket.getDBValue('get_current_stream_info', 'panelData', 'stream', function(e) {
+            // Decrease the wins.
+            socket.decrDBValue('decr_wins_1', 'wins', JSON.parse(e.panelData).game, '1', function() {
+                // Set the new number
+                $('#win-number').html(helpers.parseNumber(wins - 1));
+                // New value is set so we can let the updates work.
+                canUpdate = true;
+            });
+        });
+    });
+
+    // Reset button.
+    $('#reset-wins-button').on('click', function() {
+        // Don't update wins until new value is set.
+        canUpdate = false;
+
+        // Get current game.
+        socket.getDBValue('get_current_stream_info', 'panelData', 'stream', function(e) {
+            // Delete wins.
+            socket.removeDBValue('rm_wins_game', 'wins', JSON.parse(e.panelData).game, function() {
+                // Set the new number.
+                $('#win-number').html('0');
+                // New value is set so we can let the updates work.
+                canUpdate = true;
+            });
+        });
+    });
+
+    // Settings button.
+    $('#settings-wins-button').on('click', function() {
+        // Create custom modal for this module.
+        helpers.getModal('win-settings', 'Настройки счётчика побед', 'Сохранить', $('<form/>', {
+            'role': 'form'
+        })
+        // Main div for the browser source link.
+        .append($('<div/>', {
+            'class': 'form-group',
+        })
+        // Append the lable.
+        .append($('<label/>', {
+            'text': 'Ссылка для BrowserSource'
+        }))
+        .append($('<div/>', {
+            'class': 'input-group'
+        })
+        // Add client widget URL.
+        .append($('<input/>', {
+            'type': 'text',
+            'class': 'form-control',
+            'id': 'win-url',
+            'readonly': 'readonly',
+            'value': window.location.protocol + '//' + window.location.host + '/addons/deathctr/winctr.txt?refresh=true&webauth=' + getAuth(),
+            'style': 'color: transparent !important; text-shadow: 0 0 5px hsla(0, 0%, 100%, .5);',
+            'data-toggle': 'tooltip',
+            'title': 'Нажмите на это поле, чтобы увидеть ссылку (её можно добавить в OBS в качестве источника BrowserSource)',
+            'click': function() {
+                // Reset styles.
+                $(this).prop('style', '');
+            }
+        })).append($('<span/>', {
+            'class': 'input-group-btn',
+            'html': $('<button/>', {
+                'type': 'button',
+                'class': 'btn btn-primary btn-flat',
+                'html': 'Копировать',
+                'click': function() {
+                    // Select URL.
+                    $('#win-url').select();
+                    // Copy the URL.
+                    document.execCommand('Copy');
+                }
+            })
+        }))))
+        // Append box with current wins.
+        .append(helpers.getInputGroup('wins-t', 'number', 'Количество', '',
+            $('#win-number').html().replace(/,/g, ''), 'Количество побед в текущей игре')),
+        function() { // callback.
+            let wins = $('#wins-t');
+
+            switch (false) {
+                case helpers.handleInputNumber(wins, 0):
+                    break;
+                default:
+                    // Update the win number.
+                    $('#win-number').html(helpers.parseNumber(wins.val()));
+                    // Get current game.
+                    socket.getDBValue('get_current_stream_info', 'panelData', 'stream', function(e) {
+                        // Delete wins.
+                        socket.updateDBValue('update_wins_game', 'wins', JSON.parse(e.panelData).game, wins.val(), function() {
+                            // Close the modal.
+                            $('#win-settings').modal('toggle');
                             // Alert the user.
                             toastr.success('Настройки счётчика побед успешно обновлены');
                         });

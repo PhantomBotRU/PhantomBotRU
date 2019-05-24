@@ -443,6 +443,7 @@
                 $.log.event($.username.resolve(sender) + ' changed the current game to ' + http.getString('game'));
                 if ($.bot.isModuleEnabled('./commands/deathctrCommand.js')) {
                     $.deathUpdateFile(game);
+                    $.winUpdateFile(game);
                 }
             } else {
                 $.log.error('Failed to change the game. The Twitch API might be having issues.');

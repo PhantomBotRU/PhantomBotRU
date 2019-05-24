@@ -30,38 +30,87 @@
     <!-- Main content -->
     <section class="content">
     	<div class="box box-solid">
-            <div class="box-header with-border">
+            <div class="box-header">
                 <div class="box-tools pull-right">
                     <label class="switch" data-toggle="tooltip" title="Переключить">
   						<input type="checkbox" id="deathCounterModuleToggle" checked="true">
                         <span class="slider round"></span>
                     </label>
 
-                    <button type="button" id="settings-deaths-button" class="btn btn-md btn-box-tool" style="margin-bottom: 7px;" data-toggle="tooltip" title="Настройки">
+                    <button type="button" id="settings-betting" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Настройки" style="margin-bottom: 7px;">
                         <i class="fa fa-cog fa-lg"></i>
                     </button>
                 </div>
-                <h3 class="box-title">Счётчик побед</h3>
+                <h3 class="box-title">Счётчики</h3>
+            </div>
+        </div>
+
+        <div class="row" id="deathCounterModule">
+            <!-- Win menu -->
+            <div class="col-md-6">
+    	        <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <div class="box-tools pull-right">
+                            <button type="button" id="settings-wins-button" class="btn btn-md btn-box-tool" style="margin-bottom: 7px;" data-toggle="tooltip" title="Настройки">
+                                <i class="fa fa-cog fa-lg"></i>
+                            </button>
+                        </div>
+                        <h3 class="box-title">Победы</h3>
+                    </div>
+
+                    <form role="form">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <div class="death-total center">
+                                <span>Количество побед:&nbsp;</span>
+                                <span id="win-number">–</span>
+                            </div>
+
+                            <div class="btn-toolbar center">
+                                <button class="btn btn-success" type="button" id="incr-wins-button"
+                            data-toggle="tooltip" title="Прибавить одну победу в текущей игре"><i class="fa fa-plus"></i>&nbsp; Прибавить</button>
+                                <button class="btn btn-warning" type="button" id="decr-wins-button"
+                            data-toggle="tooltip" title="Отнять одну победу в текущей игре"><i class="fa fa-minus"></i>&nbsp; Отнять</button>
+                                <button class="btn btn-danger" type="button" id="reset-wins-button"
+                            data-toggle="tooltip" title="Сбросить количество побед в текущей игре до нуля"><i class="fa fa-eraser"></i>&nbsp; Сбросить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
 
-            <form role="form" id="deathCounterModule">
-                <!-- Box content -->
-                <div class="box-body">
-                    <div class="death-total center">
-                        <span>Количество побед:&nbsp;</span>
-                        <span id="death-number">–</span>
+            <!-- Death menu -->
+            <div class="col-md-6">
+    	        <div class="box box-solid">
+                    <div class="box-header with-border">
+                        <div class="box-tools pull-right">
+                            <button type="button" id="settings-deaths-button" class="btn btn-md btn-box-tool" style="margin-bottom: 7px;" data-toggle="tooltip" title="Настройки">
+                                <i class="fa fa-cog fa-lg"></i>
+                            </button>
+                        </div>
+                        <h3 class="box-title">Смерти</h3>
                     </div>
 
-                    <div class="btn-toolbar center">
-                        <button class="btn btn-success" type="button" id="incr-deaths-button"
-                            data-toggle="tooltip" title="Прибавить одну победу в текущей игре"><i class="fa fa-plus"></i>&nbsp; Прибавить</button>
-                        <button class="btn btn-warning" type="button" id="decr-deaths-button"
-                            data-toggle="tooltip" title="Отнять одну победу в текущей игре"><i class="fa fa-minus"></i>&nbsp; Отнять</button>
-                        <button class="btn btn-danger" type="button" id="reset-deaths-button"
-                            data-toggle="tooltip" title="Сбросить количество побед в текущей игре до нуля"><i class="fa fa-eraser"></i>&nbsp; Сбросить</button>
-                    </div>
+                    <form role="form">
+                        <!-- Box content -->
+                        <div class="box-body">
+                            <div class="death-total center">
+                                <span>Количество смертей:&nbsp;</span>
+                                <span id="death-number">–</span>
+                            </div>
+
+                            <div class="btn-toolbar center">
+                                <button class="btn btn-success" type="button" id="incr-deaths-button"
+                            data-toggle="tooltip" title="Прибавить одну смерть в текущей игре"><i class="fa fa-plus"></i>&nbsp; Прибавить</button>
+                                <button class="btn btn-warning" type="button" id="decr-deaths-button"
+                            data-toggle="tooltip" title="Отнять одну смерть в текущей игре"><i class="fa fa-minus"></i>&nbsp; Отнять</button>
+                                <button class="btn btn-danger" type="button" id="reset-deaths-button"
+                            data-toggle="tooltip" title="Сбросить количество смертей в текущей игре до нуля"><i class="fa fa-eraser"></i>&nbsp; Сбросить</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
     </section>
 
