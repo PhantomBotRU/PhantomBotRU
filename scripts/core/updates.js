@@ -932,18 +932,21 @@
         $.inidb.set('aliases', 'up', 'uptime');
         $.inidb.set('aliases', 'whenfollow', 'followage');
         $.inidb.set('aliases', 'followtime', 'followage');
-        $.inidb.set('aliases', 'play', 'songrequest');
-        $.inidb.set('aliases', 'find', 'findsong');
-        $.inidb.set('aliases', 'steal', 'stealsong');
-        $.inidb.set('aliases', 'wrong', 'wrongsong');
-        $.inidb.set('aliases', 'now', 'currentsong');
-        $.inidb.set('aliases', 'prev', 'previoussong');
-        $.inidb.set('aliases', 'next', 'nextsong');
-        $.inidb.set('aliases', 'skip', 'skipsong');
-        $.inidb.set('aliases', 'jump', 'jumptosong');
-        $.inidb.set('aliases', 'volume', 'ytp volume');
+        $.inidb.set('aliases', 'deaths', 'deathctr');
+        $.inidb.set('aliases', 'wins', 'winctr');
         $.inidb.set('aliases', 'social', 'vk;instagram;discord');
-
+        /**
+         * $.inidb.set('aliases', 'play', 'songrequest');
+         * $.inidb.set('aliases', 'find', 'findsong');
+         * $.inidb.set('aliases', 'steal', 'stealsong');
+         * $.inidb.set('aliases', 'wrong', 'wrongsong');
+         * $.inidb.set('aliases', 'now', 'currentsong');
+         * $.inidb.set('aliases', 'prev', 'previoussong');
+         * $.inidb.set('aliases', 'next', 'nextsong');
+         * $.inidb.set('aliases', 'skip', 'skipsong');
+         * $.inidb.set('aliases', 'jump', 'jumptosong');
+         * $.inidb.set('aliases', 'volume', 'ytp volume');
+         */
 
         $.consoleLn('Deleting obsolete aliases...');
         $.inidb.del('aliases', 'group');
