@@ -36,7 +36,7 @@
 | Russian in-chat responses in Twitch and Discord. |
 | Preset custom commands and alerts in Russian language. |
 | Fixed Russian language handling by the moderation filters. |
-| Added win counter (the `!wins` command and its subcommands). |
+| Added win counter (the `!winctr` command and its subcommands). |
 | Added *Command Tags* tab to the *Help* section. |
 | Various web interface and modules improvements. |
 
@@ -57,7 +57,7 @@
 |   2   | Copy a *russian* folder from a *\scripts\lang* directory of the exctracted *PhantomBotRU-3.0.1-beta1.zip* file to the same directory of your original PhantomBot folder. |
 |   3   | Replace *web* folder in your original PhantomBot folder with the same folder from the exctracted *PhantomBotRU-3.0.1-beta1.zip* file. |
 |   4   | If you have previously launched PhantomBot, and have nothing to lose (commands, points, ranks, etc.), and you want to install the extended preset of custom commands and alerts in Russian language, you need to «reset» the bot by deleting the *phantombot.db* file in the *…\config* directory. |
-|   5   | Start PhantomBot, wait for its loading to complete, and type the command `lang russian` in the console, after which the bot will respond with the `язык изменён на russian` (`changed language to russian`) message. |
+|   5   | Start PhantomBot, wait for its loading to complete, and type the command `lang russian` in the console, after which the bot will respond with the `changed language to russian` message. |
 |   ✓   | PhantomBot is now ready to work in Russian. |
 
 ---
