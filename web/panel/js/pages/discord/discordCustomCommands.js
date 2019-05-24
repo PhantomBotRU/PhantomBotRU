@@ -270,7 +270,7 @@ $(function() {
                 {
                     'title': 'Права',
                     'options': [{
-                        'name': 'Администратор',
+                        'name': 'Administrators',
                         'selected': 'true'
                     }]
                 },
