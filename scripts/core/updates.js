@@ -874,9 +874,13 @@
             }
         }
 
-        /* Start PhantomBotRU Updates */
+        $.consoleLn('PhantomBot update 3.0.1 completed!');
+        $.inidb.set('updates', 'installedv3.0.1', 'true');
+    }
 
-        $.consoleLn('Setting up new default custom commands...');
+    /* version PhantomBotRU 3.0.1 updates */
+    if (!$.inidb.exists('updates', 'installedv3.0.1.ru') || $.inidb.get('updates', 'installedv3.0.1.ru') != 'true') {
+        $.consoleLn('Starting PhantomBotRU 3.0.1 updates...');
 
         if ($.inidb.exists('command', 'age') && $.inidb.get('command', 'age').equalsIgnoreCase('(age)')) {
             $.inidb.set('command', 'age', '(age) (adminonlyedit)');
@@ -953,10 +957,8 @@
         $.inidb.del('aliases', 'grouppoints');
         $.inidb.del('aliases', 'groups');
 
-        /* End PhantomBotRU Updates */
-
-        $.consoleLn('PhantomBot update 3.0.1 completed!');
-        $.inidb.set('updates', 'installedv3.0.1', 'true');
+        $.consoleLn('PhantomBotRU 3.0.1 update completed!');
+        $.inidb.set('updates', 'installedv3.0.1.ru', 'true');
     }
 
     /**
