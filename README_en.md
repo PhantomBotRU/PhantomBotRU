@@ -8,7 +8,7 @@
 
 ---
 
-|   #   | Contents                      |
+|   #   | Contents &nbsp; &nbsp;        |
 | :---: | ----------------------------- |
 |   1   | [Version](#Version)           |
 |   2   | [Description](#Description)   |
