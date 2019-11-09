@@ -327,7 +327,7 @@
         for (i in currentAdventure.survivors) {
             username = currentAdventure.survivors[i].username;
             maxlength += username.length();
-            temp.push($.username.resolve(username) + ' (+' + $.getPointsString($.inidb.get('adventurePayoutsTEMP', currentAdventure.survivors[i].username)) + ')');
+            temp.push($.username.resolve(username) + ' — +' + $.getPointsString($.inidb.get('adventurePayoutsTEMP', currentAdventure.survivors[i].username)) + '');
         }
 
         if (temp.length == 0) {

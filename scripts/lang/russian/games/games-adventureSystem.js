@@ -1,6 +1,6 @@
-$.lang.register('adventuresystem.adventure.usage', 'Применение: !adventure [$1].');
-$.lang.register('adventuresystem.alreadyjoined', 'You have already joined the adventure!');
-$.lang.register('adventuresystem.completed', 'The adventure ended! Survivors are: $1.');
+$.lang.register('adventuresystem.adventure.usage', 'применение: !adventure [количество $1]');
+$.lang.register('adventuresystem.alreadyjoined', 'вы уже участвуете в приключениях');
+$.lang.register('adventuresystem.completed', 'Приключение закончено (награда выжившим: $1)');
 $.lang.register('adventuresystem.completed.no.win', 'The adventure ended! There are no survivors.');
 $.lang.register('adventuresystem.completed.win.total', 'The adventure ended with $1 survivor(s) and $2 death(s).');
 $.lang.register('adventuresystem.join.bettoohigh', 'You can not join with $1, the maximum is $2.');
@@ -10,27 +10,27 @@ $.lang.register('adventuresystem.join.notpossible', 'You can not join now.');
 $.lang.register('adventuresystem.join.success', 'You have joined the adventure with $1!');
 $.lang.register('adventuresystem.loaded', 'Loaded adventure stories (found $1).');
 $.lang.register('adventuresystem.payoutwhisper', 'Adventure completed, $1 + $2 has been added to your balance.');
-$.lang.register('adventuresystem.runstory', 'Starting adventure "$1" with $2 player(s).');
+$.lang.register('adventuresystem.runstory', 'Начинаем приключение «$1» с $2 player(s).');
 $.lang.register('adventuresystem.set.success', 'Set $1 to $2.');
 $.lang.register('adventuresystem.set.usage', 'Применение: !adventure set [settingname] [value].');
-$.lang.register('adventuresystem.start.success', '$1 is trying get a team together for some serious adventure business! Use "!adventure [$2]" to join in!');
-$.lang.register('adventuresystem.tamagotchijoined', '$1 is also joining the adventure.');
+$.lang.register('adventuresystem.start.success', '$1 предлагает создать команду для совместного приключения (наберите «!adventure [количество $2]» для участия)');
+$.lang.register('adventuresystem.tamagotchijoined', '$1 также присоединяется к приключениям');
 $.lang.register('adventuresystem.top5', 'The top 5 adventurerers are: $1.');
 $.lang.register('adventuresystem.top5.empty', 'There haven\'t been any adventure winners recorded yet.');
 $.lang.register('adventuresystem.reset', 'The adventure has now cooled off! Use "!adventure [$1]" to start a new adventure!');
 
 
-$.lang.register('adventuresystem.stories.1.title', 'Time Heist');
+$.lang.register('adventuresystem.stories.1.title', 'Ограбление во времени');
 $.lang.register('adventuresystem.stories.1.chapter.1', 'Your memory is vague, on the table a small laptop is playing a video: "My name is The Architect. The bank of Karabraxos is the most secure bank in the universe. You will rob the bank of Karabraxos!"');
 $.lang.register('adventuresystem.stories.1.chapter.2', 'Unable to leave their minds blank, (caught) slowly feel their mind being drained as The Teller feeds on their thoughts.');
 $.lang.register('adventuresystem.stories.1.chapter.3', 'We find ourselves back in the room we started in as consciousness of (survivors) slowly fades again, only to wake up in our beds like nothing at all has happened.');
 
-$.lang.register('adventuresystem.stories.2.title', 'Beartraps');
+$.lang.register('adventuresystem.stories.2.title', 'Медвежий капкан');
 $.lang.register('adventuresystem.stories.2.chapter.1', 'Friends! I\'ve got coordinates for a secret stash of bolts, hidden away within the bowels of the elven forest. We should shoe up and give this a go!');
 $.lang.register('adventuresystem.stories.2.chapter.2', 'Look out, bear traps! (caught) got their legs ripped off!');
 $.lang.register('adventuresystem.stories.2.chapter.3', 'Dayum, that was a close call for loosing a leg. But you\'ve deserved this (survivors)!');
 
-$.lang.register('adventuresystem.stories.3.title', 'Vampires?!');
+$.lang.register('adventuresystem.stories.3.title', 'Вампиры');
 $.lang.register('adventuresystem.stories.3.chapter.1', 'Ah, my dear friends! I may have found the adventure of a lifetime. Namely the house of count Dracula is believed to be the bolts master! I\'m for going now!');
 $.lang.register('adventuresystem.stories.3.chapter.2', 'It\'s him! (caught) got slaughtered violently!');
 $.lang.register('adventuresystem.stories.3.chapter.3', 'That was a close call, I don\'t think I\'ve been bitten. you? Ow well, (survivors), here\'s your share! ~Transforms into a bat and flutters off~');
