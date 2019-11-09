@@ -1,3 +1,18 @@
+<!--
+    Copyright (C) 2016-2018 phantom.bot
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
 <main>
     <!-- Header -->
     <section class="content-header">
@@ -14,9 +29,9 @@
     	<div class="box box-solid">
             <div class="box-header">
                 <div class="box-tools pull-right">
-                    <label class="switch" data-toggle="tooltip" title="Модуль нельзя выключить">
-  						<input type="checkbox" disabled="" checked="true">
-                        <span class="slider round disabled"></span>
+                    <label class="switch" data-toggle="tooltip" title="Переключить">
+  						<input type="checkbox" id="pointsModuleToggle" checked="true">
+                        <span class="slider round"></span>
                     </label>
 
                     <button type="button" class="btn btn-md btn-box-tool disabled" data-toggle="tooltip" title="Модуль не имеет настроек" style="margin-bottom: 7px;">
@@ -27,7 +42,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="pointsModule">
             <!-- Left section -->
             <section class="col-lg-6">
                 <div class="row">
@@ -51,7 +66,7 @@
                                                 <lable>Сообщение</lable>
                                                 <input type="text" class="form-control" id="points-message" data-toggle="tooltip"
                                                     title="Отклик при вызове команды !points"/>
-                                                <div style="font-size: 80%; margin-top: 2px !important; opacity: 0.65 !important">Доступные теги: (userprefix), (user), (points), (pointsname), (pointstring), (time) и (rank)</div>
+                                                <div style="font-size: 80%; margin-top: 2px !important; opacity: 0.65 !important">Доступные теги: (userprefix), (user), (points), (pointsname), (pointsstring), (time) и (rank)</div>
                                             </div>
                                         </div>
                                     </div>

@@ -1,7 +1,29 @@
+/*
+ * Copyright (C) 2016-2018 phantom.bot
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 // Function that querys all of the data we need.
 $(run = function() {
     // Get module status.
     socket.getDBValue('get_points_module_status', 'modules', './systems/pointSystem.js', function(e) {
+        // If the module is off, don't load any data.
+        if (!helpers.handleModuleLoadUp('pointsModule', e.modules)) {
+            return;
+        }
+
         // Get points settings.
         socket.getDBValues('get_points_settings', {
             tables: ['pointSettings', 'pointSettings', 'pointSettings', 'pointSettings', 'pointSettings', 'pointSettings', 'pointSettings', 'pointSettings', 'settings'],
@@ -45,6 +67,12 @@ $(run = function() {
 
 // Function that handlers the loading of events.
 $(function() {
+    // Module toggle.
+    $('#pointsModuleToggle').on('change', function() {
+        // Enable the module then query the data.
+        socket.sendCommand('points_module_toggle_cmd', 'module ' + ($(this).is(':checked') ? 'enablesilent' : 'disablesilent') + ' ./systems/pointSystem.js', run);
+    });
+
     // Get user points button.
     $('#points-get-user').on('click', function() {
         let username = $('#points-username').val().toLowerCase();

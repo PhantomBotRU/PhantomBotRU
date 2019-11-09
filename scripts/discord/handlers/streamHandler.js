@@ -63,10 +63,6 @@
      * @event twitchOffline
      */
     $.bind('twitchOffline', function(event) {
-        if (botGameToggle === true) {
-            $.discord.removeGame();
-        }
-
         // Make sure the channel is really offline before deleting and posting the data. Wait a minute and do another check.
         setTimeout(function() {
 /*            // Delete live messages if any.
@@ -77,6 +73,10 @@
 *                    }
 *                }
 *            }*/
+
+            if (botGameToggle === true) {
+                $.discord.removeGame();
+            }
 
             if (!$.isOnline($.channelName) && offlineToggle === true) {
                 var keys = $.inidb.GetKeyList('discordStreamStats', ''),
@@ -200,11 +200,11 @@
 
                     $.setIniDbNumber('discordSettings', 'lastOnlineEvent', $.systemTime());
                 }
+                if (botGameToggle === true) {
+                    $.discord.setStream($.getStatus($.channelName), ('https://twitch.tv/' + $.channelName));
+                }
             }
         }, 6e4);
-        if (botGameToggle === true) {
-            $.discord.setStream($.getStatus($.channelName), ('https://twitch.tv/' + $.channelName));
-        }
     });
 
     /**

@@ -1,3 +1,20 @@
+/*
+ * Copyright (C) 2016-2018 phantom.bot
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 $.lang.register('twitter.tweet', 'Твит от @(twitterid): $1');
 $.lang.register('twitter.tweet.mention', 'Твит от @$1 из ленты @(twitterid): $2');
 $.lang.register('twitter.reward.announcement', '$1 получает $2 за ретвит');

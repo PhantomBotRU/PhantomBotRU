@@ -201,7 +201,7 @@
             return timeString;
         }
     }
-    
+
     /**
      * @function getCountString
      * @export $
@@ -504,7 +504,7 @@
 
         if (levelWithTime) {
             for (i in $.users) {
-                username = $.users[i][0].toLowerCase();
+                username = $.users[i].toLowerCase();
                 if (!$.isMod(username) && !$.isAdmin(username) && !$.isSub(username) && !$.isVIP(username) && $.inidb.exists('time', username) && Math.floor(parseInt($.inidb.get('time', username)) / 3600) >= hoursForLevelUp && parseInt($.getUserGroupId(username)) > regularsGroupId) {
                     if (!$.hasModList(username)) { // Added a second check here to be 100% sure the user is not a mod.
                         $.setUserGroupById(username, regularsGroupId);

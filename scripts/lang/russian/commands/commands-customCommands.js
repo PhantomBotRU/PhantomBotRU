@@ -1,3 +1,20 @@
+/*
+ * Copyright (C) 2016-2018 phantom.bot
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 $.lang.register('customcommands.add.error', 'указанная команда или псевдоним уже существует');
 $.lang.register('customcommands.add.success', 'команда «!$1» создана');
 $.lang.register('customcommands.add.usage', 'применение: «!addcom [имя команды] [текст отклика]»');
@@ -32,6 +49,8 @@ $.lang.register('customcommands.404.no.commands', 'пользовательск�
 $.lang.register('customcommands.cmds', 'доступные вам пользовательские команды и псевдонимы: «$1»');
 $.lang.register('customcommands.edit.usage', 'применение: «!editcom [имя команды] [отклик команды]»');
 $.lang.register('customcommands.edit.success', 'команда «!$1» отредактирована');
+$.lang.register('customcommands.token.usage', 'применение: !tokencom [имя команды] [код токена] (рекомендуется использовать эту команду в консоли или в панели бота, чтобы токен не был виден в чате)');
+$.lang.register('customcommands.token.success', 'токен для команды «!$1» установлен (убедитесь, что тег «(token)» помещён в ссылку внутри тега «(customapi)» или «(customapijson)»)');
 // $.lang.register('customcommands.touser.offline', '$1 в офлайне'); // нигде в скриптах не используется
 $.lang.register('customcommands.customapi.404', 'команда «!$1» требует дополнительной переменной');
 $.lang.register('customcommands.customapijson.err', 'с командой «!$1» указана некорректная переменная'); // по сути: в процессе обработки API возникла ошибка

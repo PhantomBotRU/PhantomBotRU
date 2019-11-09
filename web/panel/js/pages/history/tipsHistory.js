@@ -1,3 +1,20 @@
+/*
+ * Copyright (C) 2016-2018 phantom.bot
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 // Function that querys all of the data we need.
 $(function() {
 	socket.getDBTableValues('get_all_tips', 'donations', function(results) {
@@ -20,7 +37,8 @@ $(function() {
 								json.name,
 								helpers.getPaddedDateString(new Date(parseInt(json.created_at) * 1e3).toLocaleString()),
 								json.currency + ' ' + parseFloat(json.amount).toFixed(2),
-								'Streamlabs'
+								'Streamlabs',
+								parseInt(json.created_at) * 1e3
 							]);
 							break;
 						case json.parameters !== undefined:
@@ -28,7 +46,8 @@ $(function() {
 								json.parameters.username,
 								helpers.getPaddedDateString(new Date(json.created_at.substring(0, json.created_at.indexOf('+'))).toLocaleString()), // We remove the +0200 because Safari doesn't like it.
 								json.parameters.currency + ' ' + parseFloat(json.parameters.amount).toFixed(2),
-								'TipeeeStream'
+								'TipeeeStream',
+								new Date(json.created_at.substring(0, json.created_at.indexOf('+'))).getTime()
 							]);
 							break;
 						case json.createdAt !== undefined && json.donation !== undefined:
@@ -36,7 +55,8 @@ $(function() {
 								json.donation.user.username,
 								helpers.getPaddedDateString(new Date(json.createdAt).toLocaleString()),
 								json.donation.currency + ' ' + parseFloat(json.donation.amount).toFixed(2),
-								'StreamElements'
+								'StreamElements',
+								new Date(json.createdAt).getTime()
 							]);
 							break;
 						case json.user !== undefined && json.user.name !== undefined:
@@ -44,7 +64,8 @@ $(function() {
 								json.user.name,
 								helpers.getPaddedDateString(new Date(json.date).toLocaleString()),
 								json.currencyCode + ' ' + parseFloat(json.amount).toFixed(2),
-								'Streamtip'
+								'Streamtip',
+								new Date(json.date).getTime()
 							]);
 							break;
 					}
@@ -64,9 +85,10 @@ $(function() {
     		],
 			'columns': [
 				{ 'title': 'Пользователь' },
-				{ 'title': 'Дата', 'orderData': [1] },
+				{ 'title': 'Дата', 'orderData': [4] },
 				{ 'title': 'Сумма' },
-				{ 'title': 'Сервис' }
+				{ 'title': 'Сервис' },
+				{ 'visible': false }
 			]
 		});
 	});

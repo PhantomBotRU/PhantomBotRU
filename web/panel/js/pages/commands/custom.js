@@ -20,7 +20,7 @@ $(run = function() {
     // Check if the module is enabled.
     socket.getDBValue('custom_command_module', 'modules', './commands/customCommands.js', function(e) {
         // If the module is off, don't load any data.
-        if (!helpers.getModuleStatus('customCommandsModule', e.modules)) {
+        if (!helpers.handleModuleLoadUp('customCommandsModule', e.modules)) {
             return;
         }
         // Query custom commands.
@@ -91,8 +91,8 @@ $(run = function() {
                     'Команда «!' + command + '» успешно удалена', function() {
                     // Delete all information about the command.
                     socket.removeDBValues('custom_command_remove', {
-                        tables: ['command', 'permcom', 'cooldown', 'aliases', 'pricecom', 'paycom'],
-                        keys: [command, command, command, command, command, command]
+                        tables: ['command', 'permcom', 'cooldown', 'aliases', 'pricecom', 'paycom', 'commandtoken'],
+                        keys: [command, command, command, command, command, command, command]
                     }, function() {
                         socket.wsEvent('custom_command_remove_ws', './commands/customCommands.js', null, ['remove', String(command)], function() {
                             // Remove the table row.
@@ -114,6 +114,21 @@ $(run = function() {
                 }, function(e) {
                     let cooldownJson = (e.cooldown === null ? { isGlobal: 'true', seconds: 0 } : JSON.parse(e.cooldown));
 
+                    let tokenButton = '';
+                    
+                    if (e.command.match(/\(customapi/gi) !== null) {
+                        tokenButton = $('<button/>', {
+                            'type': 'button',
+                            'class': 'btn',
+                            'style': 'float: right; position: relative; bottom: 6px;',
+                            'data-command': command,
+                            'click': function() {
+                                tokenEditModal($(this).data('command'));
+                            },
+                            'text': 'Добавить или редактировать токен команды'
+                        });
+                    }
+
                     // Get advance modal from our util functions in /utils/helpers.js
                     helpers.getAdvanceModal('edit-command', 'Редактирование команды', 'Сохранить', $('<form/>', {
                         'role': 'form'
@@ -124,6 +139,7 @@ $(run = function() {
                     .append(helpers.getTextAreaGroup('command-response', 'text', 'Отклик', 'Текст отклика', e.command, 'Текст отклика на вызов команды')
                         // Append a sub-comment.
                         .append(helpers.getSubComment('Доступные теги см. в разделе «Помощь»')))
+                    .append(tokenButton)
                     // Append a select option for the command permission.
                     .append(helpers.getDropdownGroup('command-permission', 'Доступ', helpers.getGroupNameById(e.permcom),
                         ['Владелец', 'Администратор', 'Модератор', 'Подписчик', 'Донатор', 'VIP', 'Регуляр', 'Зритель'], 'Уровень доступа команды'))
@@ -300,4 +316,37 @@ $(function() {
             }
         }).modal('toggle');
     });
+    
+    // On token button.
+    tokenEditModal =  function(command) {
+        // Get modal from our util functions in /utils/helpers.js
+        helpers.getModal('token-command', 'Установка токена команды', 'Сохранить', $('<form/>', {
+            'role': 'form'
+        })
+        .append('Токен – это логин и пароль, либо ключ API, заменяющий тег «(token)» внутри тега «(customapi)» или «(customapijson)».')
+        // Append input box for the command name. This one is disabled.
+        .append(helpers.getInputGroup('command-tname', 'text', 'Команда', '', '!' + command, 'Имя команды (не редактируется)', true))
+        // Append a text box for the command token.
+        .append(helpers.getInputGroup('command-token', 'text', 'Токен', '', 'Код токена команды')), function() {
+            let commandName = $('#command-tname'),
+                commandToken = $('#command-token');
+
+            // Remove the ! and spaces.
+            commandName.val(commandName.val().replace(/(\!|\s)/g, '').toLowerCase());
+
+            // Handle each input to make sure they have a value.
+            switch (false) {
+                case helpers.handleInputString(commandName):
+                    break;
+                default:
+                // Update command token.
+                socket.sendCommand('command_settoken_cmd', 'tokencom silent@' + commandName.val() + ' ' + commandToken.val(), function() {
+                    // Close the modal.
+                    $('#token-command').modal('hide');
+                    // Tell the user the command was edited.
+                    toastr.success('Токен команды «!' + commandName.val() + '» успешно изменён');
+                });
+            }
+        }).modal('toggle');
+    };
 });
