@@ -879,87 +879,86 @@
     }
 
     /* version PhantomBotRU 3.0.1 updates */
-    if (!$.inidb.exists('updates', 'installedv3.0.1.ru') || $.inidb.get('updates', 'installedv3.0.1.ru') != 'true') {
-        $.consoleLn('Starting PhantomBotRU 3.0.1 updates...');
+    /** if (!$.inidb.exists('updates', 'installedv3.0.1.ru') || $.inidb.get('updates', 'installedv3.0.1.ru') != 'true') {
+        * $.consoleLn('Starting PhantomBotRU 3.0.1 updates...');
 
-        if ($.inidb.exists('command', 'age') && $.inidb.get('command', 'age').equalsIgnoreCase('(age)')) {
-            $.inidb.set('command', 'age', '(age) (adminonlyedit)');
-        }
+        * if ($.inidb.exists('command', 'age') && $.inidb.get('command', 'age').equalsIgnoreCase('(age)')) {
+            * $.inidb.set('command', 'age', '(age) (adminonlyedit)');
+        * }
 
-        if ($.inidb.exists('command', 'followage') && $.inidb.get('command', 'followage').equalsIgnoreCase('(followage)')) {
-            $.inidb.set('command', 'followage', '(followage) (adminonlyedit)');
-        }
+        * if ($.inidb.exists('command', 'followage') && $.inidb.get('command', 'followage').equalsIgnoreCase('(followage)')) {
+            * $.inidb.set('command', 'followage', '(followage) (adminonlyedit)');
+        * }
 
-        if ($.inidb.exists('command', 'game') && $.inidb.get('command', 'game').equalsIgnoreCase('(pointtouser) (gameinfo)')) {
-            $.inidb.set('command', 'game', 'Текущая игра: (gameinfo) (adminonlyedit)');
-        }
+        * if ($.inidb.exists('command', 'game') && $.inidb.get('command', 'game').equalsIgnoreCase('(pointtouser) (gameinfo)')) {
+            * $.inidb.set('command', 'game', 'Текущая игра: (gameinfo) (adminonlyedit)');
+        * }
 
-        if ($.inidb.exists('command', 'playtime') && $.inidb.get('command', 'playtime').equalsIgnoreCase('(pointtouser) (channelname) has been playing (game) for (playtime)')) {
-            $.inidb.set('command', 'playtime', 'Стрим (game) идёт (playtime) (adminonlyedit)');
-        }
+        * if ($.inidb.exists('command', 'playtime') && $.inidb.get('command', 'playtime').equalsIgnoreCase('(pointtouser) (channelname) has been playing (game) for (playtime)')) {
+            * $.inidb.set('command', 'playtime', 'Стрим (game) идёт (playtime) (adminonlyedit)');
+        * }
 
-        if ($.inidb.exists('command', 'title') && $.inidb.get('command', 'title').equalsIgnoreCase('(pointtouser) (titleinfo)')) {
-            $.inidb.set('command', 'title', 'Текущий заголовок: (titleinfo) (adminonlyedit)');
-        }
+        * if ($.inidb.exists('command', 'title') && $.inidb.get('command', 'title').equalsIgnoreCase('(pointtouser) (titleinfo)')) {
+            * $.inidb.set('command', 'title', 'Текущий заголовок: (titleinfo) (adminonlyedit)');
+        * }
 
-        if ($.inidb.exists('command', 'uptime') && $.inidb.get('command', 'uptime').equalsIgnoreCase('(pointtouser) (channelname) has been online for (uptime)')) {
-            $.inidb.set('command', 'uptime', 'Стрим идёт (uptime) (adminonlyedit)');
-        }
+        * if ($.inidb.exists('command', 'uptime') && $.inidb.get('command', 'uptime').equalsIgnoreCase('(pointtouser) (channelname) has been online for (uptime)')) {
+            * $.inidb.set('command', 'uptime', 'Стрим идёт (uptime) (adminonlyedit)');
+        * }
 
-        $.inidb.set('command', 'viewers', 'Зрителей на канале: (viewers) (adminonlyedit)');
-        $.inidb.set('command', 'followers', 'Фолловеров канала: (follows) (adminonlyedit)');
-        $.inidb.set('command', 'subscribers', 'Подписчиков канала: (subscribers) (adminonlyedit)');
-        $.inidb.set('command', 'lasttip', 'Последний донат: (lasttip) (adminonlyedit)');
-        $.inidb.set('command', 'help', 'Команды чата: !discord, !vk, !instagram, !youtube, !games, !music, !points, !specs, !subscription, !donation, !followage');
-        $.inidb.set('command', 'specs', 'ПК и девайсы стримера: MB <модель>, CPU <модель>, GPU <модель>, RAM <модель>, SSD/SSHD/HDD <модель>, HSF <модель>, PSU <модель>, корпус <модель>, монитор <модель>, клавиатура <модель>, мышь <модель>, микрофон <модель>, наушники <модель>');
-        $.inidb.set('command', 'subscription', 'Подписка на стримера: https://twitch.tv/subs/(channelname)');
-        $.inidb.set('command', 'donation', 'Чаевые стримеру: <ссылка не задана>');
-        $.inidb.set('command', 'discord', 'Стример в Discord: <ссылка не задана>');
-        $.inidb.set('command', 'vk', 'Стример в ВК: <ссылка не задана>');
-        $.inidb.set('command', 'instagram', 'Стример в Instagram: <ссылка не задана>');
-        $.inidb.set('command', 'youtube', 'Стример в YouTube: <ссылка не задана>');
-        $.inidb.set('command', 'music', 'Музыка на стриме: !play – заказ, !list – плейлист, !skip vote – голосование за пропуск трека, !now – текущий трек, !next – следующий трек, !prev – предыдущий трек (только для модераторов: !steal – заимствование трека, !skip – пропуск трека, !volume – громкость) (adminonlyedit)');
-        $.inidb.set('command', 'games', 'Игры чата: !8ball, !kill, !pan, !slap, !love, !iq, !roulette');
-        $.inidb.set('command', 'love', '(sender), любовь между вами и (1=random) по 10-балльной шкале составляет (# 0,11) (adminonlyedit)');
-        $.inidb.set('command', 'pan', '(sender) бьёт сковородой (1=random) и снимает (#)% здоровья (adminonlyedit)');
-        $.inidb.set('command', 'slap', '(sender) даёт пощёчину (1=random) и выбивает зубов (# 1,32) шт. (adminonlyedit)');
-        $.inidb.set('command', 'iq', '(sender), ваш IQ равен (# 2,16)0 (adminonlyedit)');
-        $.inidb.set('command', 'banana', '(sender) заказал(а) танец банана на стриме (alert banana.gif,24) (adminonlyedit)');
-        $.inidb.set('command', 'paycommands', 'Платные команды: (commandcostlist) (adminonlyedit)');
+        * $.inidb.set('command', 'viewers', 'Зрителей на канале: (viewers) (adminonlyedit)');
+        * $.inidb.set('command', 'followers', 'Фолловеров канала: (follows) (adminonlyedit)');
+        * $.inidb.set('command', 'subscribers', 'Подписчиков канала: (subscribers) (adminonlyedit)');
+        * $.inidb.set('command', 'lasttip', 'Последний донат: (lasttip) (adminonlyedit)');
+        * $.inidb.set('command', 'help', 'Команды чата: !discord, !vk, !instagram, !youtube, !games, !music, !points, !specs, !subscription, !donation, !followage');
+        * $.inidb.set('command', 'specs', 'ПК и девайсы стримера: MB <модель>, CPU <модель>, GPU <модель>, RAM <модель>, SSD/SSHD/HDD <модель>, HSF <модель>, PSU <модель>, корпус <модель>, монитор <модель>, клавиатура <модель>, мышь <модель>, микрофон <модель>, наушники <модель>');
+        * $.inidb.set('command', 'subscription', 'Подписка на стримера: https://twitch.tv/subs/(channelname)');
+        * $.inidb.set('command', 'donation', 'Чаевые стримеру: <ссылка не задана>');
+        * $.inidb.set('command', 'discord', 'Стример в Discord: <ссылка не задана>');
+        * $.inidb.set('command', 'vk', 'Стример в ВК: <ссылка не задана>');
+        * $.inidb.set('command', 'instagram', 'Стример в Instagram: <ссылка не задана>');
+        * $.inidb.set('command', 'youtube', 'Стример в YouTube: <ссылка не задана>');
+        * $.inidb.set('command', 'music', 'Музыка на стриме: !play – заказ, !list – плейлист, !skip vote – голосование за пропуск трека, !now – текущий трек, !next – следующий трек, !prev – предыдущий трек (только для модераторов: !steal – заимствование трека, !skip – пропуск трека, !volume – громкость) (adminonlyedit)');
+        * $.inidb.set('command', 'games', 'Игры чата: !8ball, !kill, !pan, !slap, !love, !iq, !roulette');
+        * $.inidb.set('command', 'love', '(sender), любовь между вами и (1=random) по 10-балльной шкале составляет (# 0,11) (adminonlyedit)');
+        * $.inidb.set('command', 'pan', '(sender) бьёт сковородой (1=random) и снимает (#)% здоровья (adminonlyedit)');
+        * $.inidb.set('command', 'slap', '(sender) даёт пощёчину (1=random) и выбивает зубов (# 1,32) шт. (adminonlyedit)');
+        * $.inidb.set('command', 'iq', '(sender), ваш IQ равен (# 2,16)0 (adminonlyedit)');
+        * $.inidb.set('command', 'banana', '(sender) заказал(а) танец банана на стриме (alert banana.gif,24) (adminonlyedit)');
+        * $.inidb.set('command', 'paycommands', 'Платные команды: (commandcostlist) (adminonlyedit)');
 
-        $.consoleLn('Setting up new default custom Discord commands...');
-        $.inidb.set('discordCommands', 'viewers', '(embed 255 255 255, Зрителей на канале Twitch: (viewers))');
-        $.inidb.set('discordCommands', 'followers', '(embed 255 255 255, Фолловеров канала Twitch: (follows))');
-        $.inidb.set('discordCommands', 'lasttip', '(embed 255 255 255, Последний донат: (lasttip))');
+        * $.consoleLn('Setting up new default custom Discord commands...');
+        * $.inidb.set('discordCommands', 'viewers', '(embed 255 255 255, Зрителей на канале Twitch: (viewers))');
+        * $.inidb.set('discordCommands', 'followers', '(embed 255 255 255, Фолловеров канала Twitch: (follows))');
+        * $.inidb.set('discordCommands', 'lasttip', '(embed 255 255 255, Последний донат: (lasttip))');
 
-        $.consoleLn('Setting up new default aliases...');
-        $.inidb.set('aliases', 'up', 'uptime');
-        $.inidb.set('aliases', 'whenfollow', 'followage');
-        $.inidb.set('aliases', 'followtime', 'followage');
-        $.inidb.set('aliases', 'deaths', 'deathctr');
-        $.inidb.set('aliases', 'wins', 'winctr');
-        $.inidb.set('aliases', 'social', 'vk;instagram;discord');
-        /**
-         * $.inidb.set('aliases', 'play', 'songrequest');
-         * $.inidb.set('aliases', 'find', 'findsong');
-         * $.inidb.set('aliases', 'steal', 'stealsong');
-         * $.inidb.set('aliases', 'wrong', 'wrongsong');
-         * $.inidb.set('aliases', 'now', 'currentsong');
-         * $.inidb.set('aliases', 'prev', 'previoussong');
-         * $.inidb.set('aliases', 'next', 'nextsong');
-         * $.inidb.set('aliases', 'skip', 'skipsong');
-         * $.inidb.set('aliases', 'jump', 'jumptosong');
-         * $.inidb.set('aliases', 'volume', 'ytp volume');
-         */
+        * $.consoleLn('Setting up new default aliases...');
+        * $.inidb.set('aliases', 'up', 'uptime');
+        * $.inidb.set('aliases', 'whenfollow', 'followage');
+        * $.inidb.set('aliases', 'followtime', 'followage');
+        * $.inidb.set('aliases', 'deaths', 'deathctr');
+        * $.inidb.set('aliases', 'wins', 'winctr');
+        * $.inidb.set('aliases', 'social', 'vk;instagram;discord');
 
-        $.consoleLn('Deleting obsolete aliases...');
-        $.inidb.del('aliases', 'group');
-        $.inidb.del('aliases', 'grouppoints');
-        $.inidb.del('aliases', 'groups');
+        * $.inidb.set('aliases', 'play', 'songrequest');
+        * $.inidb.set('aliases', 'find', 'findsong');
+        * $.inidb.set('aliases', 'steal', 'stealsong');
+        * $.inidb.set('aliases', 'wrong', 'wrongsong');
+        * $.inidb.set('aliases', 'now', 'currentsong');
+        * $.inidb.set('aliases', 'prev', 'previoussong');
+        * $.inidb.set('aliases', 'next', 'nextsong');
+        * $.inidb.set('aliases', 'skip', 'skipsong');
+        * $.inidb.set('aliases', 'jump', 'jumptosong');
+        * $.inidb.set('aliases', 'volume', 'ytp volume');
 
-        $.consoleLn('PhantomBotRU 3.0.1 update completed!');
-        $.inidb.set('updates', 'installedv3.0.1.ru', 'true');
-    }
+        * $.consoleLn('Deleting obsolete aliases...');
+        * $.inidb.del('aliases', 'group');
+        * $.inidb.del('aliases', 'grouppoints');
+        * $.inidb.del('aliases', 'groups');
+
+        * $.consoleLn('PhantomBotRU 3.0.1 update completed!');
+        * $.inidb.set('updates', 'installedv3.0.1.ru', 'true');
+    * } */
 
     /**
      * @function getTableContents
